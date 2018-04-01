@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+
+  app:
+    build: .
+    container_name: recv.io-website
+    image: forward-motion/recv.io-website
+    command: gatsby develop --host 0.0.0.0 --port 8000
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
