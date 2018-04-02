@@ -51,3 +51,5 @@ class MyApps extends React.Component {
         }
     }
 }
+
+export default MyApps;

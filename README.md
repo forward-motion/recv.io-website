@@ -5,7 +5,7 @@ Website for recv.io
 
 Run `docker-compose up`. The site will be accessible at http://localhost:8000.
 
-## TODO
-- choose CMS (Netlify CMS or Contentful)
-- how to use images and fonts
-- structure site
+## Useful Links
+- https://react-bootstrap.github.io/components/navbar/
+- https://getbootstrap.com/docs/3.3/components/
+- 

@@ -7,7 +7,7 @@ import '../../../styles/_global/ui/Header.scss';
 const Header = () => (
     <div className="header">
 
-        <Navbar collapseOnSelect>
+        <Navbar collapseOnSelect fluid>
             <Navbar.Header>
                 <Navbar.Brand>
                     <Link to="/">recv.io</Link>
@@ -31,7 +31,7 @@ const Header = () => (
                         </li>
                     </NavDropdown>
                     <li role="presentation">
-                        <Link role="button" to="/dashboard/">Blog</Link>
+                        <Link role="button" to="/blog/">Blog</Link>
                     </li>
                     <li role="presentation">
                         <Link role="button" to="/dashboard/">Dashboard</Link>

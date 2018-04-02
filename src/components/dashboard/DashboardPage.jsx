@@ -80,8 +80,8 @@ class DashboardPage extends React.Component {
         );
     }
 
-    static defaultProps() {
-        
+    static get defaultProps() {
+
         return {
             isLoggedIn: false,
             views: ['my-apps', 'my-account'],
