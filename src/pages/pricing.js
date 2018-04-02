@@ -1,3 +1,3 @@
-import Pricing from '../components/pricing/Pricing.jsx';
+import Pricing from '../components/pricing/PricingPage.jsx';
 
 export default Pricing;

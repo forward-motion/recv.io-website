@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-
 import Header from '../ui/Header';
 
+import '../../../styles/_global/templates/DefaultTemplate.scss';
+
 const DefaultTemplate = ({ children }) => (
-    <div>
+    <div className="default-template">
         <Helmet
             title="Gatsby Default Starter"
             meta={[

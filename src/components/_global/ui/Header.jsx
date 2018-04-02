@@ -1,13 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
+import '../../../styles/_global/ui/Header.scss';
+
 const Header = () => (
-    <div
-        style={{
-            background: 'rebeccapurple',
-            marginBottom: '1.45rem',
-        }}
-    >
+    <div className="header">
         <div
             style={{
                 margin: '0 auto',

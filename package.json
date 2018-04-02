@@ -1,5 +1,5 @@
 {
-  "name": "recv.io website",
+  "name": "recv.io-website",
   "description": "Website for recv.io",
   "version": "0.0.1",
   "author": "Shaun Persad <shaun@forwardmotion.io>",
@@ -7,6 +7,7 @@
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-sass": "^1.0.25",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -15,7 +16,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --host 0.0.0.0",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
