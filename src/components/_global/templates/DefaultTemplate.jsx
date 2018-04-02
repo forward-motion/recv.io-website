@@ -13,7 +13,9 @@ const DefaultTemplate = ({ children }) => (
                 { name: 'keywords', content: 'sample, something' },
             ]}
         />
+
         <Header />
+
         <div className="container-fluid">
             {children()}
         </div>

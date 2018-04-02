@@ -83,7 +83,7 @@ class DashboardPage extends React.Component {
     static get defaultProps() {
 
         return {
-            isLoggedIn: false,
+            isLoggedIn: true,
             views: ['my-apps', 'my-account'],
             subViews: ['overview', 'keys', 'data', 'plan']
         };
