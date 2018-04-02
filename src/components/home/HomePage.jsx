@@ -8,7 +8,7 @@ const HomePage = () => (
         <h1>Testing Netlify</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
-        <Link to="/pricing/">Go to page 2</Link>
+        <Link to="/pricing/">Go to pricing</Link>
     </div>
 );
 
