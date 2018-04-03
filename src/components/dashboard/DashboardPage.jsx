@@ -4,6 +4,7 @@ import Login from './Login.jsx';
 import MyApps from './MyApps.jsx';
 import MyAccount from './MyAccount.jsx';
 
+
 class DashboardPage extends React.Component {
 
     constructor(props) {
@@ -68,14 +69,18 @@ class DashboardPage extends React.Component {
 
     render() {
 
-        if (!this.props.isLoggedIn) {
-            return <Login />;
+        const { user, firebase } = this.props;
+
+
+        if (!user) {
+            return <Login firebase={firebase} />;
         }
 
         return (
             <div className="dashboard-page">
                 {this.breadcrumbs}
                 {this.content}
+                <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
             </div>
         );
     }
@@ -83,7 +88,6 @@ class DashboardPage extends React.Component {
     static get defaultProps() {
 
         return {
-            isLoggedIn: true,
             views: ['my-apps', 'my-account'],
             subViews: ['overview', 'keys', 'data', 'plan']
         };

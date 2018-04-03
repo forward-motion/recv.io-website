@@ -19,7 +19,7 @@ const Header = () => (
                     <li role="presentation">
                         <Link role="button" to="/pricing/">Pricing</Link>
                     </li>
-                    <NavDropdown title="Resources">
+                    <NavDropdown title="Resources" id="resources">
                         <li role="presentation">
                             <Link to="/docs/">Docs</Link>
                         </li>
