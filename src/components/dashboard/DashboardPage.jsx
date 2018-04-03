@@ -93,14 +93,19 @@ class DashboardPage extends React.Component {
 
     render() {
 
-        if (!this.state.isUserLogin) {
-            return <Login  onUserLogin={ this.onUserLogin} />;
+
+        const { user, firebase } = this.props;
+
+
+        if (!user) {
+            return <Login firebase={firebase} />;
         }
 
         return (
             <div className="dashboard-page">
                 {this.breadcrumbs}
                 {this.content}
+                <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
             </div>
         );
     }

@@ -1,9 +1,21 @@
 import React from 'react';
-import '../../../node_modules/font-awesome/css/font-awesome.css';
-import '../../styles/dashboard/LoginPage.scss';
+import firebase from 'firebase';
+import FirebaseAuth from 'react-firebaseui/FirebaseAuth';
 
-const Login = (props) => (
-    <div className="login-page">
+const uiConfig = {
+    signInFlow: 'popup',
+    signInOptions: [
+        firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
+    ],
+    callbacks: {
+        signInSuccess: () => false
+    }
+};
+
+const Login = ({ firebase }) => (
+    <div>
 
         <div className="row">
             <div className="col-md-12">
@@ -35,6 +47,8 @@ const Login = (props) => (
                 </button>
             </div>
         </div>
+
+        <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
 
     </div>
 );
