@@ -5,6 +5,7 @@
   "author": "Shaun Persad <shaun@forwardmotion.io>",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "firebase": "^4.12.1",
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
