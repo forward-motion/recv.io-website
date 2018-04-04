@@ -1,10 +1,11 @@
 import React from 'react';
-import { Modal } from 'react-bootstrap';
+import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 import Login from './Login.jsx';
 import MyApps from './MyApps.jsx';
 import MyAccount from './MyAccount.jsx';
-import user from '../../data/apps'; 
+import user from '../../data/apps.js'; 
+import ModalApp from './Modal.jsx';
 
 // app styles 
 import '../../styles/dashboard/DashboardPage.scss';
@@ -28,8 +29,12 @@ class DashboardPage extends React.Component {
         this.state = {
             view: {label: 'my-apps', value: 'my-apps'},
             selectedApp: null,
+            deleteApp: null,
             show: false,
-            isUserLogin: false
+            modalType: null,
+            userApps: user,
+            createdApp: ''
+
         };
 
         this.onChangeView = this.onChangeView.bind(this);
@@ -38,7 +43,8 @@ class DashboardPage extends React.Component {
         this.onShowModal = this.onShowModal.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.onDeleteApp = this.onDeleteApp.bind(this);
-        this.onUserLogin = this.onUserLogin.bind(this);
+        this.onCreateApp = this.onCreateApp.bind(this);
+        this.handleUserEnter = this.handleUserEnter.bind(this);
     }
 
     onChangeView(selectedOption) {
@@ -47,11 +53,19 @@ class DashboardPage extends React.Component {
         
     }
 
-    onShowModal() {
+    handleUserEnter(e) {
+
+        this.setState({ createdApp : e.target.value })
+    }
+
+    onShowModal(type, app) {
 
         let show = this.state.show ? false : true; 
 
-        this.setState({ show : show });
+        //let type = e.currentTarget.name;
+        
+
+        this.setState({ show : show, modalType: type , deleteApp: app});
     }
 
     handleClose() {
@@ -59,8 +73,27 @@ class DashboardPage extends React.Component {
         this.setState({show : false})
     }
 
-    onDeleteApp() {
+    onDeleteApp(delete_app) {
+
+        let selectedAppToDelete = this.state.userApps.filter((app) => {
+            return app.name !== delete_app; 
+        }); 
+
+        this.setState({userApps : selectedAppToDelete, show: false})
         
+        
+    }
+
+    onCreateApp() {
+        console.log('it was created');
+        
+        let usersApps = this.state.userApps; 
+        usersApps.push({
+            name: this.state.createdApp,
+            stats: [{type: '', key: ''},{type: '', key: ''},{type: '', key: ''}]
+        });
+
+        this.setState({ userApps: usersApps, show: false });
     }
 
     onChangeSelectedApp(selectedApp) {
@@ -73,27 +106,54 @@ class DashboardPage extends React.Component {
         this.setState({ subView });
     }
 
-    onUserLogin(user) {
-
-        if( user ) {
-            this.setState({ isUserLogin : true })
-        }
-    }
-
     get showModal() {
 
-        console.log('state show', this.state.show);
-
-        return(
-            <Modal show={this.state.show} onHide={this.handleClose}>
-                <Modal.Header>
-                    <Modal.Title>Modal title</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <p> Hello World </p>
-                </Modal.Body>
-            </Modal>
-        );
+        switch(this.state.modalType) {
+            case 'delete app':
+                return(
+                    <ModalApp 
+                        name={this.state.modalType} 
+                        handleClose={this.handleClose} 
+                        functionalApp={this.onDeleteApp}
+                        show={this.state.show} 
+                        appName={this.state.deleteApp.name}
+                        buttonType="Delete">
+                        <p>Want to delete {this.state.deleteApp.name}</p>
+                    </ModalApp>
+                );
+            case 'create app':
+                return(
+                    <ModalApp 
+                        name={this.state.modalType} 
+                        handleClose={this.handleClose} 
+                        functionalApp={this.handleClose}
+                        show={this.state.show}
+                        buttonType="Cancel">
+                        <p>Create App</p>
+                        <form>
+                        <FormGroup
+                            controlId="formBasicText"
+                        >
+                            <ControlLabel>Name</ControlLabel>
+                            <div className="row">
+                                <div className="col-md-6">
+                                <FormControl
+                                    type="text"
+                                    value={this.state.createdApp}
+                                    placeholder="Enter text"
+                                    onChange={this.handleUserEnter}
+                                />
+                                </div>
+                                <div className="col-md-3">
+                                    <Button onClick={this.onCreateApp}>Create App</Button>
+                                </div>
+                            </div>
+                            
+                        </FormGroup>
+                        </form>
+                    </ModalApp>
+                );
+        }
         
     }
 
@@ -125,7 +185,7 @@ class DashboardPage extends React.Component {
         console.log('user', user);
         
 
-        return user.map((app, index) => {
+        return this.state.userApps.map((app, index) => {
             return(
                 <div className="col-md-3">
                     <MyApps
@@ -134,7 +194,8 @@ class DashboardPage extends React.Component {
                         onChangeSelectedApp={this.onChangeSelectedApp}>
                             <button
                                 className="btn trash-btn"
-                                onClick={this.onShowModal}
+                                name="delete app"
+                                onClick={() => this.onShowModal('delete app', app)}
                             >
                                 <i 
                                     className="fa fa-trash">
@@ -162,6 +223,18 @@ class DashboardPage extends React.Component {
                     <div className="container-fluid">
                         <div className="my-apps">
                             <div className="row">
+                            <div className="col-md-3 pull-right">
+                                <div style={{marginBottom: '50px', textAlign: 'right'}}>
+                                    <button 
+                                        className="btn btn-default"
+                                        onClick={() => this.onShowModal('create app', null)}
+                                    >
+                                        Create App
+                                    </button>
+                                </div>
+                            </div>
+                            </div>
+                            <div className="row">
                                 { !this.state.selectedApp ? this.userApps : this.selectedApp }
                             </div>
                         </div>
@@ -185,10 +258,12 @@ class DashboardPage extends React.Component {
         return (
             <div className="dashboard-page">
                <div style={{maxWidth: '1024px', margin: '0 auto'}}>
+                <div className="row">
+                    <a className="pull-right" style={{marginRight: '20px'}} onClick={() => firebase.auth().signOut()}>Sign-out</a>
+                </div>
                 {this.breadcrumbs}
                 {this.content}
                 { this.showModal }
-                <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
                </div>
             </div>
         );
