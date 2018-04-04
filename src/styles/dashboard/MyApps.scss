@@ -1,10 +1,10 @@
 .my-apps {
     .panel-default {
         height: 130px;
-        cursor: pointer;
 
         .panel-heading {
             text-transform: uppercase;
+            cursor: pointer;
         }
         .trash {
             position: relative;

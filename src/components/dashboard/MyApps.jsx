@@ -21,10 +21,12 @@ class MyApps extends React.Component {
         return(
             <div>
                 <div 
-                    className="panel panel-default"
-                    onClick={(selectedApp) => this.props.onChangeSelectedApp(this.props.appInfo)}
+                    className="panel panel-default">
+                    <div className="panel-heading"
+                        onClick={(selectedApp) => this.props.onChangeSelectedApp(this.props.appInfo)}
                     >
-                    <div className="panel-heading">{ this.props.appInfo.name }</div>
+                        { this.props.appInfo.name }
+                    </div>
                     <div className="panel-body">
                         <div className="trash">
                             { this.props.children }

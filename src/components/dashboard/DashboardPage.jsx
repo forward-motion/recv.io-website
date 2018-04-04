@@ -36,6 +36,7 @@ class DashboardPage extends React.Component {
         this.onChangeSelectedApp = this.onChangeSelectedApp.bind(this);
         this.onChangeSubView = this.onChangeSubView.bind(this);
         this.onShowModal = this.onShowModal.bind(this);
+        this.handleClose = this.handleClose.bind(this);
         this.onDeleteApp = this.onDeleteApp.bind(this);
         this.onUserLogin = this.onUserLogin.bind(this);
     }
@@ -48,12 +49,14 @@ class DashboardPage extends React.Component {
 
     onShowModal() {
 
-        console.log('I was clicked');
-        
-
         let show = this.state.show ? false : true; 
 
         this.setState({ show : show });
+    }
+
+    handleClose() {
+
+        this.setState({show : false})
     }
 
     onDeleteApp() {
@@ -80,20 +83,18 @@ class DashboardPage extends React.Component {
     get showModal() {
 
         console.log('state show', this.state.show);
+
+        return(
+            <Modal show={this.state.show} onHide={this.handleClose}>
+                <Modal.Header>
+                    <Modal.Title>Modal title</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p> Hello World </p>
+                </Modal.Body>
+            </Modal>
+        );
         
-        
-        return this.state.show ? 
-            (
-                <Modal>
-                    <Modal.Header>
-                        <Modal.Title>Modal title</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <p> Hello World </p>
-                    </Modal.Body>
-                </Modal>
-                
-            ) : null;
     }
 
     get breadcrumbs() {
@@ -183,10 +184,12 @@ class DashboardPage extends React.Component {
 
         return (
             <div className="dashboard-page">
+               <div style={{maxWidth: '1024px', margin: '0 auto'}}>
                 {this.breadcrumbs}
                 {this.content}
                 { this.showModal }
                 <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+               </div>
             </div>
         );
     }
