@@ -13,10 +13,10 @@ const HomePage = () => (
           <div className="tagline col-md-6">
             <h1>Some Tagline</h1>
               <ul>
-                <li>Global Network</li>
-                <li>Global Network</li>
-                <li>Global Network</li>
-                <li>Global Network</li>
+                <li>Global Pub/Sub Network</li>
+                <li>Guarenteed Message Delivery</li>
+                <li>Websockets or Native </li>
+                <li>Durable Queue of Messages</li>
               </ul>
           </div>
           <div className="data-animation col-md-6">
@@ -47,39 +47,51 @@ const HomePage = () => (
           <div className="col-md-12"><h3>Look familiar? If you know Socket.io you know recv.io </h3></div>
         </div>
         <div className="extras-header row">
-          <div className="col-md-12"><h3>With some extras</h3></div>
+          <div className="col-md-12"><h3>With some extras ...</h3></div>
         </div>
 
-        <div className="extras extras-left row">
-          <div className="col-md-6">
-            <h3> Globaly Scalable </h3>
-            <span> body test about things </span>
+        <div className="extras row">
+          <div className="extras-left col-md-6">
+            <div>
+              <h3> Globaly Scalable </h3>
+              <span> 1000's of Devices </span>
+            </div>
           </div>
-          <div className="extras extras-right col-md-6">
-            <h3> Native MQTT </h3>
-            <span> body test about things </span>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="extras extras-left col-md-6">
-            <h3> Guarenteed Delivery </h3>
-            <span> body test about things </span>
-          </div>
-          <div className="extras extras-right col-md-6">
-            <h3> Retrieve Missed Messages </h3>
-            <span> body test about things </span>
+          <div className="extras-right col-md-6">
+            <div>
+              <h3> Native MQTT </h3>
+              <span> For IOT Devices </span>
+            </div>
           </div>
         </div>
 
-        <div className="row">
-          <div className="extras extras-left col-md-6">
-            <h3> Casual Ordering </h3>
-            <span> body test about things </span>
+        <div className="extras row">
+          <div className="extras-left col-md-6">
+            <div>
+              <h3> Guarenteed Delivery </h3>
+              <span> To Any Device, Any Location, Regardless of Connection Stability </span>
+            </div>
           </div>
-          <div className="extras extras-right col-md-6">
-            <h3> Durable Queue </h3>
-            <span> body test about things </span>
+          <div className="extras-right col-md-6">
+            <div>
+              <h3> Retrieve Missed Messages </h3>
+              <span> For Up To 24 Hours of Being Disconnected </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="extras row">
+          <div className="extras-left col-md-6">
+            <div>
+              <h3> Casual Ordering </h3>
+              <span> Means Messages Always Arrive in the Correct Order </span>
+            </div>
+          </div>
+          <div className="extras-right col-md-6">
+            <div>
+              <h3> Durable Queue </h3>
+              <span> All Messages for Asynchronous Server Side Processing</span>
+            </div>
           </div>
         </div>
 
