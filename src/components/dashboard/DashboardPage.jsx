@@ -2,6 +2,10 @@ import React from 'react';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 import VirtualizedSelect from 'react-virtualized-select';
 
+import Overview from './my-apps-subviews/Overview.jsx';
+import Keys from './my-apps-subviews/Keys.jsx';
+import Data from './my-apps-subviews/Data.jsx';
+import Plan from './my-apps-subviews/Plan.jsx';
 import Login from './Login.jsx';
 import App from './App.jsx';
 import MyAccount from './MyAccount.jsx';
@@ -21,6 +25,7 @@ class DashboardPage extends React.Component {
 
         this.state = {
             view: {label: 'my-apps', value: 'my-apps'},
+            subView: 'overview',
             selectedApp: null,
             deleteApp: null,
             show: false,
@@ -211,12 +216,64 @@ class DashboardPage extends React.Component {
         });
     }
 
+    get subview() {
+
+        switch (this.state.subView) {
+            case 'overview':
+                return (
+                    <Overview selectedApp={this.state.selectedApp} />
+                );
+            case 'keys':
+                return (
+                    <Keys selectedApp={this.state.selectedApp} />
+                );
+            case 'data':
+                return (
+                    <Data selectedApp={this.state.selectedApp} />
+                );
+            case 'plan':
+                return (
+                    <Plan selectedApp={this.state.selectedApp} />
+                );
+        }
+    }
+
+    get subViewBtn() {
+        const subViewButtons = ['overview', 'keys', 'data', 'plan'];
+
+        return subViewButtons.map((btn) => {
+            return(
+                <div className="subview-buttons">
+                    <button
+                        name={btn}
+                        className={`btn ${this.state.subView == btn ? 'active' : null}`}
+                        onClick={() => this.setState({ subView : btn })}
+                    >   
+                        { btn }
+                        <div className={`underline ${this.state.subView == btn ? 'active' : null}`}></div>
+                    </button>
+                </div>
+            );
+        })
+
+    }
+
     get selectedApp() {
+
         return(
             <div>
-                <h1>Selected App</h1>
+                
+                <div className="row">
+                    <div className="subview-button-layout">
+                        { this.subViewBtn }
+                    </div>
+                </div>
+
+                <div className="row">
+                    { this.subview }
+                </div>
             </div>
-        )
+        );
     }
 
     get content() {
@@ -224,23 +281,21 @@ class DashboardPage extends React.Component {
         switch(this.state.view.label) {
             case 'my-apps':
                 return (
-                    <div className="container-fluid">
-                        <div className="my-apps">
-                            <div className="row">
-                            <div className="col-md-3 pull-right">
-                                <div style={{marginBottom: '50px', textAlign: 'right'}}>
-                                    <button 
-                                        className="btn btn-default"
-                                        onClick={() => this.onShowModal('create app', null)}
-                                    >
-                                        Create App
-                                    </button>
-                                </div>
+                    <div className="my-apps">
+                        <div className="row">
+                        <div className="col-md-3 pull-right">
+                            <div style={{marginBottom: '50px', textAlign: 'right'}}>
+                                <button 
+                                    className="btn btn-default"
+                                    onClick={() => this.onShowModal('create app', null)}
+                                >
+                                    Create App
+                                </button>
                             </div>
-                            </div>
-                            <div className="row">
-                                { !this.state.selectedApp ? this.userApps : this.selectedApp }
-                            </div>
+                        </div>
+                        </div>
+                        <div className="row">
+                            { !this.state.selectedApp ? this.userApps : this.selectedApp }
                         </div>
                     </div>
                 );
@@ -265,9 +320,11 @@ class DashboardPage extends React.Component {
                 <div className="row">
                     <a className="pull-right" style={{marginRight: '20px'}} onClick={() => firebase.auth().signOut()}>Sign-out</a>
                 </div>
-                {this.breadcrumbs}
-                {this.content}
-                { this.showModal }
+                <div className="container-fluid">
+                    {this.breadcrumbs}
+                    {this.content}
+                    { this.showModal }
+                </div>
                </div>
             </div>
         );
