@@ -1,0 +1,25 @@
+.dashboard-page {
+
+    .Select-control {
+        border: none; 
+        border-radius: 0; 
+        background: transparent; 
+        top: 15px; 
+        width: 130px;
+    }
+
+    .breadcrumb {
+        .btn-breadcrumb-removal {
+            border: none; 
+            background: transparent;
+            position: relative;
+            bottom: 11px; 
+            font-size: 11px; 
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+   
+}

@@ -17,7 +17,11 @@ const uiConfig = {
 const Login = ({ firebase }) => (
     <div>
 
-        <h1>Login</h1>
+        <div className="row">
+            <div className="col-md-12">
+                <h1>Login with</h1>
+            </div>
+        </div>
 
         <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
 
