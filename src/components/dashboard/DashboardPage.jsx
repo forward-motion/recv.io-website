@@ -42,7 +42,7 @@ class DashboardPage extends React.Component {
 
     onChangeView(selectedOption) {
 
-        this.setState({ view: selectedOption});
+        this.setState({ view: selectedOption, selectedApp : null});
         
     }
 
@@ -166,8 +166,20 @@ class DashboardPage extends React.Component {
                         onChange={this.onChangeView}
                     />
                 </li>
-                <li>app e</li>
-                <li className="active">Data</li>
+                {(() => {
+                    
+                    return this.state.selectedApp !== null ? 
+                        (
+                            <li> 
+                                { this.state.selectedApp.name } 
+                                <button
+                                    className="btn btn-breadcrumb-removal" 
+                                    onClick={() => this.setState({ selectedApp : null })}> 
+                                        x 
+                                </button> 
+                            </li>
+                        ) : null
+                })()}
             </ol>
         );
     }
