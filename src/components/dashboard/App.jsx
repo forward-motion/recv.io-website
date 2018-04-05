@@ -6,7 +6,7 @@ import Data from './my-apps-subviews/Data.jsx';
 import Plan from './my-apps-subviews/Plan.jsx';
 
 import '../../../node_modules/font-awesome/css/font-awesome.css';
-import '../../styles/dashboard/MyApps.scss';
+import '../../styles/dashboard/App.scss';
 
 class MyApps extends React.Component {
 

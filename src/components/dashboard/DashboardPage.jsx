@@ -1,23 +1,16 @@
 import React from 'react';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
+import VirtualizedSelect from 'react-virtualized-select';
 
 import Login from './Login.jsx';
-import MyApps from './MyApps.jsx';
+import App from './App.jsx';
 import MyAccount from './MyAccount.jsx';
-import user from '../../data/apps.js'; 
 import ModalApp from './Modal.jsx';
 
 // app styles 
 import '../../styles/dashboard/DashboardPage.scss';
 
-// import default styles.
-import 'react-select/dist/react-select.css';
-import 'react-virtualized/styles.css';
-import 'react-virtualized-select/styles.css';
-
-// Then import the virtualized Select HOC
-import VirtualizedSelect from 'react-virtualized-select';
-
+import user from '../../data/apps.js';
 
 
 class DashboardPage extends React.Component {
@@ -59,13 +52,11 @@ class DashboardPage extends React.Component {
     }
 
     onShowModal(type, app) {
-
-        let show = this.state.show ? false : true; 
-
+        
         //let type = e.currentTarget.name;
         
 
-        this.setState({ show : show, modalType: type , deleteApp: app});
+        this.setState({ show : !this.state.show, modalType: type , deleteApp: app});
     }
 
     handleClose() {
@@ -167,7 +158,8 @@ class DashboardPage extends React.Component {
         return (
 
             <ol className="breadcrumb">
-                <li><VirtualizedSelect 
+                <li>
+                    <VirtualizedSelect
                         value={this.state.view}
                         options={this.props.views}
                         clearable={false}
@@ -188,7 +180,7 @@ class DashboardPage extends React.Component {
         return this.state.userApps.map((app, index) => {
             return(
                 <div className="col-md-3">
-                    <MyApps
+                    <App
                         key={index}
                         appInfo={app}
                         onChangeSelectedApp={this.onChangeSelectedApp}>
@@ -201,7 +193,7 @@ class DashboardPage extends React.Component {
                                     className="fa fa-trash">
                                 </i>
                             </button>
-                    </MyApps>
+                    </App>
                 </div>
             );
         });
@@ -239,7 +231,7 @@ class DashboardPage extends React.Component {
                             </div>
                         </div>
                     </div>
-                )
+                );
             case 'my-account':
                 return (<MyAccount />);
         }

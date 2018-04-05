@@ -16,6 +16,6 @@ const ModalApp = (props) => {
             </Modal.Footer>
         </Modal>
     );
-}
+};
 
 export default ModalApp; 
