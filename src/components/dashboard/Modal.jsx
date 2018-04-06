@@ -12,7 +12,7 @@ const ModalApp = (props) => {
                 { props.children }
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={(app) => props.functionalApp(props.appName)}>{props.buttonType}</Button>
+                <Button onClick={props.handleClose}> Cancel </Button>
             </Modal.Footer>
         </Modal>
     );
