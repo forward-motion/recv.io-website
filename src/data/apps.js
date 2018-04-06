@@ -3,15 +3,15 @@ const data = [
         name: "my-app-1",
         stats: [
             {
-                type: "a",
+                type: "stat a",
                 key: "xxxxxxxx"
             },
             {
-                type: "b",
+                type: "stat b",
                 key: "xxxxxxxx"
             },
             {
-                type: "c",
+                type: "stat c",
                 key: "xxxxxxxx"
             }
         ]
@@ -20,15 +20,15 @@ const data = [
         name: "my-app-2",
         stats: [
             {
-                type: "a",
+                type: "stat a",
                 key: "xxxxxxxx"
             },
             {
-                type: "b",
+                type: "stat b",
                 key: "xxxxxxxx"
             },
             {
-                type: "c",
+                type: "stat c",
                 key: "xxxxxxxx"
             }
         ]
@@ -37,15 +37,15 @@ const data = [
         name: "my-app-3",
         stats: [
             {
-                type: "a",
+                type: "stat a",
                 key: "xxxxxxxx"
             },
             {
-                type: "b",
+                type: "stat b",
                 key: "xxxxxxxx"
             },
             {
-                type: "c",
+                type: "stat c",
                 key: "xxxxxxxx"
             }
         ]
@@ -54,15 +54,15 @@ const data = [
         name: "my-app-4",
         stats: [
             {
-                type: "a",
+                type: "stat a",
                 key: "xxxxxxxx"
             },
             {
-                type: "b",
+                type: "stat b",
                 key: "xxxxxxxx"
             },
             {
-                type: "c",
+                type: "stat c",
                 key: "xxxxxxxx"
             }
         ]
