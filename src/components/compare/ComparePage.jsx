@@ -44,7 +44,22 @@ class ComparePage extends Component {
       price: 100,
       feature_a: 'Feature Stuff',
       feature_b: 'Feature Things',
-    }]
+    }];
+    const columns = [{
+      Header: '',
+      accessor: 'name'
+    }, {
+      Header: 'Price',
+      accessor: 'price',
+      // Cell: props => <span>{props.value}</span> // Custom cell components!
+    }, {
+      Header: 'Feature A',
+      accessor: 'feature_a',
+    }, {
+      Header: 'Feature B',
+      accessor: 'feature_b',
+    }];
+
     return(
       <div className="compare-page container">
         <h1>Compare Page</h1>

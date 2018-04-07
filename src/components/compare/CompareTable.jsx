@@ -15,14 +15,16 @@ export default class CompareTable extends Component {
     }, {
       Header: 'Price',
       accessor: 'price',
-      // Cell: props => <span>{props.value}</span> // Custom cell components!
+      Cell: props => <div className="value">{props.value}</div>
     }, {
       Header: 'Feature A',
       accessor: 'feature_a',
+      Cell: props => <div className="value">{props.value}</div>
     }, {
       Header: 'Feature B',
       accessor: 'feature_b',
-    },
+      Cell: props => <div className="value">{props.value}</div>
+    }
   ]
     return(
       <ReactTable
