@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import Link from 'gatsby-link';
 import '../../styles/blog/PopularArticles.scss';
 
 const articleLinks = (props) => {
   return props.articles.map((article)=>{
     return(
-      <div key={article.id} className="article-link">
-        <h4>{article.title}</h4>
-        <span>{article.date}</span>
-      </div>
+      <Link to="#">
+        <div key={article.id} className="article-link">
+          <h4>{article.title}</h4>
+          <span>{article.date}</span>
+        </div>
+      </Link>
     );
   })
 }

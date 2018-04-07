@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import VirtualizedSelect from 'react-virtualized-select';
 import BlogPreview from './BlogPreview';
 import PopularArticles from './PopularArticles';
+import Link from 'gatsby-link';
 
 import '../../styles/blog/BlogPage.scss';
 
@@ -33,7 +34,7 @@ export default class BlogPage extends Component {
   }
 
   updateEmail(e) {
-    //@TODO: preventDefault() not working;
+    //@TODO: preventDefault() not working
     e.preventDefault();
     this.setState({
       email: e.target.value
@@ -43,12 +44,14 @@ export default class BlogPage extends Component {
     return(
       blogData.map((article)=>{
         return(
+          <Link to="#">
           <BlogPreview
               key={article.id}
               title={article.title}
               subtitle={article.subtitle}
               date={article.date}
               article={article.article}/>
+          </Link>
         );
       })
     );

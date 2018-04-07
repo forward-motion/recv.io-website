@@ -1,4 +1,10 @@
 .blog-page {
+  a {
+    color: black;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
   .social-icon {
     text-align: center;
   }
