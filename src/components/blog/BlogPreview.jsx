@@ -8,7 +8,10 @@ export default class BlogPreview extends Component {
   render() {
     return(
       <div className="blog-preview">
-        ARTICLE PREVIEW
+        <h2>{this.props.title}</h2>
+        <span>{this.props.date}</span>
+        <div style={{background:"url(http://via.placeholder.com/350x150)", height:150, width:350}}></div>
+        <div>{this.props.article}</div>
       </div>
     );
   }
