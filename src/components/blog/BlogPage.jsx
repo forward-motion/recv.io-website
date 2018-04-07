@@ -7,22 +7,7 @@ import Link from 'gatsby-link';
 
 import '../../styles/blog/BlogPage.scss';
 
-let blogData = [
-  {
-    id:1,
-    title: "title article 1",
-    subtitle: "subtitle",
-    date: "2017_01_01",
-    image: "http://via.placeholder.com/350x150",
-    article:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  },{
-    id:2,
-    title: "title article 2",
-    subtitle: "subtitle",
-    date: "2017_01_02",
-    image: "http://via.placeholder.com/350x150",
-    article:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
-  }];
+
 
 
 export default class BlogPage extends Component {
@@ -32,7 +17,7 @@ export default class BlogPage extends Component {
 
   get showBlogs() {
     return(
-      blogData.map((article)=>{
+      this.props.blogData.map((article)=>{
         return(
           <Link key={article.id} to="#">
             <BlogPreview
@@ -73,7 +58,7 @@ export default class BlogPage extends Component {
             <div className="search"><VirtualizedSelect /></div>
             <div className="popular-articles">
               <h3> Popular Articles </h3>
-              <PopularArticles articles={blogData}/>
+              <PopularArticles articles={this.props.blogData}/>
             </div>
             <div className="social-media">
               <h3> Social Media </h3>
@@ -85,5 +70,22 @@ export default class BlogPage extends Component {
       </div>
     );
   }
-
+}
+BlogPage.defaultProps = {
+  blogData:[
+    {
+      id:1,
+      title: "title article 1",
+      subtitle: "subtitle",
+      date: "2017_01_01",
+      image: "http://via.placeholder.com/350x150",
+      article:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    },{
+      id:2,
+      title: "title article 2",
+      subtitle: "subtitle",
+      date: "2017_01_02",
+      image: "http://via.placeholder.com/350x150",
+      article:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+    }]
 }
