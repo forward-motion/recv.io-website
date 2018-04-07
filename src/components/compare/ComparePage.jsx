@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Link from 'gatsby-link';
-import Slider from 'react-rangeslider'
+import Slider from 'react-rangeslider';
+import CompareTable from './CompareTable';
+
 
 import '../../styles/compare/ComparePage.scss';
 
@@ -32,6 +34,17 @@ class ComparePage extends Component {
     });
   }
   render(){
+    const data = [{
+      name: 'Socket.io',
+      price: 26,
+      feature_a: 'Feature Stuff',
+      feature_b: 'Feature Things',
+    },{
+      name: 'recv.io',
+      price: 100,
+      feature_a: 'Feature Stuff',
+      feature_b: 'Feature Things',
+    }]
     return(
       <div className="compare-page container">
         <h1>Compare Page</h1>
@@ -125,6 +138,7 @@ class ComparePage extends Component {
         <div className="row">
           <div className="col-md-12">
             <h2>Results:</h2>
+            <CompareTable data={data}/>
           </div>
         </div>
       </div>
