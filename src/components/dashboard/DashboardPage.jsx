@@ -48,7 +48,9 @@ class DashboardPage extends React.Component {
         this.onDeleteKey = this.onDeleteKey.bind(this);
         this.handleUserEnter = this.handleUserEnter.bind(this);
         this.onUpgradePlan = this.onUpgradePlan.bind(this);
+        this.onDeleteAccount = this.onDeleteAccount.bind(this);
     }
+
 
     onChangeView(selectedOption) {
 
@@ -76,13 +78,31 @@ class DashboardPage extends React.Component {
         this.setState({show : false})
     }
 
+
+    onDeleteAccount() {
+
+        /* Todo 
+        ** Need to implement the api to actually delete the account and erase all the data 
+        ** tied to this account.
+        */
+        
+        const { firebase }  = this.props;
+
+        location.reload();
+        firebase.auth().signOut();
+    }
+
+
     onDeleteApp(delete_app) {
 
-        let selectedAppToDelete = this.state.userApps.filter((app) => {
-            return app.name !== delete_app; 
-        }); 
+        if( this.state.userApps ) {
 
-        this.setState({userApps : selectedAppToDelete, show: false})
+            let selectedAppToDelete = this.state.userApps.filter((app) => {
+                return app.name !== delete_app; 
+            }); 
+    
+            this.setState({userApps : selectedAppToDelete, show: false})
+        }
         
         
     }
@@ -292,6 +312,18 @@ class DashboardPage extends React.Component {
                             { this.selectedAPlan }
                     </ModalApp>
                 );
+            case 'delete account':
+                return(
+                    <ModalApp 
+                        name={this.state.modalType} 
+                        handleClose={this.handleClose} 
+                        functionalApp={this.handleClose}
+                        show={this.state.show}>
+                            <p>Delete Account</p>
+                            <p>Warning all of your apps and data will also be erased. This action can't be undone</p>
+                            <button className="btn btn-default" onClick={ this.onDeleteAccount }> Delete </button>
+                    </ModalApp>
+                );
         }
 
         
@@ -478,7 +510,18 @@ class DashboardPage extends React.Component {
                     </div>
                 );
             case 'my-account':
-                return (<MyAccount />);
+                const { user } = this.props;
+                const loggedCredentials = user.providerData[0];
+                
+
+                return ( 
+                            <MyAccount 
+                                displayName={ loggedCredentials.displayName } 
+                                provider={ loggedCredentials.providerId }
+                                email={ loggedCredentials.email }
+                                onShowModal={this.onShowModal}
+                            /> 
+                        );
         }
     }
 
@@ -486,6 +529,7 @@ class DashboardPage extends React.Component {
 
 
         const { user, firebase } = this.props;
+        
 
 
         if (!user) {

@@ -1,9 +1,32 @@
 import React from 'react';
 
-const MyAccount = () => (
-    <div>
+import '../../styles/dashboard/MyAccount.scss';
 
-        <h1>MyAccount</h1>
+const MyAccount = (props) => (
+
+    <div className="container-fluid my-account-page">
+
+        <div className="row">
+
+            <div className="col-md-12">
+
+                <p>
+                    Hey <span className="display-name">{ props.displayName }</span> you are currently signed in via <span className="provider-id"> { props.provider }</span>
+                </p>
+
+            </div>
+
+
+        </div>
+
+        <div className="row">
+            <div className="col-md-12">
+                <p>Delete your account</p>
+            </div>
+            <div className="col-md-4">
+                <button className="btn btn-default" onClick={ () => props.onShowModal('delete account', null) }> Delete </button>
+            </div>
+        </div>
 
     </div>
 );
