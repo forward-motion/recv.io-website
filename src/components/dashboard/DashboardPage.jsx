@@ -33,8 +33,8 @@ class DashboardPage extends React.Component {
             userApps: user,
             createdApp: '',
             createdKeyApi: '',
-            deleteKey: null
-
+            deleteKey: null,
+            userPlan: 'free'
         };
 
         this.onChangeView = this.onChangeView.bind(this);
@@ -47,6 +47,7 @@ class DashboardPage extends React.Component {
         this.onCreateKey = this.onCreateKey.bind(this);
         this.onDeleteKey = this.onDeleteKey.bind(this);
         this.handleUserEnter = this.handleUserEnter.bind(this);
+        this.onUpgradePlan = this.onUpgradePlan.bind(this);
     }
 
     onChangeView(selectedOption) {
@@ -141,6 +142,59 @@ class DashboardPage extends React.Component {
         this.setState({ subView });
     }
 
+    onUpgradePlan() {
+
+        this.setState({ show: false,  userPlan : 'paid' })
+    }
+
+    get selectedAPlan() {
+
+        if(this.state.userPlan == 'free') {
+            return (
+                <form>
+                    <FormGroup
+                        controlId="formBasicText"
+                    >
+                        <ControlLabel>Stripe Flow</ControlLabel>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <FormControl
+                                    type="text"
+                                    name="Full Name"
+                                    placeholder="Enter text"
+                                />
+                            </div>
+                            <div className="col-md-6">
+                                <FormControl
+                                    type="text"
+                                    name="Credit Card"
+                                    placeholder="Enter text"
+                                />
+                            </div>
+                            <div className="col-md-3 pull-right" style={{marginTop: '20px' }}>
+                                <Button style={{width: '100%'}} onClick={this.onUpgradePlan}>Upgrade</Button>
+                            </div>
+                        </div>
+                        
+                    </FormGroup>
+                </form>
+            );
+        } else if(this.state.userPlan == 'paid') {
+
+            return (
+                
+                <div>
+                    <p>
+                        Interested in a sandalone  network, click the button below,
+                        and we will email you
+                    </p>
+                    <button className="bt btn-default">Contact</button>
+                </div>
+            );
+            
+        }
+    }
+
     get showModal() {
 
         switch(this.state.modalType) {
@@ -207,7 +261,7 @@ class DashboardPage extends React.Component {
                         <FormGroup
                             controlId="formBasicText"
                         >
-                            <ControlLabel>Key ost-fix</ControlLabel>
+                            <ControlLabel>Key post-fix</ControlLabel>
                             <div className="row">
                                 <div className="col-md-6">
                                 <FormControl
@@ -227,7 +281,19 @@ class DashboardPage extends React.Component {
                         </form>
                     </ModalApp>
                 );
+            case 'upgrade': 
+                return(
+                    <ModalApp 
+                        name={this.state.modalType} 
+                        handleClose={this.handleClose} 
+                        functionalApp={this.handleClose}
+                        show={this.state.show}>
+                            <p>Upgrade Plan</p>
+                            { this.selectedAPlan }
+                    </ModalApp>
+                );
         }
+
         
     }
 
@@ -272,8 +338,6 @@ class DashboardPage extends React.Component {
     }
 
     get userApps() {
-
-        console.log('user', user);
         
 
         return this.state.userApps.map((app, index) => {
@@ -323,7 +387,7 @@ class DashboardPage extends React.Component {
                 );
             case 'plan':
                 return (
-                    <Plan selectedApp={this.state.selectedApp} />
+                    <Plan selectedApp={this.state.selectedApp} currentPlan={this.state.userPlan} />
                 );
         }
     }
@@ -390,6 +454,18 @@ class DashboardPage extends React.Component {
                                                 onClick={() => this.onShowModal('create key', null)}
                                             >
                                                 Create Key
+                                            </button>
+                                        ) : null; 
+                                })()}
+                                {(() => {
+                                    return this.state.subView === 'plan' ? 
+                                        (
+                                            <button 
+                                                className="btn btn-default"
+                                                style={{marginLeft: '10px'}}
+                                                onClick={() => this.onShowModal('upgrade', null)}
+                                            >
+                                                Upgrade
                                             </button>
                                         ) : null; 
                                 })()}
