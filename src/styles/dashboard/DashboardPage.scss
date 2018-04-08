@@ -1,0 +1,56 @@
+.dashboard-page {
+
+    .Select-control {
+        border: none; 
+        border-radius: 0; 
+        background: transparent; 
+        top: 15px; 
+        width: 130px;
+    }
+
+    .breadcrumb {
+        .btn-breadcrumb-removal {
+            border: none; 
+            background: transparent;
+            position: relative;
+            bottom: 11px; 
+            font-size: 11px; 
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .subview-button-layout {
+        margin: 0 auto;
+        width: 400px;
+
+        .subview-buttons {
+            display: inline;
+            margin-left: 20px;
+            
+            button {
+                background: none;
+                font-size: 20px;
+
+                &.active {
+                    box-shadow: none; 
+                    color: lightgrey;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            .underline {
+                &.active {
+                    border-top: 1px solid black;
+                }
+            }
+        }
+    }
+   
+}

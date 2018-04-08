@@ -1,0 +1,24 @@
+.my-apps {
+    .panel-default {
+        height: 130px;
+
+        .panel-heading {
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .trash {
+            position: relative;
+            width: 100%; 
+    
+            .trash-btn {
+                position: absolute;
+                right: 0;
+                bottom: -60px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
