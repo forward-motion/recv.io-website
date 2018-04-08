@@ -1,0 +1,23 @@
+.data-page {
+
+    margin-top: 50px;
+
+    .table-btn-selector {
+        display: block; 
+        text-transform: uppercase;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .under-line {
+        
+        margin-bottom: 20px;
+
+        &.active {
+            border-top: 1px solid black;
+            width: 70%;
+        } 
+    }
+}
