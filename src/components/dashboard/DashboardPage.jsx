@@ -31,7 +31,9 @@ class DashboardPage extends React.Component {
             show: false,
             modalType: null,
             userApps: user,
-            createdApp: ''
+            createdApp: '',
+            createdKeyApi: '',
+            deleteKey: null
 
         };
 
@@ -42,6 +44,8 @@ class DashboardPage extends React.Component {
         this.handleClose = this.handleClose.bind(this);
         this.onDeleteApp = this.onDeleteApp.bind(this);
         this.onCreateApp = this.onCreateApp.bind(this);
+        this.onCreateKey = this.onCreateKey.bind(this);
+        this.onDeleteKey = this.onDeleteKey.bind(this);
         this.handleUserEnter = this.handleUserEnter.bind(this);
     }
 
@@ -53,13 +57,15 @@ class DashboardPage extends React.Component {
 
     handleUserEnter(e) {
 
-        this.setState({ createdApp : e.target.value })
+        if( e.target.name == 'create app') {
+
+            this.setState({ createdApp : e.target.value })
+        } else {
+            this.setState({ createdKeyApi : e.target.value })
+        }
     }
 
     onShowModal(type, app) {
-        
-        //let type = e.currentTarget.name;
-        
 
         this.setState({ show : !this.state.show, modalType: type , deleteApp: app});
     }
@@ -80,16 +86,49 @@ class DashboardPage extends React.Component {
         
     }
 
-    onCreateApp() {
-        console.log('it was created');
-        
-        let usersApps = this.state.userApps; 
-        usersApps.push({
-            name: this.state.createdApp,
-            stats: [{type: '', key: ''},{type: '', key: ''},{type: '', key: ''}]
+    onDeleteKey(delete_key) {
+
+
+        let modifiedAppKeys = this.state.selectedApp.keys.filter((key) => {
+            return key.api !== delete_key.api;
         });
 
-        this.setState({ userApps: usersApps, show: false });
+        let selectedApp = this.state.selectedApp; 
+        selectedApp.keys = modifiedAppKeys; 
+
+        this.setState({ show : false, selectedApp : selectedApp  });
+        
+    }
+
+    onCreateApp() {
+        
+        let usersApps = this.state.userApps; 
+        let newlyCreatedApp = {
+            name: this.state.createdApp,
+            stats: [{type: 'stat a', key: 'no stats yet'},{type: 'stat b', key: 'no stats yet'},{type: 'stat c', key: 'no stats yet'}],
+            keys:[]
+        }; 
+
+        usersApps.push(newlyCreatedApp);
+
+        this.setState({ userApps: usersApps, show: false, selectedApp :  newlyCreatedApp, createdApp: '', subView : 'overview'});
+    }
+
+    onCreateKey() { 
+
+        let keys = [];
+
+        let newSetOfKeys = {
+            api : `key-xxxxxxxxxxxx-app-${this.state.createdKeyApi}`,
+            secret : 'xxxx',
+            date : 1523048292239
+        }; 
+
+        let updatedSelectedApp = this.state.selectedApp;
+        updatedSelectedApp.keys.push(newSetOfKeys);
+        
+        this.setState({ show : false, selectedApp : updatedSelectedApp, createdKeyApi : '' });
+
     }
 
     onChangeSelectedApp(selectedApp) {
@@ -109,12 +148,19 @@ class DashboardPage extends React.Component {
                 return(
                     <ModalApp 
                         name={this.state.modalType} 
-                        handleClose={this.handleClose} 
-                        functionalApp={this.onDeleteApp}
-                        show={this.state.show} 
-                        appName={this.state.deleteApp.name}
-                        buttonType="Delete">
-                        <p>Want to delete {this.state.deleteApp.name}</p>
+                        handleClose={this.handleClose}
+                        show={this.state.show}>
+                        <div className="container-fluid">
+                            <div className="row">
+                                <p>Want to delete {this.state.deleteApp.name}</p>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-3 pull-right">
+                                    <Button onClick={() => this.onDeleteApp(this.state.deleteApp.name)}>Delete App</Button>
+                                </div>
+                            </div>
+                        </div>
+
                     </ModalApp>
                 );
             case 'create app':
@@ -122,9 +168,8 @@ class DashboardPage extends React.Component {
                     <ModalApp 
                         name={this.state.modalType} 
                         handleClose={this.handleClose} 
-                        functionalApp={this.handleClose}
-                        show={this.state.show}
-                        buttonType="Cancel">
+                        closeModal={this.handleClose}
+                        show={this.state.show}>
                         <p>Create App</p>
                         <form>
                         <FormGroup
@@ -136,6 +181,7 @@ class DashboardPage extends React.Component {
                                 <FormControl
                                     type="text"
                                     value={this.state.createdApp}
+                                    name="create app"
                                     placeholder="Enter text"
                                     onChange={this.handleUserEnter}
                                 />
@@ -149,16 +195,43 @@ class DashboardPage extends React.Component {
                         </form>
                     </ModalApp>
                 );
+            case 'create key': 
+                return(
+                    <ModalApp 
+                        name={this.state.modalType} 
+                        handleClose={this.handleClose} 
+                        functionalApp={this.handleClose}
+                        show={this.state.show}>
+                        <p>Create Key</p>
+                        <form>
+                        <FormGroup
+                            controlId="formBasicText"
+                        >
+                            <ControlLabel>Key ost-fix</ControlLabel>
+                            <div className="row">
+                                <div className="col-md-6">
+                                <FormControl
+                                    type="text"
+                                    value={this.state.createdKeyApi}
+                                    name="create key"
+                                    placeholder="Enter text"
+                                    onChange={this.handleUserEnter}
+                                />
+                                </div>
+                                <div className="col-md-3">
+                                    <Button onClick={this.onCreateKey}>Create Key</Button>
+                                </div>
+                            </div>
+                            
+                        </FormGroup>
+                        </form>
+                    </ModalApp>
+                );
         }
         
     }
 
     get breadcrumbs() {
-
-        // render a dropdown that can toggle the view, then the selected app (if any), then the subview.
-
-        console.log('App selected', this.state.selectedApp);
-        
 
         return (
 
@@ -179,11 +252,20 @@ class DashboardPage extends React.Component {
                                 { this.state.selectedApp.name } 
                                 <button
                                     className="btn btn-breadcrumb-removal" 
-                                    onClick={() => this.setState({ selectedApp : null })}> 
+                                    onClick={() => this.setState({ selectedApp : null, subView : 'overview' })}> 
                                         x 
                                 </button> 
                             </li>
                         ) : null
+                })()}
+                {(() => {
+
+                    return this.state.selectedApp !== null ? 
+                        (
+                            <li> 
+                                { this.state.subView } 
+                            </li>
+                        ) : null 
                 })()}
             </ol>
         );
@@ -225,7 +307,15 @@ class DashboardPage extends React.Component {
                 );
             case 'keys':
                 return (
-                    <Keys selectedApp={this.state.selectedApp} />
+                    <Keys 
+                        selectedApp={this.state.selectedApp} 
+                        show={this.state.show} 
+                        onDeletedKey={this.onDeleteKey} 
+                        onHandleClose={this.handleClose}
+                        onShowModal={this.onShowModal}
+                        modalType={this.state.modalType}
+                        deleteKey={this.state.deleteApp}
+                    />
                 );
             case 'data':
                 return (
@@ -291,6 +381,18 @@ class DashboardPage extends React.Component {
                                 >
                                     Create App
                                 </button>
+                                {(() => {
+                                    return this.state.subView === 'keys' ? 
+                                        (
+                                            <button 
+                                                className="btn btn-default"
+                                                style={{marginLeft: '10px'}}
+                                                onClick={() => this.onShowModal('create key', null)}
+                                            >
+                                                Create Key
+                                            </button>
+                                        ) : null; 
+                                })()}
                             </div>
                         </div>
                         </div>
