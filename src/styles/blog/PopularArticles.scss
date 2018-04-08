@@ -1,0 +1,8 @@
+.popular-articles {
+  .article-link {
+    padding-left: 10px;
+    &:hover, &:focus {
+      color: blue;
+    }
+  }
+}
