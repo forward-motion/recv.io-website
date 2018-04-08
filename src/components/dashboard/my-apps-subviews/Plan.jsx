@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Plan = () => (
-    <div>
+import '../../../styles/dashboard/my-apps-subviews/Plan.scss';
 
-        <h1>Plan</h1>
+const Plan = (props) => (
+    <div className="container-fluid plan-page">
+
+        <div className="row">
+            <p>You are currently on the <span>{ props.currentPlan }</span> plan</p>
+        </div>
 
     </div>
 );
