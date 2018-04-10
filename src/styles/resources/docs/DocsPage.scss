@@ -1,0 +1,19 @@
+.docs-page {
+
+    .btn-sublinks {
+        display: block;
+
+        &:focus {
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none; 
+        }
+
+        &.active {
+            color: lightgrey;
+            outline: none; 
+            -webkit-box-shadow: none;
+            box-shadow: none; 
+        }
+    }
+}
