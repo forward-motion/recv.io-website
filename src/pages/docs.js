@@ -1,3 +1,3 @@
-import DocsPage from '../components/resources/DocsPage.jsx';
+import DocsPage from '../components/docs/DocsPage.jsx';
 
 export default DocsPage; 
