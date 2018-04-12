@@ -1,3 +1,3 @@
-import ExamplesPage from '../components/resources/Examples.jsx';
+import ExamplesPage from '../components/resources/ExamplesPage.jsx';
 
 export default ExamplesPage; 

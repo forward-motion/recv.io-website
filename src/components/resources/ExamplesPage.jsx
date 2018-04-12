@@ -1,8 +1,8 @@
 import React, { Component } from 'react'; 
 
-class Examples extends Component {
+class ExamplesPage extends Component {
     constructor(props) {
-        super(prosp); 
+        super(props); 
     }
 
     render() {
