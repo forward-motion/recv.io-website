@@ -12,4 +12,4 @@ class ExamplesPage extends Component {
     }
 }
 
-export default Examples; 
+export default ExamplesPage; 
