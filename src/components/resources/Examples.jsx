@@ -1,4 +1,4 @@
-import React, { Component } from 'rect'; 
+import React, { Component } from 'react'; 
 
 class Examples extends Component {
     constructor(props) {
