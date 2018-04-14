@@ -1,39 +1,116 @@
+@import '../_global/variables';
+
 .home-page {
-  .extras-header h3 {
-    text-decoration: underline;
-  }
-  .extras {
-    // margin: 0 auto;
-    // max-width: 800px;
-    padding-bottom: 15px;
-  }
-  .extras-left,.extras-right  {
+  color: $font-color;
+  .info-data {
+    border: solid white 1px;
     display: flex;
     justify-content: center;
     align-items: center;
-    div {
-      width: 200px;
+    max-width: 700px;
+    margin: auto;
+    height: 400px;
+    .tagline {
+      ul {
+        margin: 0;
+        padding: 12px;
+      }
+      .tagline-text {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+    }
+    .data-animation {
+      border: solid white 1px;
+      height: 100%;
     }
   }
-  .link-to-features, .sign-in-header,.look-familiar,.extras-header,.sign-in-option-wrapper{
+  .code-sample {
+    height: 400px;
+    background: white;
+  }
+  .extras-header,.extras {
+    background: white;
+    color: black;
+  }
+  .extras-header {
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 25px;
+  }
+  .extras-wrapper {
+    height: 600px;
+    background: white;
+    margin-bottom: 0px;
+    .extras {
+      margin: 0 auto;
+      max-width: 900px;
+      padding-bottom: 15px;
+    }
+    .extras-left,.extras-right  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 450px;
+        height: 120px;
+        border: solid ghostwhite 2px;
+        padding: 0 20px;
+        padding-bottom: 20px;
+        -webkit-box-shadow: 7px 7px 0px -3px $accent-green;
+           -moz-box-shadow: 7px 7px 0px -3px $accent-green;
+                box-shadow: 7px 7px 0px -3px $accent-green;
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .link-to-features, .sign-in-header,.look-familiar,.sign-in-option-wrapper{
     text-align: center;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .look-familiar {
+    height: 200px;
+  }
   .link-to-features {
     border-bottom: solid black 1px;
+    height: 200px;
+    background:$secondary-blue;
+      a {
+        text-decoration: underline;
+        color: $action-purple;
+      }
+  }
+  .sign-in-header {
+    .question-mark {
+      color: $accent-green;
+    }
   }
 
   .sign-in-option-wrapper {
     .sign-in-option {
-      border: solid black 1px;
-      padding: 25px 50px;
-      width: 200px;
+      background: $action-purple;
+      padding: 2px;
+      border-radius: 5px;
     }
   }
   footer {
     height: 50px;
+  }
+}
+@media (max-width: 700px) {
+  .info-data {
+    flex-direction: column;
+    background: red;
+  }
+  .data-animation {
+    height: 60%!important;
   }
 }

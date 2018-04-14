@@ -6,9 +6,13 @@
 
 @import '../ui/ActionButton';
 @import '../ui/ReactTable';
-
+@import '../variables';
 .default-template {
-
+  background: $background;
+  font-family: $recv-font;
+  .container-fluid {
+    padding: 0;
+  }
   /*
   include global styles here
    */
