@@ -50,21 +50,35 @@
       max-width: 900px;
       padding-bottom: 15px;
     }
-    .extras-left,.extras-right  {
+    .extras-parent  {
       display: flex;
       justify-content: center;
       align-items: center;
-      div {
+      .extras-inner {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         width: 450px;
         height: 120px;
         border: solid ghostwhite 2px;
-        padding: 0 20px;
+        padding: 20px;
         padding-bottom: 20px;
         -webkit-box-shadow: 7px 7px 0px -3px $accent-green;
            -moz-box-shadow: 7px 7px 0px -3px $accent-green;
                 box-shadow: 7px 7px 0px -3px $accent-green;
         span {
           font-size: 13px;
+        }
+        .extras-icon {
+          border: solid red 1px;
+          height: 100%;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .extras-icon-inner {
+            border: solid red 1px;
+          }
         }
       }
     }

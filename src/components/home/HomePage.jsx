@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import ExtrasParent from './ExtrasParent';
 
 import '../../styles/home/HomePage.scss';
 
@@ -50,50 +51,8 @@ const HomePage = () => (
             <div className="col-md-12"><h4>with some extras ...</h4></div>
         </div>
         <div className="extras-wrapper">
-          <div className="extras row">
-              <div className="extras-left col-md-6">
-                  <div>
-                      <h3> Globaly Scalable </h3>
-                      <span> 1000's of Devices </span>
-                  </div>
-              </div>
-              <div className="extras-right col-md-6">
-                  <div>
-                      <h3> Native MQTT </h3>
-                      <span> For IOT Devices </span>
-                  </div>
-              </div>
-          </div>
-
-          <div className="extras row">
-              <div className="extras-left col-md-6">
-                  <div>
-                      <h3> Guarenteed Delivery </h3>
-                      <span> To Any Device, Any Location, Regardless of Connection Stability </span>
-                  </div>
-              </div>
-              <div className="extras-right col-md-6">
-                  <div>
-                      <h3> Retrieve Missed Messages </h3>
-                      <span> For Up To 24 Hours of Being Disconnected </span>
-                  </div>
-              </div>
-          </div>
-
-          <div className="extras row">
-              <div className="extras-left col-md-6">
-                  <div>
-                      <h3> Casual Ordering </h3>
-                      <span> Means Messages Always Arrive in the Correct Order </span>
-                  </div>
-              </div>
-              <div className="extras-right col-md-6">
-                  <div>
-                      <h3> Durable Queue </h3>
-                      <span> All Messages for Asynchronous Server Side Processing</span>
-                  </div>
-              </div>
-          </div>
+          <ExtrasParent />
+          
         </div>
         <div className="link-to-features row">
             <div className="col-md-12">
