@@ -24,17 +24,17 @@ class ExamplesPage extends Component {
         this.basic_examples = [
             {
                 app: 'Chat App',
-                icon: 'icon',
+                icon: 'icon-chat',
                 tag: 'simple chat example'
             },
             {
                 app: 'MapApp',
-                icon: 'icon',
+                icon: 'icon-map',
                 tag: 'real-time position tracking'
             },
             {
                 app: 'Website',
-                icon: 'icon',
+                icon: 'icon-website',
                 tag: 'with notifications'
             }
         ]; 
@@ -42,17 +42,17 @@ class ExamplesPage extends Component {
         this.advance_examples = [
             {
                 app: 'WhatSlack',
-                icon: 'icon',
+                icon: 'icon-whatslack',
                 tag: 'a fully featured chat client'
             },
             {
                 app: '{x}uber',
-                icon: 'icon',
+                icon: 'icon-x-uber',
                 tag: 'uber for “x”'
             },
             {
                 app: 'GitFeed',
-                icon: 'icon',
+                icon: 'icon-gitfeed',
                 tag: 'turn GitHub into a social network'
             }
         ];
@@ -66,7 +66,7 @@ class ExamplesPage extends Component {
                         <div className="row">
                             <div className="app-wrapper">
                                 <div className="col-md-2">
-                                    {example.icon}
+                                    <p className="icons"><span className={ example.icon }></span></p>
                                 </div>
                                 <div className="col-md-10">
                                     <p className="app-name"> {example.app} </p>
@@ -88,7 +88,7 @@ class ExamplesPage extends Component {
                         <div className="row">
                             <div className="app-wrapper">
                                 <div className="col-md-2">
-                                    {example.icon}
+                                    <p className="icons"><span className={example.icon}></span></p>
                                 </div>
                                 <div className="col-md-10">
                                     <p className="app-name"> {example.app} </p>
@@ -110,7 +110,7 @@ class ExamplesPage extends Component {
             <div className="examples-page">
                 <div className="row">
                     <div className="col-md-12 secondary-background">
-                        <h2>Examples</h2>
+                        <p className="subtitle">Examples</p>
                     </div>
                 </div>
 

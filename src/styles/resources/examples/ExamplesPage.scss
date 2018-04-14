@@ -1,4 +1,7 @@
-@import '../../_global/variables/variables.scss';
+@import '../../_global/styles/variables.scss';
+@import '../../_global/styles/icons.scss';
+@import '../../_global/styles/fonts.scss';
+
 
 .examples-page {
 
@@ -6,6 +9,12 @@
         background-color: $secondary-bg-color;
         color: white;
         margin-top: -21px;
+    }
+
+    .subtitle {
+        font-family: 'AvenirNextLTW01-Regular';
+        font-size: 22px;
+        padding: 13px 0;
     }
 
     h3 {
@@ -38,6 +47,34 @@
         -webkit-box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
         -moz-box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
         box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
+
+        .icons {
+            font-size: 40px;
+
+            .icon-chat:before {
+                content: "\e911";
+            }
+
+            .icon-map:before {
+                content: "\e910";
+            }
+
+            .icon-website:before {
+                content: "\e90f";
+            }
+
+            .icon-whatslack:before {
+                content: "\e90e";
+            }
+
+            .icon-x-uber:before {
+                content: "\e90d";
+            }
+
+            .icon-gitfeed:before {
+                content: "\e90c";
+            }
+        }
     }
 
     .examples-page-footer {
