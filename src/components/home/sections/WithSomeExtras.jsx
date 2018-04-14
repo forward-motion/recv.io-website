@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Extra from './Extra';
+import '../../../styles/home/sections/WithSomeExtras.scss';
 
 let extrasData = [
   {
@@ -29,19 +30,27 @@ let extrasData = [
     subtitle:'All Messages for Asynchronous Server Side Processing'
   }]
 
-class ExtrasParent extends Component {
+class WithSomeExtras extends Component {
 
   renderExtras() {
-    return extrasData.map((extra)=>{
+    return extrasData.map((extra, index)=>{
       return (
-        <Extra icon={extra.icon} title={extra.title} subtitle={extra.subtitle} />
+        <Extra
+          key={extra.title + '-' + index}
+          icon={extra.icon}
+          title={extra.title} 
+          subtitle={extra.subtitle} />
       );
     });
   }
 
   render() {
     return (
-      <div>
+      <div className="component-with-some-extras">
+        <div className="extras-header row">
+            <div className="col-md-12"><h4>with some extras ...</h4></div>
+        </div>
+
         <div className="extras row">
           {this.renderExtras()}
         </div>
@@ -50,4 +59,4 @@ class ExtrasParent extends Component {
     );
   }
 }
-export default ExtrasParent;
+export default WithSomeExtras;

@@ -1,7 +1,8 @@
 import React from 'react';
+import '../../../styles/home/sections/Extra.scss';
 
 const Extra = (props) => (
-  <div className="extras-parent col-md-6">
+  <div className="component-extra col-md-6">
       <div className="extras-inner">
         <div className="extras-icon">
           <div className="extras-icon-inner">

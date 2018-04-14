@@ -1,0 +1,31 @@
+@import '../../_global/variables';
+.component-footer {
+  .sign-in-header,.sign-in-option-wrapper {
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sign-in-header {
+    .question-mark {
+      color: $accent-green;
+    }
+  }
+.sign-in-option-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sign-in-option-wrapper {
+      margin: 0 20px;
+      .sign-in-option-icon {
+        border: solid white 1px;
+      }
+      .sign-in-option {
+        background: $action-purple;
+        padding: 2px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
