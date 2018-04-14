@@ -52,29 +52,41 @@ const HomePage = () => (
         </div>
         <div className="extras-wrapper">
           <ExtrasParent />
-          
+
         </div>
         <div className="link-to-features row">
             <div className="col-md-12">
-                <h4>See our full feature set <Link to="#"> here </Link> </h4>
+                <h4>see our full feature set <Link to="#"> here</Link>. </h4>
             </div>
         </div>
 
         <div className="sign-in-header row">
             <div className="col-md-12">
-                <h4>Ready to recv <span className="question-mark">?</span> Sign up for free with </h4>
+                <h4>Ready to recv<span className="question-mark">?</span> Sign up for free with </h4>
             </div>
         </div>
 
-        <div className="sign-in-option-parent row">
-            <div className="sign-in-option-wrapper col-md-4">
-                <div className="sign-in-option">GitHub</div>
+        <div className="sign-in-option-parent">
+
+            <div className="sign-in-option-wrapper">
+                <div className="sign-in-option">
+                  <span className="sign-in-option-icon">X</span>
+                  GitHub
+                </div>
             </div>
-            <div className="sign-in-option-wrapper col-md-4">
-                <div className="sign-in-option">BitBucket</div>
+
+            <div className="sign-in-option-wrapper ">
+                <div className="sign-in-option">
+                  <span className="sign-in-option-icon">X</span>
+                  BitBucket
+                </div>
             </div>
-            <div className="sign-in-option-wrapper col-md-4">
-                <div className="sign-in-option">Gmail</div>
+
+            <div className="sign-in-option-wrapper">
+                <div className="sign-in-option">
+                  <span className="sign-in-option-icon">X</span>
+                  Gmail
+                </div>
             </div>
         </div>
 

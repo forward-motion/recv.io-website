@@ -63,6 +63,7 @@
         border: solid ghostwhite 2px;
         padding: 20px;
         padding-bottom: 20px;
+        margin-bottom: 20px;
         -webkit-box-shadow: 7px 7px 0px -3px $accent-green;
            -moz-box-shadow: 7px 7px 0px -3px $accent-green;
                 box-shadow: 7px 7px 0px -3px $accent-green;
@@ -97,9 +98,14 @@
     border-bottom: solid black 1px;
     height: 200px;
     background:$secondary-blue;
+
       a {
         text-decoration: underline;
         color: $action-purple;
+        font-size: 22px;
+      }
+      h4 {
+        font-weight: 300;
       }
   }
   .sign-in-header {
@@ -107,12 +113,20 @@
       color: $accent-green;
     }
   }
-
-  .sign-in-option-wrapper {
-    .sign-in-option {
-      background: $action-purple;
-      padding: 2px;
-      border-radius: 5px;
+.sign-in-option-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sign-in-option-wrapper {
+      margin: 0 20px;
+      .sign-in-option-icon {
+        border: solid white 1px;
+      }
+      .sign-in-option {
+        background: $action-purple;
+        padding: 2px;
+        border-radius: 5px;
+      }
     }
   }
   footer {
