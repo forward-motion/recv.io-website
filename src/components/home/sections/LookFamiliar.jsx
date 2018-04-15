@@ -1,12 +1,20 @@
 import React from 'react';
+import LookFamiliarBG from '../../../img/images/home/lookfamiliar-bg.png';
 import '../../../styles/home/sections/LookFamiliar.scss';
+
 const LookFamiliar = (props) => (
-  <div className="component-look-familiar">
+  <div className="component-look-familiar"
+    style={{
+      backgroundImage:`url(${LookFamiliarBG})`,
+      backgroundRepeat:"no-repeat",
+      backgroundPosition:"center",
+      backgroundSize:"90%"
+    }}>
     <div className="look-familiar row">
         <div className="col-md-12">
-          <h3>Look familiar?</h3>
+          <h3>look familiar?</h3>
           <br />
-          <span> If you know Socket.io you know recv.io </span>
+          <span> if you know <span className="socket">socket.io</span> you know recv.io </span>
         </div>
     </div>
   </div>

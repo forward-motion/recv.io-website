@@ -8,6 +8,5 @@ const FullFeatureSet= (props) => (
         <h4>see our full feature set <span><Link to="#">here</Link></span>. </h4>
     </div>
   </div>
-
 );
 export default FullFeatureSet;
