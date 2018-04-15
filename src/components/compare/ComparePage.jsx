@@ -67,62 +67,63 @@ class ComparePage extends Component {
     }];
 
     return(
-      <div className="compare-page container">
-        <OurCalculator />
+      <div className="compare-page">
+        <div className="container">
+          <OurCalculator />
 
-        <div className="usage-section-wrapper">
-          <div className="usage-header">
-            <div className="usage-icon">X</div>
-            <div className="usage-title">Usage</div>
+          <div className="usage-section-wrapper">
+            <div className="usage-header">
+              <div className="usage-icon">X</div>
+              <div className="usage-title">Usage</div>
+            </div>
+            <div className="usage-section row">
+              <Usage
+                value={this.state.concurrent}
+                onChange={this.handleConcurrentOnChange}
+                title="Max concurrent connections per month:"
+                divider={true}
+                lowValue={"500"}
+                highValue={"500,000+"}
+                min={500}
+                max={50000}
+              />
+
+              <Usage
+                value={this.state.maxMsg}
+                onChange={this.handleMaxMsgOnChange}
+                title="Max messages per month:"
+                divider={true}
+                lowValue={"100K"}
+                highValue={"100M+"}
+                min={100}
+                max={1000000}
+              />
+              <Usage
+                value={this.state.avgMsg}
+                onChange={this.handleAvgMsgOnChange}
+                title="Average message size:"
+                divider={false}
+                lowValue={"1K"}
+                highValue={"1MB+"}
+                min={1}
+                max={1000}
+              />
+            </div>
           </div>
-          <div className="usage-section row">
-            <Usage
-              value={this.state.concurrent}
-              onChange={this.handleConcurrentOnChange}
-              title="Max concurrent connections per month:"
-              divider={true}
-              lowValue={"500"}
-              highValue={"500,000+"}
-              min={500}
-              max={50000}
-            />
+          <div className="spacer-middle">
+            <div className="spacer-inner"></div>
+          </div>
+          <Features />
 
-            <Usage
-              value={this.state.maxMsg}
-              onChange={this.handleMaxMsgOnChange}
-              title="Max messages per month:"
-              divider={true}
-              lowValue={"100K"}
-              highValue={"100M+"}
-              min={100}
-              max={1000000}
-            />
-            <Usage
-              value={this.state.avgMsg}
-              onChange={this.handleAvgMsgOnChange}
-              title="Average message size:"
-              divider={false}
-              lowValue={"1K"}
-              highValue={"1MB+"}
-              min={1}
-              max={1000}
-            />
+          <Results data={data}/>
+
+          <div className="background">
+            <div className="top-dark-blue"></div>
+            <div className="middle-white"></div>
+            <div className="btm-light-blue"></div>
           </div>
         </div>
-        <div className="spacer-middle">
-          <div className="spacer-inner"></div>
-        </div>
-        <Features />
-
-        <Results data={data}/>
-
         <Footer />
-        <div className="background">
-          <div className="top-dark-blue"></div>
-          <div className="middle-white"></div>
-          <div className="btm-light-blue"></div>
-        </div>
-
       </div>
     );
   }
