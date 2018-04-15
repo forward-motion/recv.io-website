@@ -1,6 +1,5 @@
 import React from 'react';
 
-import '../../../node_modules/font-awesome/css/font-awesome.css';
 import '../../styles/dashboard/App.scss';
 
 class MyApps extends React.Component {

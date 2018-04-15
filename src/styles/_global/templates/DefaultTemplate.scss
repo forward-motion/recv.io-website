@@ -1,20 +1,28 @@
+@import '../variables.scss';
+@import '../assets/icons.css';
+@import '../assets/fonts.css';
+
 @import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+
+@import '../../../../node_modules/font-awesome/css/font-awesome.css';
 
 @import '../../../../node_modules/react-select/dist/react-select.css';
 @import '../../../../node_modules/react-virtualized/styles.css';
 @import '../../../../node_modules/react-virtualized-select/styles.css';
 
+@import '../../../../node_modules/react-table/react-table.css';
+
 @import '../ui/ActionButton';
 @import '../ui/ReactTable';
-@import '../variables';
+
 .default-template {
-  background: $background;
-  font-family: $recv-font;
-  .container-fluid {
-    padding: 0;
-  }
+
   /*
   include global styles here
    */
+
+   ul {
+     padding : 0; 
+   }
 
 }

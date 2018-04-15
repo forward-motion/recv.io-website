@@ -1,0 +1,116 @@
+@import '../_global/variables';
+
+.examples-page {
+
+    .secondary-background {
+        background-color: $secondary-bg-color;
+        color: white;
+        margin-top: -21px;
+    }
+
+    .subtitle {
+        font-family: 'AvenirNextLTW01-Regular';
+        font-size: 22px;
+        padding: 13px 0;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .accent-underline { 
+        border-top: 2px solid $accent; 
+        margin-bottom: 60px;
+    }
+
+    .app-wrapper {
+        padding-top: 10px;
+        margin-left: 20px;
+
+        .app-name {
+            font-size: 20px;
+        }
+
+        .app-tag {
+            font-size: 10px;
+            margin-top: -5px;
+        }
+    }
+
+    .panel-default{
+        height: 110px;
+        border-radius: 0;
+
+        -webkit-box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
+        -moz-box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
+        box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
+
+        .icons {
+            font-size: 40px;
+
+            .icon-chat:before {
+                content: "\e911";
+            }
+
+            .icon-map:before {
+                content: "\e910";
+            }
+
+            .icon-website:before {
+                content: "\e90f";
+            }
+
+            .icon-whatslack:before {
+                content: "\e90e";
+            }
+
+            .icon-x-uber:before {
+                content: "\e90d";
+            }
+
+            .icon-gitfeed:before {
+                content: "\e90c";
+            }
+        }
+    }
+
+    .examples-page-footer {
+        background-color: $primary-bg-color; 
+        color: $primary-font-color;
+        height: 30vh;
+
+        .call-to-action-sign-up {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 20px;
+
+            span {
+                color: $accent;
+            }
+        }
+
+        #firebaseui_container {
+
+            margin: 25px 0;
+
+            .firebaseui-container {
+                max-width: none;
+                width: 50%;
+
+                .firebaseui-idp-list {
+                    padding: 0;
+
+                    .firebaseui-list-item {
+                        display: inline;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .copy-right {
+            padding-left: 30px;
+            margin-top: 30px;
+        }
+    }
+}

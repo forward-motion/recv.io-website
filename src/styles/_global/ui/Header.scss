@@ -1,3 +1,31 @@
+@import '../variables.scss';
+
 .header {
 
+  .navbar {
+        background-color: $primary-bg-color !important;
+        border: 0;
+        border-radius: 0;
+      
+     li {
+
+        &.open {
+            a {
+                background-color: $primary-bg-color;
+
+                &:focus {
+                    background-color: $primary-bg-color;
+                }
+            }
+
+            .dropdown-menu {
+                padding: 0;
+            }
+
+        }
+         a {
+             color: $primary-font-color !important;
+         }
+     }
+  }
 }
