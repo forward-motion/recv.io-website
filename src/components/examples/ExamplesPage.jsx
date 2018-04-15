@@ -3,7 +3,7 @@ import firebase from 'firebase';
 import FirebaseAuth from 'react-firebaseui/FirebaseAuth';
 import moment from 'moment';
 
-import '../../styles/resources/examples/ExamplesPage.scss';
+import '../../styles/examples/ExamplesPage.scss';
 
 const uiConfig = {
     signInFlow: 'popup',

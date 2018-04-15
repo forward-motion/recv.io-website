@@ -9,7 +9,7 @@ class DocsPage extends Component {
 
         this.state = {
             selectedView: 'concepts'
-        }
+        };
 
         this.sideBarLinks = [
             {

@@ -1,9 +1,13 @@
-@import '../styles/variables.scss';
+@import '../variables.scss';
 @import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+
+@import '../../../../node_modules/font-awesome/css/font-awesome.css';
 
 @import '../../../../node_modules/react-select/dist/react-select.css';
 @import '../../../../node_modules/react-virtualized/styles.css';
 @import '../../../../node_modules/react-virtualized-select/styles.css';
+
+@import '../../../../node_modules/react-table/react-table.css';
 
 @import '../ui/ActionButton';
 @import '../ui/ReactTable';
