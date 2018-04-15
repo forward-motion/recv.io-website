@@ -1,42 +1,14 @@
 import React, { Component } from 'react';
 import SideBar from './sections/SideBar';
+import Article from './sections/Article';
 import Helmet from 'react-helmet';
 import '../../styles/blog/ArticlePage.scss';
 
 export default class ArticlePage extends Component {
-  get showArticle(){
-    return(
-      <div>
-        <div className="row">
-          <div className="col-md-12">
-            <h3>{this.props.blogData.title}</h3>
-            <span>{this.props.blogData.date}</span>
-          </div>
-        </div>
 
-        <div className="row">
-          <div className="col-md-12">
-            <div style={{background:`url(${this.props.blogData.image})`, height:150, width:350}}></div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-md-8">
-            <h3>{this.props.blogData.subtitle}</h3>
-          </div>
-        </div>
-
-        <div className="article row">
-          <div className="col-md-12">
-            <span>{this.props.blogData.article}</span>
-          </div>
-        </div>
-      </div>
-  );
-  }
   render(){
     return(
-      <div className="article-page container">
+      <div className="component-article-page container-fluid">
           <Helmet
               title="recv.io - title goes here"
               meta={[
@@ -45,7 +17,9 @@ export default class ArticlePage extends Component {
               ]}
           />
           <div className="showArticle col-md-8">
-            {this.showArticle}
+            <Article
+              blogData={this.props.blogData}
+             />
           </div>
           <SideBar />
       </div>
