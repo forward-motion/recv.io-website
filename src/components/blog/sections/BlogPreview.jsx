@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import '../../../styles/blog/sections/BlogPreview.scss';
 
 const BlogPreview = (props) => (
-  <div className="blog-preview">
-    <h2>{props.title}</h2>
-    <span>{props.date}</span>
-    <div style={{background:`url(${props.image})`, height:150, width:350}}></div>
-    <div>{props.article}</div>
+  <div className="component-blog-preview">
+    <div className="blog-preview-inner">
+      <div className="article-title-wrapper">
+        <span className="article-title">{props.title}</span>
+        <div className="article-title-seperator"></div>
+      </div>
+
+      <span className="date"> Date {props.date}</span>
+      <div className="image-wrapper" style={{background:`url(${props.image})`}}> </div>
+      <div className="article">{props.article}</div>
+    </div>
+
   </div>
 );
 export default BlogPreview;
