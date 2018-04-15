@@ -10,7 +10,7 @@ import '../../../styles/blog/sections/SideBar.scss';
 class SideBar extends Component {
   render(){
     return(
-      <div className="component-side-bar col-md-4">
+      <div className="component-side-bar col-md-4" >
         <div className="seperator">
           <div className="search">
             <VirtualizedSelect

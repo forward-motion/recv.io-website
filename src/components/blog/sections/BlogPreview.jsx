@@ -13,7 +13,7 @@ const BlogPreview = (props) => (
       <div className="image-wrapper" style={{background:`url(${props.image})`}}> </div>
       <div className="article">{props.article}</div>
     </div>
-
+    {/* When my other updated are merged link footer here */}
   </div>
 );
 export default BlogPreview;
