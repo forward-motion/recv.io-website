@@ -13,5 +13,14 @@
    }
    .search {
      width: 200px;
+
+     .Select-menu-outer,.Select-menu,.Select-control,.Select-placeholder, .Select--single > .Select-control .Select-value {
+       color: $sidebar-subtext!important;
+       background-color: $primary-bg-color!important;
+       border: none!important;
+     }
+     .Select-placeholder {
+       font-style: italic;
+     }
    }
 }

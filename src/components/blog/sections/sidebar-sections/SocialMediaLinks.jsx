@@ -12,7 +12,6 @@ function renderSocialMediaLinks() {
   );
 }
 const SocialMediaLinks = (props) => {
-
   return(
     <div className="component-social-media-links">
       <h3 className="social-media-links-title"> Social Media </h3>

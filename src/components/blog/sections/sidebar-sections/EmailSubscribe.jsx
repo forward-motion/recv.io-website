@@ -21,13 +21,13 @@ export default class EmailSubscribe extends Component {
 
   render() {
     return(
-        <div className="email-subscribe">
-          <h3> Subscribe </h3>
+        <div className="component-email-subscribe">
+          <h3 className="email-subscribe-title"> Subscribe </h3>
           <form>
             <input
               onChange={(e)=>this.updateEmail(e)}
               value={this.state.email}
-              placeholder="email"
+              placeholder="E-mail"
               className="subscribe-input" />
           </form>
         </div>

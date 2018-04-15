@@ -1,7 +1,31 @@
-.email-subscribe {
+@import '../../../_global/variables';
+.component-email-subscribe {
+  .email-subscribe-title {
+    font-weight: 300;
+  }
   .subscribe-input {
     max-width: 250px;;
+    height: 35px;
     border-radius: 5px;
-    border: solid #d9d9d9  1px;
+    padding-left: 10px;
+    color: $sidebar-subtext;
+    background-color: $primary-bg-color;
+    border: none;
+  }
+  ::-webkit-input-placeholder {
+   font-style: italic;
+   color: $sidebar-subtext;
+  }
+  :-moz-placeholder {
+     font-style: italic;
+     color: $sidebar-subtext;
+  }
+  ::-moz-placeholder {
+     font-style: italic;
+     color: $sidebar-subtext;
+  }
+  :-ms-input-placeholder {
+     font-style: italic;
+     color: $sidebar-subtext;
   }
 }

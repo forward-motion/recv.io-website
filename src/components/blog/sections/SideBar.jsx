@@ -13,7 +13,9 @@ class SideBar extends Component {
       <div className="component-side-bar col-md-4">
         <div className="seperator">
           <div className="search">
-            <VirtualizedSelect />
+            <VirtualizedSelect
+              placeholder= "Search"
+            />
           </div>
         </div>
 
