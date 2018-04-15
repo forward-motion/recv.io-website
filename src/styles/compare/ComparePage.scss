@@ -3,19 +3,21 @@
   .usage-section-wrapper {
     background: white;
     color: black;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 5px;
     .usage-header {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
-    .usage-section {
-
-
-      .component-usage {
-        border: solid red 1px;
+      .usage-title {
+        font-size: 30px;
       }
     }
+    .usage-section {
+    }
+
   }
 
 

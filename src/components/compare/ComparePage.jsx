@@ -78,14 +78,33 @@ class ComparePage extends Component {
             <Usage
               value={this.state.concurrent}
               onChange={this.handleConcurrentOnChange}
+              title="Max concurrent connections per month:"
+              divider={true}
+              lowValue={"500"}
+              highValue={"500,000+"}
+              min={500}
+              max={50000}
             />
+
             <Usage
               value={this.state.maxMsg}
               onChange={this.handleMaxMsgOnChange}
+              title="Max messages per month:"
+              divider={true}
+              lowValue={"100K"}
+              highValue={"100M+"}
+              min={100}
+              max={1000000}
             />
             <Usage
               value={this.state.avgMsg}
               onChange={this.handleAvgMsgOnChange}
+              title="Average message size:"
+              divider={false}
+              lowValue={"1K"}
+              highValue={"1MB+"}
+              min={1}
+              max={1000}
             />
           </div>
         </div>

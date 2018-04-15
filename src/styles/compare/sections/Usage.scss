@@ -1,4 +1,27 @@
 @import '../../_global/variables';
 .component-usage {
-height: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 25px;
+  .slider-title {
+    padding-left: 15px;
+  }
+  .slider-value {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    color: $accent-green;
+  }
+  .usage-seperator {
+    position: absolute;
+    right: -4px;
+    height: 150px;
+    border-right: solid rgb(221, 223, 226) 1px;
+  }
+  .slider-labels {
+    display: flex;
+    justify-content: space-between;
+  }
 }
