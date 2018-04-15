@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import '../../../styles/blog/sections/PopularArticles.scss';
+import '../../../../styles/blog/sections/PopularArticles.scss';
 
 const articleLinks = (props) => {
   return props.articles.map((article)=>{

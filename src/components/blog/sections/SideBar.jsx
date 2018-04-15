@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import VirtualizedSelect from 'react-virtualized-select';
-import PopularArticles from './PopularArticles';
-import EmailSubscribe from './EmailSubscribe';
-import SocialMediaLinks from './SocialMediaLinks';
+import PopularArticles from './sidebar-sections/PopularArticles';
+import EmailSubscribe from './sidebar-sections/EmailSubscribe';
+import SocialMediaLinks from './sidebar-sections/SocialMediaLinks';
 import Link from 'gatsby-link';
 
 import '../../../styles/blog/sections/SideBar.scss';
 
 class SideBar extends Component {
-
   render(){
     return(
       <div className="component-side-bar col-md-4">
