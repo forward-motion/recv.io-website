@@ -10,11 +10,15 @@
   height: 200px;
   background:$secondary-blue;
     a {
-      text-decoration: underline;
+      text-decoration: none;
       color: $action-purple;
       font-size: 22px;
     }
     h4 {
       font-weight: 300;
+    }
+    span {
+      display: inline-block;
+      border-bottom: solid $action-purple 1px;
     }
 }
