@@ -1,5 +1,15 @@
+@import '../_global/variables';
+
 .compare-page {
   color: white;
+  .row {
+    margin: 0;
+  }
+  .spacer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .usage-section-wrapper {
     background: white;
     color: black;
@@ -18,6 +28,18 @@
     .usage-section {
     }
 
+  }
+  .spacer-middle {
+    margin: 20px 0;
+    height: 75px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .spacer-inner {
+      width: 100px;
+      border-bottom: 3px solid $accent-green;
+    }
   }
 
 

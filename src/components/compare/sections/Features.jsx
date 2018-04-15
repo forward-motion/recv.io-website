@@ -1,29 +1,54 @@
 import React from 'react';
 import '../../../styles/compare/sections/Features.scss';
+import '../../../styles/_global/ui/CSSCheckbox.scss';
+
 
 const Features = (props) => (
-  <div className="component-features">
-    <div className="row">
-      <div className="col-md-12">
-        <h2>Features:</h2>
-      </div>
+  <div className="component-features row">
+    <div className="features-header">
+      <div className="features-icon">X</div>
+      <div className="features-title">Features</div>
     </div>
-    <div className="row">
-      <div className="col-md-6">
-        <input type="checkbox" /> Choice 1
-      </div>
-      <div className="col-md-6">
-        <input type="checkbox" /> Choice 2
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-md-6">
-        <input type="checkbox" /> Choice 3
-      </div>
-      <div className="col-md-6">
-        <input type="checkbox" /> Choice 4
-      </div>
-    </div>
+    <label className="check-container col-md-3">
+      <span className="checkbox-label"> Lorem ipsum dolor </span>
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="check-container col-md-3">
+      <span className="checkbox-label"> Lorem ipsum dolor </span>
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="check-container col-md-3">
+      <span className="checkbox-label"> Lorem ipsum dolor </span>
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="check-container col-md-3">
+      <span className="checkbox-label"> Lorem ipsum dolor </span>
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="check-container col-md-3">
+      <span className="checkbox-label"> Lorem ipsum dolor </span>
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="check-container col-md-3">
+      <span className="checkbox-label"> Lorem ipsum dolor </span>
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="check-container col-md-3">
+      <span className="checkbox-label"> Lorem ipsum dolor </span>
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
+    <label className="check-container col-md-3">
+      <span className="checkbox-label"> Lorem ipsum dolor </span>
+      <input type="checkbox" />
+      <span className="checkmark"></span>
+    </label>
   </div>
 );
 

@@ -8,6 +8,7 @@ import OurCalculator from './sections/OurCalculator';
 import Usage from './sections/Usage';
 import Features from './sections/Features';
 import Results from './sections/Results';
+import Footer from '../home/sections/Footer';
 
 import '../../styles/compare/ComparePage.scss';
 
@@ -108,12 +109,14 @@ class ComparePage extends Component {
             />
           </div>
         </div>
-
+        <div className="spacer-middle">
+          <div className="spacer-inner"></div>
+        </div>
         <Features />
 
         <Results data={data}/>
 
-        {/* Import footer from home */}
+        <Footer />
 
       </div>
     );
