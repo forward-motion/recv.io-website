@@ -6,7 +6,6 @@
 
   }
   .article-link {
-    padding-left: 10px;
     padding-bottom: 20px;
     &:hover, &:focus {
       color: white;
@@ -20,7 +19,7 @@
       padding-bottom: 5px;
     }
     .article-date {
-      color:$sidebar-subtext;
+      color: $sidebar-subtext;
     }
   }
   .seperator-articles {
