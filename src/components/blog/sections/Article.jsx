@@ -2,29 +2,14 @@ import React from 'react';
 import '../../../styles/blog/sections/Article.scss';
 const Article = (props) => (
   <div className="component-article">
-    <div className="row">
-      <div className="col-md-12">
-        <h3>{props.blogData.title}</h3>
-        <span>{props.blogData.date}</span>
+    <div className="blog-preview-inner">
+      <div className="article-title-wrapper">
+        <span className="article-title">{props.blogData.title}</span>
+        <div className="article-title-seperator"></div>
       </div>
-    </div>
-
-    <div className="row">
-      <div className="col-md-12">
-        <div style={{background:`url(${props.blogData.image})`, height:150, width:350}}></div>
-      </div>
-    </div>
-
-    <div className="row">
-      <div className="col-md-8">
-        <h3>{props.blogData.subtitle}</h3>
-      </div>
-    </div>
-
-    <div className="article row">
-      <div className="col-md-12">
-        <span>{props.blogData.article}</span>
-      </div>
+      <span className="date"> Date {props.blogData.date}</span>
+      <div className="image-wrapper" style={{background:`url(${props.blogData.image})`}}> </div>
+      <div className="article">{props.blogData.article}</div>
     </div>
   </div>
 );
