@@ -13,9 +13,6 @@
 
     .blog-preview-inner {
       max-width: 700px;
-      //TODO: do we want a dynamic height or fixed for previews;
-      //height:600px;
-      border-bottom: solid $secondary-bg-color 1px;
       padding-bottom: 40px;
       .article-title-wrapper {
         display: flex;
@@ -44,11 +41,14 @@
         height: 250px;
         background-position: center;
         background-repeat: no-repeat;
-        margin: 20px 0;
+        margin: 20px 0 15px 0;
       }
       .article {
         color: $secondary-bg-color;
         line-height: 30px;
+      }
+      .subtitle {
+        font-size: 30px;
       }
     }
   }

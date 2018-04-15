@@ -1,0 +1,13 @@
+@import '../../_global/variables';
+.component-read-signup {
+  background: rgb(249,249,249);
+  margin-right: 10px;
+  height: 150px;
+  width: 700px;
+  .instructions {
+
+  }
+  .buttons {
+    display: flex;
+  }
+}

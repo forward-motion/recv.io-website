@@ -16,12 +16,13 @@ export default class ArticlePage extends Component {
                   { name: 'keywords', content: 'sample, something' },
               ]}
           />
-          <div className="show-article col-md-8">
-            <Article
-              blogData={this.props.blogData}
-             />
+          <div className="row">
+            <div className="show-article col-md-8">
+              <Article blogData={this.props.blogData} />
+            </div>
+            <SideBar />
           </div>
-          <SideBar />
+
       </div>
     );
   }
@@ -31,10 +32,10 @@ export default class ArticlePage extends Component {
 ArticlePage.defaultProps = {
   blogData:{
     id:1,
-    title: "title article 1",
-    subtitle: "subtitle",
-    date: "2017_01_01",
-    image: "http://via.placeholder.com/350x150",
+    title: "Title Article 1",
+    subtitle: "Subtitle",
+    date: "01/01/2018",
+    image: "http://via.placeholder.com/700x250",
     article:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
   }
 }

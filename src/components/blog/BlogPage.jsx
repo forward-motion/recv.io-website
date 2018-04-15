@@ -6,8 +6,6 @@ import BlogPreview from './sections/BlogPreview';
 import '../../styles/blog/BlogPage.scss';
 
 
-
-
 export default class BlogPage extends Component {
 
   get showBlogs() {
