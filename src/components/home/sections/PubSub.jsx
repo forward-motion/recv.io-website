@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import '../../../styles/home/sections/PubSub.scss';
-import BackgroundImage from '../../../img/images/home/pub-sub-bg.png';
-import CodeSnip1 from '../../../img/images/home/codesnip-1.png';
-import CodeSnip2 from '../../../img/images/home/codesnip-2.png';
+import BackgroundImage from '../../../assets/img/home/pub-sub-bg.png';
+import CodeSnip1 from '../../../assets/img/home/codesnip-1.png';
+import CodeSnip2 from '../../../assets/img/home/codesnip-2.png';
 
 function renderCodeSnip(title, image, link) {
   return (

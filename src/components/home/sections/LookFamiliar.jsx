@@ -1,5 +1,5 @@
 import React from 'react';
-import LookFamiliarBG from '../../../img/images/home/lookfamiliar-bg.png';
+import LookFamiliarBG from '../../../assets/img/home/lookfamiliar-bg.png';
 import '../../../styles/home/sections/LookFamiliar.scss';
 
 const LookFamiliar = (props) => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../styles/home/sections/Header.scss';
-import BackgroundImage from '../../../img/images/home/header-bg.png'
-import DataFlow from '../../../img/images/home/data-flow.png'
+import BackgroundImage from '../../../assets/img/home/header-bg.png'
+import DataFlow from '../../../assets/img/home/data-flow.png'
 const Header = (props) => (
   <div className="component-header"
     style={{

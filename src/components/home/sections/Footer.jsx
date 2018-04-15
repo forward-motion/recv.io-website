@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import '../../../styles/home/sections/Footer.scss';
-import FooterBG from '../../../img/images/home/footer-bg.png';
+import FooterBG from '../../../assets/img/home/footer-bg.png';
 
 let date = new Date().getFullYear();
 
