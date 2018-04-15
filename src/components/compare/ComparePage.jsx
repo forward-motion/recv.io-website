@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Link from 'gatsby-link';
 import Slider from 'react-rangeslider';
-import CompareTable from './CompareTable';
+import CompareTable from './sections/CompareTable';
 
 
 import '../../styles/compare/ComparePage.scss';
