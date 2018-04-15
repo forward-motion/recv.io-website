@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../../../styles/blog/sections/EmailSubscribe.scss';
+import '../../../../styles/blog/sections/sidebar-sections/EmailSubscribe.scss';
 
 export default class EmailSubscribe extends Component {
   constructor(props) {

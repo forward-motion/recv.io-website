@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import '../../../../styles/blog/sections/SocialMediaLinks.scss';
+import '../../../../styles/blog/sections/sidebar-sections/SocialMediaLinks.scss';
 
 
 const SocialMediaLinks = (props) => {

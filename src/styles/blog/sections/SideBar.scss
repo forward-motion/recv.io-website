@@ -1,5 +1,6 @@
+@import '../../_global/variables';
 .component-side-bar {
-   a{
-     color: black;
-   }
+   a { color: white;}
+   color: white;
+   background:$secondary-bg-color;
 }
