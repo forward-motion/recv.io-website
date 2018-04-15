@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../styles/resources/docs/DocsPage.scss';
+import '../../styles/docs/DocsPage.scss';
 
 
 class DocsPage extends Component {
