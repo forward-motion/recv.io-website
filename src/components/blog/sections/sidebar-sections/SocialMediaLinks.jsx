@@ -2,23 +2,21 @@ import React from 'react';
 import Link from 'gatsby-link';
 import '../../../../styles/blog/sections/sidebar-sections/SocialMediaLinks.scss';
 
-
+function renderSocialMediaLinks() {
+  return (
+    <div className="social-media-icons">
+      <a href="#"><div className="facebook">x</div></a>
+      <a href="#"><div className="twitter">x</div></a>
+      <a href="#"><div className="rss">x</div></a>
+    </div>
+  );
+}
 const SocialMediaLinks = (props) => {
 
   return(
     <div className="component-social-media-links">
-      <h3> Social Media </h3>
-      <div className="row">
-        <div className="social-icon col-md-4">
-          <a href="#"> fb </a>
-        </div>
-        <div className="social-icon col-md-4">
-          <a href="#">tw</a>
-        </div>
-        <div className="social-icon col-md-4">
-          <a href="#">other</a>
-        </div>
-      </div>
+      <h3 className="social-media-links-title"> Social Media </h3>
+        {renderSocialMediaLinks()}
       <div className="seperator-articles"></div>
     </div>
   );
