@@ -2,6 +2,7 @@
 
 .compare-page {
   color: white;
+  //background-color: $secondary-blue;
   .row {
     margin: 0;
   }
@@ -41,6 +42,31 @@
       border-bottom: 3px solid $accent-green;
     }
   }
-
+  .background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .top-dark-blue {
+      background-color: $background;
+      height: 550px;
+      width: 100vw;
+    }
+    .middle-white {
+      background-color: white;
+      height: 400px;
+      width: 100vw;
+    }
+    .btm-light-blue {
+      background-color: $secondary-blue;
+      height: 653px;
+      width: 100vw;
+    }
+  }
+  .usage-section-wrapper, .component-features {
+    -webkit-box-shadow: -1px 0px 7px -1px rgba(161,158,161,1);
+    -moz-box-shadow: -1px 0px 7px -1px rgba(161,158,161,1);
+    box-shadow: -1px 0px 7px -1px rgba(161,158,161,1);
+  }
 
 }

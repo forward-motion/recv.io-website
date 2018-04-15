@@ -117,6 +117,11 @@ class ComparePage extends Component {
         <Results data={data}/>
 
         <Footer />
+        <div className="background">
+          <div className="top-dark-blue"></div>
+          <div className="middle-white"></div>
+          <div className="btm-light-blue"></div>
+        </div>
 
       </div>
     );

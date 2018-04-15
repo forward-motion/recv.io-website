@@ -14,7 +14,7 @@ export default class CompareTable extends Component {
     const columns = [{
       Header: '',
       accessor: 'name',
-      width: 350
+      width: 300
     }, {
       Header: () => <span className="column-header seperator">Price</span>,
       accessor: 'price',
