@@ -9,42 +9,42 @@ const Features = (props) => (
       <div className="features-icon">X</div>
       <div className="features-title">Features</div>
     </div>
-    <label className="check-container col-md-3">
+    <label className="check-container col-sm-3 col-md-3">
       <span className="checkbox-label"> Lorem ipsum dolor </span>
       <input type="checkbox" />
       <span className="checkmark"></span>
     </label>
-    <label className="check-container col-md-3">
+    <label className="check-container col-sm-3 col-md-3">
       <span className="checkbox-label"> Lorem ipsum dolor </span>
       <input type="checkbox" />
       <span className="checkmark"></span>
     </label>
-    <label className="check-container col-md-3">
+    <label className="check-container col-sm-3 col-md-3">
       <span className="checkbox-label"> Lorem ipsum dolor </span>
       <input type="checkbox" />
       <span className="checkmark"></span>
     </label>
-    <label className="check-container col-md-3">
+    <label className="check-container col-sm-3 col-md-3">
       <span className="checkbox-label"> Lorem ipsum dolor </span>
       <input type="checkbox" />
       <span className="checkmark"></span>
     </label>
-    <label className="check-container col-md-3">
+    <label className="check-container col-sm-3 col-md-3">
       <span className="checkbox-label"> Lorem ipsum dolor </span>
       <input type="checkbox" />
       <span className="checkmark"></span>
     </label>
-    <label className="check-container col-md-3">
+    <label className="check-container col-sm-3 col-md-3">
       <span className="checkbox-label"> Lorem ipsum dolor </span>
       <input type="checkbox" />
       <span className="checkmark"></span>
     </label>
-    <label className="check-container col-md-3">
+    <label className="check-container col-sm-3 col-md-3">
       <span className="checkbox-label"> Lorem ipsum dolor </span>
       <input type="checkbox" />
       <span className="checkmark"></span>
     </label>
-    <label className="check-container col-md-3">
+    <label className="check-container col-sm-3 col-md-3">
       <span className="checkbox-label"> Lorem ipsum dolor </span>
       <input type="checkbox" />
       <span className="checkmark"></span>
