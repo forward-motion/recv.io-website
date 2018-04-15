@@ -1,12 +1,38 @@
 import React, { Component } from 'react';
-import EmailSubscribe from './EmailSubscribe';
+import SideBar from './sections/SideBar';
 import Helmet from 'react-helmet';
-
 import '../../styles/blog/ArticlePage.scss';
 
 export default class ArticlePage extends Component {
-  constructor(props) {
-    super(props);
+  get showArticle(){
+    return(
+      <div>
+        <div className="row">
+          <div className="col-md-12">
+            <h3>{this.props.blogData.title}</h3>
+            <span>{this.props.blogData.date}</span>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-md-12">
+            <div style={{background:`url(${this.props.blogData.image})`, height:150, width:350}}></div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-md-8">
+            <h3>{this.props.blogData.subtitle}</h3>
+          </div>
+        </div>
+
+        <div className="article row">
+          <div className="col-md-12">
+            <span>{this.props.blogData.article}</span>
+          </div>
+        </div>
+      </div>
+  );
   }
   render(){
     return(
@@ -18,40 +44,10 @@ export default class ArticlePage extends Component {
                   { name: 'keywords', content: 'sample, something' },
               ]}
           />
-          <div className="row">
-            <div className="col-md-12">
-              <h2>Article Page</h2>
-            </div>
+          <div className="showArticle col-md-8">
+            {this.showArticle}
           </div>
-
-          <div className="row">
-            <div className="col-md-12">
-              <h3>{this.props.blogData.title}</h3>
-              <span>{this.props.blogData.date}</span>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-md-12">
-              <div style={{background:`url(${this.props.blogData.image})`, height:150, width:350}}></div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-md-8">
-              <h3>{this.props.blogData.subtitle}</h3>
-            </div>
-            <div className="col-md-4">
-              <EmailSubscribe />
-            </div>
-          </div>
-
-          <div className="article row">
-            <div className="col-md-12">
-              <span>{this.props.blogData.article}</span>
-            </div>
-          </div>
-
+          <SideBar />
       </div>
     );
   }

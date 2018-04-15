@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../styles/blog/BlogPreview.scss';
+import '../../../styles/blog/sections/BlogPreview.scss';
 
 const BlogPreview = (props) => (
   <div className="blog-preview">

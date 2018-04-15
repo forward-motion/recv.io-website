@@ -5,4 +5,10 @@
       color: blue;
     }
   }
+  a {
+    color: black;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
 }

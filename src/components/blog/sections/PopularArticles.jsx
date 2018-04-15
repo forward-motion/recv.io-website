@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import '../../styles/blog/PopularArticles.scss';
+import '../../../styles/blog/sections/PopularArticles.scss';
 
 const articleLinks = (props) => {
   return props.articles.map((article)=>{
@@ -18,7 +18,8 @@ const articleLinks = (props) => {
 const PopularArticles = (props) => {
 
   return(
-    <div className="popular-articles">
+    <div className="component-popular-articles">
+      <h3> Popular Articles </h3>
       {articleLinks(props)}
     </div>
   );

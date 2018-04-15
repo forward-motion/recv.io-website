@@ -1,46 +1,29 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import VirtualizedSelect from 'react-virtualized-select';
+import PopularArticles from './PopularArticles';
+import EmailSubscribe from './EmailSubscribe';
+import SocialMediaLinks from './SocialMediaLinks';
 import Link from 'gatsby-link';
-import SideBar from './sections/SideBar'
-import BlogPreview from './sections/BlogPreview';
-import '../../styles/blog/BlogPage.scss';
 
+import '../../../styles/blog/sections/SideBar.scss';
 
+class SideBar extends Component {
 
-
-export default class BlogPage extends Component {
-
-  get showBlogs() {
+  render(){
     return(
-      this.props.blogData.map((article)=>{
-        return(
-          <Link key={article.id} to="#">
-            <BlogPreview
-                title={article.title}
-                subtitle={article.subtitle}
-                date={article.date}
-                image={article.image}
-                article={article.article}/>
-          </Link>
-        );
-      })
-    );
-  }
-
-  render() {
-    return(
-      <div className="blog-page container">
-        <div className="row">
-          <div className="article-list col-md-8">
-            {this.showBlogs}
-          </div>
-          <SideBar />
+      <div className="component-side-bar col-md-4">
+        <div className="search">
+          <VirtualizedSelect />
         </div>
-      </div>
+          <PopularArticles articles={this.props.blogData}/>
+          <SocialMediaLinks />
+          <EmailSubscribe />
+        </div>
     );
   }
 }
-BlogPage.defaultProps = {
+export default SideBar;
+SideBar.defaultProps = {
   blogData:[
     {
       id:1,
