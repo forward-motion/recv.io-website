@@ -85,6 +85,7 @@ class ComparePage extends Component {
 
         <Results data={data}/>
 
+        {/* Import footer from home */}
 
       </div>
     );
