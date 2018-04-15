@@ -137,20 +137,22 @@ class ExamplesPage extends Component {
 
                 <div className="row">
                     <div className="examples-page-footer">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <p className="call-to-action-sign-up">Ready to recv<span>?</span> Sign up for <b>free</b> with</p>
+                        <div className="col-xs-12">
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <p className="call-to-action-sign-up">Ready to recv<span>?</span> Sign up for <b>free</b> with</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="row">
-                            <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
-                        </div>
+                            <div className="row">
+                                <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+                            </div>
 
-                        <div className="row">
-                           <div className="col-md-6">
-                                <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
-                           </div>
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
