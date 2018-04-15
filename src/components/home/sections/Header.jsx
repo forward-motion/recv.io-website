@@ -14,10 +14,10 @@ const Header = (props) => (
           <div className="tagline-inner">
             <span className="tagline-text">Lorem Ipsum Dolor sit <br />Tagline Goes Here.</span>
             <ul>
-                <li>global Pub/Sub Network</li>
-                <li>guarenteed Message Delivery</li>
-                <li>websockets or Native </li>
-                <li>durable Queue of Messages</li>
+                <li>global pub/sub network</li>
+                <li>guarenteed message delivery</li>
+                <li>websockets or native </li>
+                <li>durable queue of messages</li>
             </ul>
           </div>
         </div>
