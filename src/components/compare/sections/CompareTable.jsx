@@ -13,17 +13,24 @@ export default class CompareTable extends Component {
 
     const columns = [{
       Header: '',
-      accessor: 'name'
+      accessor: 'name',
+      width: 350
     }, {
-      Header: 'Price',
+      Header: () => <span className="column-header seperator">Price</span>,
       accessor: 'price',
-      Cell: props => <div className="value">{props.value}</div>
+      Cell: props => <div className="value">{props.value}</div>,
+      style: {
+        borderRight: "solid #55cb3d 1px"
+      }
     }, {
-      Header: 'Feature A',
+      Header: () => <span className="column-header seperator">Feature A</span>,
       accessor: 'feature_a',
-      Cell: props => <div className="value">{props.value}</div>
+      Cell: props => <div className="value">{props.value}</div>,
+      style: {
+        borderRight: "solid #55cb3d 1px"
+      }
     }, {
-      Header: 'Feature B',
+      Header: () => <span className="column-header">Feature B</span>,
       accessor: 'feature_b',
       Cell: props => <div className="value">{props.value}</div>
     }
