@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css'
-import '../../styles/compare/CompareTable.scss';
+import '../../../styles/compare/sections/CompareTable.scss';
+
+
 
 export default class CompareTable extends Component {
   constructor(props) {
