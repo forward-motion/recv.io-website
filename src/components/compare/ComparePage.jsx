@@ -68,18 +68,27 @@ class ComparePage extends Component {
     return(
       <div className="compare-page container">
         <OurCalculator />
-        <Usage
-          value={this.state.concurrent}
-          onChange={this.handleConcurrentOnChange}
-        />
-        <Usage
-          value={this.state.maxMsg}
-          onChange={this.handleMaxMsgOnChange}
-        />
-        <Usage
-          value={this.state.avgMsg}
-          onChange={this.handleAvgMsgOnChange}
-        />
+
+        <div className="usage-section-wrapper">
+          <div className="usage-header">
+            <div className="usage-icon">X</div>
+            <div className="usage-title">Usage</div>
+          </div>
+          <div className="usage-section row">
+            <Usage
+              value={this.state.concurrent}
+              onChange={this.handleConcurrentOnChange}
+            />
+            <Usage
+              value={this.state.maxMsg}
+              onChange={this.handleMaxMsgOnChange}
+            />
+            <Usage
+              value={this.state.avgMsg}
+              onChange={this.handleAvgMsgOnChange}
+            />
+          </div>
+        </div>
 
         <Features />
 

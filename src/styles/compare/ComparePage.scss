@@ -1,5 +1,22 @@
 .compare-page {
   color: white;
+  .usage-section-wrapper {
+    background: white;
+    color: black;
+    .usage-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .usage-section {
+
+
+      .component-usage {
+        border: solid red 1px;
+      }
+    }
+  }
 
 
 }
