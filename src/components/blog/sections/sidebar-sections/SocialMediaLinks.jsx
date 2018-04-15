@@ -19,6 +19,7 @@ const SocialMediaLinks = (props) => {
           <a href="#">other</a>
         </div>
       </div>
+      <div className="seperator-articles"></div>
     </div>
   );
 

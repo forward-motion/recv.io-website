@@ -1,3 +1,8 @@
+@import '../../../_global/variables';
 .component-social-media-links {
-  border: solid red 1px;
+  .seperator-articles {
+    border-bottom: solid $primary-bg-color 1px;
+    width: 250px;
+    padding-bottom: 40px;
+  }
 }

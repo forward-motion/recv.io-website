@@ -16,7 +16,7 @@ export default class ArticlePage extends Component {
                   { name: 'keywords', content: 'sample, something' },
               ]}
           />
-          <div className="showArticle col-md-8">
+          <div className="show-article col-md-8">
             <Article
               blogData={this.props.blogData}
              />

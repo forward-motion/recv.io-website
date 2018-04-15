@@ -7,8 +7,8 @@ const articleLinks = (props) => {
     return(
       <Link key={article.id} to="#">
         <div className="article-link">
-          <h4>{article.title}</h4>
-          <span>{article.date}</span>
+          <span className="article-title">{article.title}</span><br/>
+          <span className="article-date">Date {article.date}</span>
         </div>
       </Link>
     );
@@ -19,8 +19,9 @@ const PopularArticles = (props) => {
 
   return(
     <div className="component-popular-articles">
-      <h3> Popular Articles </h3>
+      <h3 className="article-section-title"> Popular Articles </h3>
       {articleLinks(props)}
+      <div className="seperator-articles"></div>
     </div>
   );
 

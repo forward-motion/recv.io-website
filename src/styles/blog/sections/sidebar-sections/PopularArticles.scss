@@ -1,14 +1,31 @@
-.popular-articles {
+@import '../../../_global/variables';
+.component-popular-articles {
+  .article-section-title {
+    font-weight: 300;
+    padding-bottom: 25px;
+
+  }
   .article-link {
     padding-left: 10px;
+    padding-bottom: 20px;
     &:hover, &:focus {
-      color: blue;
+
+    }
+    .article-title, .article-date {
+      display: inline-block;
+      font-weight: 300;
+      font-size: 14px;
+    }
+    .article-title {
+      padding-bottom: 5px;
+    }
+    .article-date {
+      color:rgb(151,164,190);
     }
   }
-  a {
-    color: black;
-    &:hover, &:focus {
-      text-decoration: none;
-    }
+  .seperator-articles {
+    border-bottom: solid $primary-bg-color 1px;
+    width: 250px;
+    padding-bottom: 40px;
   }
 }
