@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Footer from '../_global/ui/Footer.jsx';
+import RenderDocsPage from '../_global/ui/RenderDocsPage.jsx';
 
+/* doc page styles */
 import '../../styles/docs/DocsPage.scss';
 
 
@@ -73,6 +75,13 @@ class DocsPage extends Component {
         });
     }
 
+    get examplesPage() {
+        
+        return(
+            <RenderDocsPage title={this.state.selectedView} />
+        );
+    }
+
     render() {
         return(
             <div className="container-fluid docs-page">
@@ -81,7 +90,7 @@ class DocsPage extends Component {
                         { this.links }
                     </div>
                     <div className="col-md-9" style={{ backgroundColor : 'white' }}>
-                        <h2 style={{ textTransform : 'uppercase' }}> { this.state.selectedView }</h2>
+                        { this.examplesPage }
                     </div>
                 </div>
 

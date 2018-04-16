@@ -1,0 +1,39 @@
+@import '../variables';
+
+
+.render-docs-page {
+
+    font-family: 'AvenirNextLTW01-Regular';
+
+    .underline-accent {
+        border-top: 2px solid $accent;
+        margin: 20px 0px 40px;
+        width: 100px
+    }
+
+    pre{
+        background-color: $secondary-bg-color;
+
+        code {
+            ol {
+                color: $code-snippet-numebrs;
+
+                li {
+                    
+                    p {
+                        color: $primary-font-color;
+
+                        .var {
+                            color: $variables-code-snippets;
+                        }
+
+                        .array-var {
+                            color: $array-value;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
