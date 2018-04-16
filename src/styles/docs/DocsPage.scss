@@ -1,19 +1,36 @@
+@import '../_global/variables';
+
 .docs-page {
 
-    .btn-sublinks {
-        display: block;
+    .side-bar {
+        background-color: $secondary-bg-color;
+        padding-left: 50px;
+        font-family: 'AvenirNextLTW01-Regular';
 
-        &:focus {
-            outline: 0;
-            -webkit-box-shadow: none;
-            box-shadow: none; 
+        h4 {
+            color: $primary-font-color;
+            margin-top: 40px;
         }
+    }
 
-        &.active {
-            color: lightgrey;
-            outline: none; 
-            -webkit-box-shadow: none;
-            box-shadow: none; 
+    .sublinks {
+
+        .sublink {
+            color: $primary-font-color;
+            margin-left: 20px;
+            margin-bottom: 10px;
+
+            &.active {
+                color: lightgrey;
+                outline: none; 
+                -webkit-box-shadow: none;
+                box-shadow: none; 
+            }
+
+            button {
+                border: none; 
+                background: none;
+            }
         }
     }
 }
