@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import Footer from '../_global/ui/Footer.jsx';
+import RenderDocsPage from '../_global/ui/RenderDocsPage.jsx';
 
+/* doc page styles */
 import '../../styles/docs/DocsPage.scss';
 
 
@@ -47,37 +50,52 @@ class DocsPage extends Component {
                          { link.title }
                      </h4>
 
-                     {(() => {
-                         return link.sublinks.map((sublink, index) => {
-                            return(
-                                <div>
-                                    <button 
-                                        key={`sublink-${index}`} 
-                                        name={sublink}
-                                        className={`btn btn-sublinks ${this.state.selectedView == sublink ? 'active' : null}`}
-                                        onClick={this.onSelectedLink}
+                     <ul className="sublinks">
+                        {(() => {
+                            return link.sublinks.map((sublink, index) => {
+                                return (
+                                    <li
+                                        key={`sublink-${index}`}
+                                        className={`sublink ${this.state.selectedView == sublink ? 'active' : null}`}
                                     >
-                                        { sublink }
-                                    </button>
-                                </div>
-                            );
-                         });
-                     })()}
+                                        <button 
+                                            name={sublink}
+                                            onClick={this.onSelectedLink}
+
+                                        > 
+                                            { sublink }
+                                        </button>
+                                    </li>
+                                );
+                            });
+                        })()}
+                     </ul>
                  </div>
             );
         });
+    }
+
+    get examplesPage() {
+        
+        return(
+            <RenderDocsPage title={this.state.selectedView} />
+        );
     }
 
     render() {
         return(
             <div className="container-fluid docs-page">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 side-bar">
                         { this.links }
                     </div>
-                    <div className="col-md-9">
-                        <h2 style={{ textTransform : 'uppercase', textAlign : 'center' }}> { this.state.selectedView }</h2>
+                    <div className="col-md-9" style={{ backgroundColor : 'white' }}>
+                        { this.examplesPage }
                     </div>
+                </div>
+
+                <div className="row">
+                    <Footer />
                 </div>
             </div>
         );

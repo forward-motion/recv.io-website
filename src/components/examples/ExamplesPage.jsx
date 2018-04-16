@@ -1,21 +1,7 @@
 import React, { Component } from 'react'; 
-import firebase from 'firebase';
-import FirebaseAuth from 'react-firebaseui/FirebaseAuth';
-import moment from 'moment';
+import Footer from '../_global/ui/Footer.jsx';
 
 import '../../styles/examples/ExamplesPage.scss';
-
-const uiConfig = {
-    signInFlow: 'popup',
-    signInOptions: [
-        firebase.auth.GithubAuthProvider.PROVIDER_ID,
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID
-    ],
-    callbacks: {
-        signInSuccess: () => false
-    }
-};
 
 class ExamplesPage extends Component {
     constructor(props) {
@@ -114,7 +100,7 @@ class ExamplesPage extends Component {
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="row" style={{backgroundColor : 'white'}}>
                     <div style={{ width: '860px', margin: '0 auto', marginTop: '40px', height: '63vh'}}>
                         <div className="row">
                             <div className="col-md-6">
@@ -136,25 +122,7 @@ class ExamplesPage extends Component {
                 </div>
 
                 <div className="row">
-                    <div className="examples-page-footer">
-                        <div className="col-xs-12">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <p className="call-to-action-sign-up">Ready to recv<span>?</span> Sign up for <b>free</b> with</p>
-                                </div>
-                            </div>
-
-                            <div className="row">
-                                <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
-                            </div>
-
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Footer />
                 </div>
             </div>
         );

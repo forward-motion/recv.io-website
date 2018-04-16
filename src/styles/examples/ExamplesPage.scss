@@ -12,6 +12,7 @@
         font-family: 'AvenirNextLTW01-Regular';
         font-size: 22px;
         padding: 13px 0;
+        margin-left: 15px;
     }
 
     h3 {
@@ -71,46 +72,6 @@
             .icon-gitfeed:before {
                 content: "\e90c";
             }
-        }
-    }
-
-    .examples-page-footer {
-        background-color: $primary-bg-color; 
-        color: $primary-font-color;
-        height: 30vh;
-
-        .call-to-action-sign-up {
-            text-align: center;
-            padding-top: 30px;
-            font-size: 20px;
-
-            span {
-                color: $accent;
-            }
-        }
-
-        #firebaseui_container {
-
-            margin: 25px 0;
-
-            .firebaseui-container {
-                max-width: none;
-                width: 50%;
-
-                .firebaseui-idp-list {
-                    padding: 0;
-
-                    .firebaseui-list-item {
-                        display: inline;
-                        margin-left: 20px;
-                    }
-                }
-            }
-        }
-
-        .copy-right {
-            padding-left: 30px;
-            margin-top: 30px;
         }
     }
 }
