@@ -11,7 +11,7 @@
     padding-top: 15px;
     padding-bottom: 20px;
     .features-icon {
-      border: solid black 1px;
+      padding-right: 10px;
     }
     .features-title {
       font-size: 30px;
@@ -19,5 +19,9 @@
   }
   .checkbox-label {
     font-weight: 300;
+  }
+  .icon-features:before {
+    content: "\e914";
+    font-size: 45px;
   }
 }

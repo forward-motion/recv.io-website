@@ -73,7 +73,7 @@ class ComparePage extends Component {
 
           <div className="usage-section-wrapper">
             <div className="usage-header">
-              <div className="usage-icon">X</div>
+              <div className="icon-usage"></div>
               <div className="usage-title">Usage</div>
             </div>
             <div className="usage-section row">

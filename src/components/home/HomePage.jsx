@@ -11,7 +11,7 @@ import Footer from './sections/Footer';
 import '../../styles/home/HomePage.scss';
 
 const HomePage = () => (
-  <div className="home-page container-fluid">
+  <div className="home-page">
       <Header />
       <PubSub />
       <LookFamiliar />

@@ -22,8 +22,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 120px;
       .usage-title {
         font-size: 30px;
+        padding-top:15px;
       }
     }
     .usage-section {
@@ -68,5 +70,10 @@
     -moz-box-shadow: -1px 0px 7px -1px rgba(161,158,161,1);
     box-shadow: -1px 0px 7px -1px rgba(161,158,161,1);
   }
+  .icon-usage:before {
+    content: "\e915";
+    font-size: 45px;
+  }
+
 
 }
