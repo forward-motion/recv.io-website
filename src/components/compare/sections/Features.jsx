@@ -6,7 +6,9 @@ import '../../../styles/_global/ui/CSSCheckbox.scss';
 const Features = (props) => (
   <div className="component-features row">
     <div className="features-header">
-      <div className="features-icon">X</div>
+      <div className="features-icon">
+        <i className="icon-features"></i>
+      </div>
       <div className="features-title">Features</div>
     </div>
     <label className="check-container col-sm-3 col-md-3">
