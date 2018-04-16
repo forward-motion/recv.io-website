@@ -6,7 +6,7 @@ const Extra = (props) => (
       <div className="extras-inner">
         <div className="extras-icon">
           <div className="extras-icon-inner">
-            {props.icon}
+            <i className={props.icon}></i>
           </div>
         </div>
         <div>
