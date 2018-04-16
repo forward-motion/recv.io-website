@@ -1,0 +1,21 @@
+@import '../../_global/variables';
+.component-results {
+  background-color: white;
+  border-radius: 5px;
+  color: $font-dark;
+  padding: 20px 20px;
+  margin: 40px 0 ;
+  .results-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    .results-icon {
+      border: solid black 1px;
+    }
+    .results-title {
+      font-size: 30px;
+    }
+  }
+}

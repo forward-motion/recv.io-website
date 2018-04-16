@@ -1,0 +1,33 @@
+@import '../../_global/variables';
+.compare-table {
+
+}
+.value {
+    width: 100%;
+    text-align: center;
+    //border-bottom: solid $accent-green 1px;;
+}
+.rt-th {
+  padding:0!important;
+}
+.ReactTable .rt-thead.-header {
+  box-shadow: none;
+  border-right: none;
+}
+.ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td {
+  border-right: none;
+}
+.ReactTable .rt-tbody .rt-tr-group {
+  border-bottom: none;
+}
+.ReactTable {
+  border: none;
+}
+.column-header {
+  display: block;
+  width: 100%;
+  border-bottom: solid $accent-green 1px;
+  &.seperator {
+    border-right: solid $accent-green 1px;
+  }
+}

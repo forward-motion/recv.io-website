@@ -1,0 +1,19 @@
+@import '../../_global/variables';
+.component-look-familiar {
+  height: 350px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .look-familiar {
+    h3 {
+      font-size: 50px;
+    }
+    span {
+      font-size: 30px;
+    }
+    .socket {
+      color: rgb(44,53,64);
+    }
+  }
+}
