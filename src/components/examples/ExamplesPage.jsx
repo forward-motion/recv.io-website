@@ -100,7 +100,7 @@ class ExamplesPage extends Component {
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="row" style={{backgroundColor : 'white'}}>
                     <div style={{ width: '860px', margin: '0 auto', marginTop: '40px', height: '63vh'}}>
                         <div className="row">
                             <div className="col-md-6">
