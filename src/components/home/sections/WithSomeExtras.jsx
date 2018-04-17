@@ -46,9 +46,9 @@ class WithSomeExtras extends Component {
 
   render() {
     return (
-      <div className="component-with-some-extras">
-        <div className="extras-header row">
-            <div className="col-md-12"><span className="extras-text">with some extras ...</span></div>
+      <div className="component-with-some-extras ">
+        <div className="extras-header">
+            <div><span className="extras-text">with some extras ...</span></div>
         </div>
 
         <div className="extras row">
