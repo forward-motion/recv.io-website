@@ -29,10 +29,10 @@ export default class BlogPage extends Component {
     return(
       <div className="component-blog-page container-fluid">
           <div className="row">
-            <div className="article-list col-md-8">
+            {/* <div className="article-list col-md-8">
               {this.showBlogs}
-            </div>
-            <SideBar />
+            </div> */}
+            <SideBar article={this.showBlogs}/>
           </div>
       </div>
     );

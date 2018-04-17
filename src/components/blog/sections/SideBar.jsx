@@ -10,18 +10,23 @@ import '../../../styles/blog/sections/SideBar.scss';
 class SideBar extends Component {
   render(){
     return(
-      <div className="component-side-bar col-md-4" >
-        <div className="seperator">
-          <div className="search">
-            <VirtualizedSelect
-              placeholder= "Search"
-            />
-          </div>
+      <div className="component-side-bar" >
+        <div className="article-wrapper col-md-8">
+          {this.props.article}
         </div>
+        <div className="component-side-bar-inner col-md-4" >
+          <div className="seperator">
+            <div className="search">
+              <VirtualizedSelect
+                placeholder= "Search"
+              />
+            </div>
+          </div>
 
-          <PopularArticles articles={this.props.blogData}/>
-          <SocialMediaLinks />
-          <EmailSubscribe />
+            <PopularArticles articles={this.props.blogData}/>
+            <SocialMediaLinks />
+            <EmailSubscribe />
+          </div>
         </div>
     );
   }

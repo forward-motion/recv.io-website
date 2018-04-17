@@ -1,5 +1,6 @@
 @import '../../_global/variables';
 .component-side-bar {
+  .component-side-bar-inner {
 
    a { color: white;}
    color: white;
@@ -25,4 +26,5 @@
        font-style: italic;
      }
    }
+ }
 }
