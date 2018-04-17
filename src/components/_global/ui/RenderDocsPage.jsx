@@ -7,7 +7,7 @@ import '../../../styles/_global/ui/RenderDocsPage.scss';
 const RenderDocsPage = (props) => {
 
     return(
-        <div className="container-fluid render-docs-page" style={{minHeight : '630px'}}>
+        <div className="container-fluid render-docs-page" style={{backgroundColor : 'white', float : 'right', width : '80%'}}>
             
             <div style={{ width: '870px'}}>
                 <h1 style={{ textTransform: 'uppercase' }}> {props.title}</h1>
@@ -37,6 +37,7 @@ const RenderDocsPage = (props) => {
                 </pre>
 
                 <p>avisse ut, ius ubique dolorum id, mea erat exerci definitionem an. Dolore populo per id. Detraxit disputando an pro, vero concludaturque eam at. Mei veritus maiestatis suscipiantur ad, cu quo dolor primis. Te justo omittantur ullamcorper mea.</p>
+
             </div>
         </div>
     );
