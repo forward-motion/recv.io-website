@@ -10,7 +10,7 @@ import '../../../styles/blog/sections/SideBar.scss';
 class SideBar extends Component {
   render(){
     return(
-      <div className="component-side-bar" >
+      <div className="component-side-bar row" >
         <div className="article-wrapper col-md-8">
           {this.props.article}
         </div>

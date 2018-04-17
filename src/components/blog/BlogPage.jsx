@@ -28,7 +28,7 @@ export default class BlogPage extends Component {
   render() {
     return(
       <div className="component-blog-page container-fluid">
-          <div className="row">
+          <div>
             {/* <div className="article-list col-md-8">
               {this.showBlogs}
             </div> */}
