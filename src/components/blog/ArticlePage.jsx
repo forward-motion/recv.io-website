@@ -5,7 +5,9 @@ import Helmet from 'react-helmet';
 import '../../styles/blog/ArticlePage.scss';
 
 export default class ArticlePage extends Component {
-
+  get renderArticle() {
+    return <Article blogData={this.props.blogData} />
+  }
   render(){
     return(
       <div className="component-article-page container-fluid">
@@ -16,11 +18,8 @@ export default class ArticlePage extends Component {
                   { name: 'keywords', content: 'sample, something' },
               ]}
           />
-          <div className="row">
-            <div className="show-article col-md-8">
-              <Article blogData={this.props.blogData} />
-            </div>
-            <SideBar />
+          <div>
+            <SideBar article={this.renderArticle} />
           </div>
 
       </div>
