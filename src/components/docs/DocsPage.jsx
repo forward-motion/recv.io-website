@@ -86,11 +86,9 @@ class DocsPage extends Component {
         return(
             <div className="container-fluid docs-page">
                 <div className="row">
-                    <div className="col-md-3 side-bar">
-                        { this.links }
-                    </div>
-                    <div className="col-md-9" style={{ backgroundColor : 'white' }}>
-                        { this.examplesPage }
+                    <div className="col-md-12 side-bar">
+                        <div style={{width : '200px', float : 'left'}}>{this.links}</div>
+                        {this.examplesPage}
                     </div>
                 </div>
 
