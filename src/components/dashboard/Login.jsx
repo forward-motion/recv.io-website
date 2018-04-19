@@ -1,4 +1,6 @@
 import React from 'react';
+
+import SecondaryHeader from '../_global/ui/SecondaryHeader';
 import firebase from 'firebase';
 import FirebaseAuth from 'react-firebaseui/FirebaseAuth';
 
@@ -18,9 +20,7 @@ const Login = ({ firebase }) => (
     <div>
 
         <div className="row">
-            <div className="col-md-12">
-                <h1>Login with</h1>
-            </div>
+            <SecondaryHeader title='Dashboard' />
         </div>
 
         <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
