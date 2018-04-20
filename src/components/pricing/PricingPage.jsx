@@ -15,54 +15,76 @@ class PricingPage extends Component {
                 {
                     icon: 'icon-free',
                     plan: 'free',
-                    includes: ['lmiited monitoring', '4 apps', '10k streams', '-']
+                    includes: [
+                        '100 peak connections per month',
+                        '10GB ingress and egress',
+                        'free forever'
+                    ]
                 },
                 {
                     icon: 'icon-paid',
                     plan: 'paid',
-                    includes: ['full monitoring', 'unlimited apps', '100k streans', 'realtime connections']
+                    includes: [
+                        '$50 per month per 1k (up to 20k) peak connections',
+                        '$0.50 per GB ingress',
+                        '$0.25 per GB egress'
+                    ]
                 },
                 {
                     icon: 'icon-standalone',
                     plan: 'standalone',
-                    includes: ['access to Jarves', 'robot build apps for you', 'unlimited streams', 'end-to-end connections']
+                    includes: [
+                        'fully isolated network',
+                        'unlimited peak connections',
+                        'unlimited ingress and egress',
+                        'customizable limits',
+                        'dedicated support'
+                    ]
                 }
             ],
             faqs: [
                 {
                     key: '1',
-                    heading: 'Lorem ipsum dolor sit amet, his odio omnium ad, mea minimum consequat democritum an. Ut cum feugiat vocibus forensibus, eros suscipiantur ?',
+                    heading: 'What are "peak connections"?',
                     questions: [
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.',
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.',
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.'                        
+                        'This is the number of simultaneous connections at any given moment.',
+                        'If you have 10,000 devices, but only 1,000 are ever connected at the same time, you will only be charged for 1,000 peak connections.'
                     ]
                 },
                 {
                     key: '2',
-                    heading: 'Lorem ipsum dolor sit amet, his odio omnium ad, mea minimum consequat democritum an. Ut cum feugiat vocibus forensibus, eros suscipiantur ?',
+                    heading: 'What is "ingress" and "egress"?',
                     questions: [
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.',
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.',
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.'
+                        'Ingress is the amount of bandwidth used to publish messages.',
+                        'Egress is the amount of bandwidth used to deliver messages.',
                     ]
                 },
                 {
                     key: '3',
-                    heading: 'Lorem ipsum dolor sit amet, his odio omnium ad, mea minimum consequat democritum an. Ut cum feugiat vocibus forensibus, eros suscipiantur ?',
+                    heading: 'Why do you charge for bandwidth?',
                     questions: [
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.',
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.',
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.'
+                        'We feel that bandwidth is the most accurate representation of usage costs rather than charging per message (which many of our competitors do).',
+                        'Please check out our comparison calculator to learn more.'
                     ]
                 },
                 {
                     key: '4',
-                    heading: 'Lorem ipsum dolor sit amet, his odio omnium ad, mea minimum consequat democritum an. Ut cum feugiat vocibus forensibus, eros suscipiantur ?',
+                    heading: 'What happens if I go over my limits?',
                     questions: [
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.',
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.',
-                        'bus elaboraret cu, illud fugit conceptam vis in, eam mundi tation bonorum cu. Illum incorrupte contentiones eu pri.'
+                        'Once you reach your peak connection limit, newer connections will be refused until the number of simultaneous connections decreases.',
+                        'You will receive an email alert once per day if your peak connections approaches 75% of your limit during that day.',
+                        'We do not currently have a hard limit on bandwidth, but you may opt to receive email alerts once your bandwidth costs cross a defined threshold.'
+                    ]
+                },
+                {
+                    key: '4',
+                    heading: 'How often can I change my plan?',
+                    questions: [
+                        'You can upgrade or downgrade your account at any time.',
+                        'Once you upgrade from the free plan, you can also set your peak connection limit at any time.',
+                        'Once on the paid plan, changing your connection limit has no effect on your current costs, because costs are purely usage-based.',
+                        'For example, if you change your connection limit from 10,000 to 15,000, you will still only be charged for your actual usage that month.',
+                        'Likewise, downgrading from a higher limit to lower will still charge you for your actual usage for that month.'
                     ]
                 }
             ]
