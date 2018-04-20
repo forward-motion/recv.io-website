@@ -4,7 +4,7 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 import '../../../styles/_global/ui/Header.scss';
 
-const Header = () => (
+const Header = (props) => (
     <div className="header">
 
         <Navbar collapseOnSelect fluid>
@@ -34,7 +34,7 @@ const Header = () => (
                         <Link role="button" to="/blog/">Blog</Link>
                     </li>
                     <li role="presentation">
-                        <Link role="button" to="/dashboard/">Dashboard</Link>
+                        <Link className="btn btn-dashboard" role="button" to="/dashboard/"><span className="icon-my-apps"></span>{props.user ? props.user.displayName : 'Dashboard'}</Link>
                     </li>
                 </Nav>
             </Navbar.Collapse>

@@ -25,6 +25,29 @@
         }
          a {
              color: $primary-font-color !important;
+
+             &.btn-dashboard {
+                    height: 20px;
+                    background-color: $callToActionButtons;
+                    padding-top: 15px;
+                    border: none;
+                    line-height: 0;
+                    margin-top: 9px;
+
+                    &:hover, &:focus {
+
+                        background-color: $callToActionButtons;
+                    }
+
+                    .icon-my-apps {
+                        line-height: 0 !important;
+                        padding-right: 10px;
+                    }
+
+                    .icon-my-apps:before {
+                        content: "\e908";
+                    }
+             }
          }
      }
   }
