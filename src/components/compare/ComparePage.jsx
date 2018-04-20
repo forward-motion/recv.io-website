@@ -122,8 +122,11 @@ class ComparePage extends Component {
             <div className="middle-white"></div>
             <div className="btm-light-blue"></div>
           </div>
+
+          <div className="row">
+            <Footer user={this.props.user} />
+          </div>
         </div>
-        <Footer />
       </div>
     );
   }

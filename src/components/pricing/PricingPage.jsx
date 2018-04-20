@@ -127,7 +127,7 @@ class PricingPage extends Component {
     }
 
     render() {
-
+        
         return(
             <div className="pricing-page">
 
@@ -201,7 +201,7 @@ class PricingPage extends Component {
                     </div>
 
                     <div className="row">
-                        <Footer />
+                        <Footer user={this.props.user} />
                     </div>
 
                 </div>

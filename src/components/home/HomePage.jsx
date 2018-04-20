@@ -10,14 +10,14 @@ import Footer from './sections/Footer';
 
 import '../../styles/home/HomePage.scss';
 
-const HomePage = () => (
+const HomePage = (props) => (
   <div className="home-page container-fluid">
       <Header />
       <PubSub />
       <LookFamiliar />
       <WithSomeExtras />
       <FullFeatureSet />
-      <Footer />
+      <Footer user={props.user} />
   </div>
   );
 

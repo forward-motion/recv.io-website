@@ -93,7 +93,7 @@ class DocsPage extends Component {
                 </div>
 
                 <div className="row">
-                    <Footer />
+                    <Footer user={this.props.user} />
                 </div>
             </div>
         );

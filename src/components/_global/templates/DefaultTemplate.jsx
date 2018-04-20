@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Header from '../ui/Header';
+import Footer from '../ui/Footer';
 import firebase from 'firebase';
 import 'firebase/auth';
 
