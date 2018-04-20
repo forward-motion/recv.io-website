@@ -10,8 +10,13 @@ import Footer from './sections/Footer';
 
 import '../../styles/home/HomePage.scss';
 
+<<<<<<< HEAD
 const HomePage = (props) => (
   <div className="home-page container-fluid">
+=======
+const HomePage = () => (
+  <div className="home-page">
+>>>>>>> develop
       <Header />
       <PubSub />
       <LookFamiliar />
