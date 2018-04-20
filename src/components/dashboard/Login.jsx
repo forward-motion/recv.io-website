@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Footer from '../_global/ui/Footer';
+import DashboardFooter from '../_global/ui/DashboardFooter';
 
 import SecondaryHeader from '../_global/ui/SecondaryHeader';
 import firebase from 'firebase';
@@ -20,7 +20,7 @@ const uiConfig = {
     }
 };
 
-const Login = ({ firebase }) => (
+const Login = ({ firebase, user }) => (
     <div className="login-page">
 
         <div className="row">
@@ -49,7 +49,7 @@ const Login = ({ firebase }) => (
         </div>
 
         <div className="row">
-            <Footer user={'user'} dashboard={true} />
+            <DashboardFooter />
         </div>
 
     </div>

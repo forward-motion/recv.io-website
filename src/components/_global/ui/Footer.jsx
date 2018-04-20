@@ -45,7 +45,7 @@ const Footer = (props) => {
                 </div>
             </div>
         );
-    } else if ( props.user && props.dashboard) {
+    } else {
         return (
             <div className="page-footer">
 
