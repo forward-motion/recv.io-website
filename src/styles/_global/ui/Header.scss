@@ -1,12 +1,13 @@
 @import '../variables.scss';
 
 .header {
-
+  position: relative;
+  z-index: 2;
   .navbar {
         background-color: $primary-bg-color !important;
         border: 0;
         border-radius: 0;
-      
+
      li {
 
         &.open {
