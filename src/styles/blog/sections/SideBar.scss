@@ -2,13 +2,16 @@
 .component-side-bar {
   display: flex;
   justify-content: flex-end;
+  background: white;
   .component-side-bar-inner {
    a { color: white;}
    color: white;
    background:$secondary-bg-color;
-   padding-left: 40px;
-   padding-top: 50px;
-   padding-bottom: 50px;
+   // padding-left: 40px;
+   // padding-top: 50px;
+   // padding-bottom: 50px;
+   // padding-right: 150px;
+   padding: 50px 150px 50px 40px;
    .seperator{
      border-bottom: solid $primary-bg-color 1px;
      display: inline-block;
