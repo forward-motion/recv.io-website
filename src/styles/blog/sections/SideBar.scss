@@ -1,0 +1,30 @@
+@import '../../_global/variables';
+.component-side-bar {
+  .component-side-bar-inner {
+
+   a { color: white;}
+   color: white;
+   background:$secondary-bg-color;
+   padding-left: 40px;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   .seperator{
+     border-bottom: solid $primary-bg-color 1px;
+     display: inline-block;
+     padding-bottom: 40px;
+     width: 250px;
+   }
+   .search {
+     width: 200px;
+
+     .Select-menu-outer,.Select-menu,.Select-control,.Select-placeholder, .Select--single > .Select-control .Select-value {
+       color: $sidebar-subtext!important;
+       background-color: $primary-bg-color!important;
+       border: none!important;
+     }
+     .Select-placeholder {
+       font-style: italic;
+     }
+   }
+ }
+}

@@ -1,0 +1,21 @@
+@import '../../../_global/variables';
+.component-social-media-links {
+  .social-media-links-title {
+    font-weight: 300;
+  }
+  .social-media-icons {
+    display: flex;
+    div {
+      border: solid red 1px;
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+  }
+
+  .seperator-articles {
+    border-bottom: solid $primary-bg-color 1px;
+    width: 250px;
+    padding-bottom: 40px;
+  }
+}

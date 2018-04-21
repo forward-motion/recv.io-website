@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import '../../styles/blog/PopularArticles.scss';
+import '../../../../styles/blog/sections/sidebar-sections/PopularArticles.scss';
 
 const articleLinks = (props) => {
   return props.articles.map((article)=>{
     return(
       <Link key={article.id} to="#">
         <div className="article-link">
-          <h4>{article.title}</h4>
-          <span>{article.date}</span>
+          <span className="article-title">{article.title}</span><br/>
+          <span className="article-date">Date {article.date}</span>
         </div>
       </Link>
     );
@@ -18,8 +18,10 @@ const articleLinks = (props) => {
 const PopularArticles = (props) => {
 
   return(
-    <div className="popular-articles">
+    <div className="component-popular-articles">
+      <h3 className="article-section-title"> Popular Articles </h3>
       {articleLinks(props)}
+      <div className="seperator-articles"></div>
     </div>
   );
 
