@@ -44,21 +44,12 @@ class WithSomeExtras extends Component {
         });
     }
 
-<<<<<<< HEAD
-    render() {
-        return (
-            <div className="component-with-some-extras">
-                <div className="extras-header row">
-                    <div className="col-md-12"><span className="extras-text">with some extras ...</span></div>
-                </div>
-=======
   render() {
     return (
       <div className="component-with-some-extras ">
         <div className="extras-header">
             <div><span className="extras-text">with some extras ...</span></div>
         </div>
->>>>>>> feature/adding-icons
 
                 <div className="extras row">
                     {this.renderExtras()}
