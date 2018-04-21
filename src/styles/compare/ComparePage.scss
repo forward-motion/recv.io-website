@@ -3,7 +3,6 @@
 .compare-page {
   .compare-page-inner {
     position: relative;
-    z-index: 2;
   }
   color: white;
   //background-color: $secondary-blue;
@@ -49,9 +48,8 @@
     }
   }
   .background {
-    z-index: 1;
     position: absolute;
-    top: 0;
+    top: 35px;
     left: 0;
     .top-dark-blue {
       background-color: $background;
@@ -65,7 +63,7 @@
     }
     .btm-light-blue {
       background-color: $secondary-blue;
-      height: 500px;
+      height: 465px;
       width: 100vw;
     }
   }
