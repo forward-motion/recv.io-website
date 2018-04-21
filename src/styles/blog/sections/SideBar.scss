@@ -29,3 +29,24 @@
    }
  }
 }
+@media (max-width: 1200px) {
+  .component-side-bar {
+    background: white;
+    flex-direction: column;
+    .component-side-bar-inner {
+      margin-left: 0px;
+    }
+    .component-blog-preview, .component-article {
+      justify-content: center;
+      padding: 0 20px;
+    }
+    .component-read-signup {
+      margin: 10px auto;
+      width: 300px;
+      height: 250px;
+      padding: 0 20px;
+      text-align: center;
+    }
+  }
+
+}
