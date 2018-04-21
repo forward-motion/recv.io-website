@@ -4,12 +4,12 @@
     display: flex;
     justify-content: center;
     .tagline {
-      height: 100%;
       min-width: 400px;
       display: flex;
       justify-content: center;
       align-items: center;
       .tagline-inner {
+        margin: 0 30px;
         ul {
           margin: 0;
           padding: 12px;
@@ -20,13 +20,20 @@
           font-weight: 300;
           line-height: 36px;
           margin-bottom: 10px;
+
         }
       }
 
     }
     .data-animation {
-      height: 100%;
-      min-width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .data-img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+      }
     }
   }
 
@@ -35,5 +42,12 @@
 @media (max-width: 700px) {
   .component-header  {
     flex-direction: column;
+    .data-animation {
+      .data-img {
+        max-width: auto;
+        height: 200px;
+        display: block;
+      }
+    }
   }
 }

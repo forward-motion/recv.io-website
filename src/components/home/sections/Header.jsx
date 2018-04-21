@@ -21,13 +21,8 @@ const Header = (props) => (
                 </ul>
             </div>
         </div>
-        <div className="data-animation"
-             style={{
-                 backgroundImage:`url(${DataFlow})`,
-                 backgroundRepeat:"no-repeat",
-                 backgroundPosition:"center",
-                 backgroundSize:"80%"
-             }}>
+        <div className="data-animation">
+             <img className="data-img" src={DataFlow}/>
         </div>
     </div>
 );
