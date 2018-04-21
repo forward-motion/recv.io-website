@@ -68,7 +68,12 @@ class ComparePage extends Component {
 
     return(
       <div className="compare-page">
-        <div className="container">
+        <div className="background">
+          <div className="top-dark-blue"></div>
+          <div className="middle-white"></div>
+          <div className="btm-light-blue"></div>
+        </div>
+        <div className="container compare-page-inner">
           <OurCalculator />
 
           <div className="usage-section-wrapper">
@@ -116,12 +121,6 @@ class ComparePage extends Component {
           <Features />
 
           <Results data={data}/>
-
-          <div className="background">
-            <div className="top-dark-blue"></div>
-            <div className="middle-white"></div>
-            <div className="btm-light-blue"></div>
-          </div>
         </div>
         <Footer />
       </div>
