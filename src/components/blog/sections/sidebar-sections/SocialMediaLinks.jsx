@@ -5,9 +5,9 @@ import '../../../../styles/blog/sections/sidebar-sections/SocialMediaLinks.scss'
 function renderSocialMediaLinks() {
   return (
     <div className="social-media-icons">
-      <a href="#"><div className="facebook">x</div></a>
-      <a href="#"><div className="twitter">x</div></a>
-      <a href="#"><div className="rss">x</div></a>
+      <a href="#"><i className="icon-social_fb"></i></a>
+      <a href="#"><i className="icon-social_twt"></i></a>
+      <a href="#"><i className="icon-social_rss"></i></a>
     </div>
   );
 }
