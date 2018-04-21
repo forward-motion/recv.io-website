@@ -76,6 +76,19 @@
     content: "\e915";
     font-size: 45px;
   }
-
-
+}
+@media (max-width:450px) {
+  .compare-page {
+    .text-wrapper {
+      h3 {
+        font-size: 26px;
+      }
+    }
+    .rt-thead.-header, .rt-td,.rt-th {
+      min-width: 100px!important;
+      max-width: 100px!important;
+      width: 100px!important;
+      flex: auto!important;
+    }
+  }
 }
