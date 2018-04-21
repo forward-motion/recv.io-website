@@ -1,10 +1,38 @@
 .my-apps {
+
     .panel-default {
         height: 130px;
 
-        .panel-heading {
-            text-transform: uppercase;
-            cursor: pointer;
+         -webkit-box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
+        -moz-box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
+        box-shadow: 9px 10px 0px -5px rgba(85,203,61,0.83);
+
+        .panel-body {
+            padding-top: 25px;
+
+            .app-cliable-body {
+
+                cursor: pointer;
+
+                .icon-my-apps{
+                    font-size: 40px;
+                    margin-left: 20px;
+                    position: relative;
+                    top: 13px;
+                }
+
+                .icon-my-apps:before {
+                    content: "\e908";
+                }
+
+                .desc{
+                    width: 310px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+            }
         }
         .trash {
             position: relative;
@@ -12,8 +40,14 @@
     
             .trash-btn {
                 position: absolute;
-                right: 0;
-                bottom: -60px;
+                right: -20px;
+                bottom: -50px;
+                background: transparent;
+                z-index: 20;
+
+                .icon-trash:before {
+                    content: "\e906";
+                }
 
                 &:focus {
                     outline: none;

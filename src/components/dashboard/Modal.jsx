@@ -1,14 +1,14 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
+import '../../styles/dashboard/Modal.scss';
+
 const ModalApp = (props) => {
     
     return(
         <Modal show={props.show} onHide={props.handleClose}>
-            <Modal.Header>
-                <Modal.Title style={{textTransform: 'uppercase'}}>{props.name}</Modal.Title>
-            </Modal.Header>
             <Modal.Body>
+                <Modal.Title style={{ textTransform: 'uppercase' }}>{props.name}</Modal.Title>
                 { props.children }
             </Modal.Body>
             <Modal.Footer>

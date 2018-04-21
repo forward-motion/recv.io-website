@@ -10,6 +10,7 @@ import Login from './Login.jsx';
 import App from './App.jsx';
 import MyAccount from './MyAccount.jsx';
 import ModalApp from './Modal.jsx';
+import DashboardFooter from '../_global/ui/DashboardFooter.jsx';
 
 // app styles 
 import '../../styles/dashboard/DashboardPage.scss';
@@ -24,7 +25,7 @@ class DashboardPage extends React.Component {
         super(props);
 
         this.state = {
-            view: {label: 'my-apps', value: 'my-apps'},
+            view: {label: 'My Apps', value: 'my-apps'},
             subView: 'overview',
             selectedApp: null,
             deleteApp: null,
@@ -32,6 +33,7 @@ class DashboardPage extends React.Component {
             modalType: null,
             userApps: user,
             createdApp: '',
+            createdAppDesc: '',
             createdKeyApi: '',
             deleteKey: null,
             userPlan: 'free'
@@ -60,11 +62,15 @@ class DashboardPage extends React.Component {
 
     handleUserEnter(e) {
 
-        if( e.target.name == 'create app') {
+        if (e.target.name == 'app desc') {
 
-            this.setState({ createdApp : e.target.value })
+            this.setState({ createdAppDesc: e.target.value })
+
+        } else if (e.target.name == 'create app') {
+
+            this.setState({ createdApp: e.target.value })
         } else {
-            this.setState({ createdKeyApi : e.target.value })
+            this.setState({ createdKeyApi: e.target.value })
         }
     }
 
@@ -126,13 +132,14 @@ class DashboardPage extends React.Component {
         let usersApps = this.state.userApps; 
         let newlyCreatedApp = {
             name: this.state.createdApp,
+            desc: this.state.createdAppDesc,
             stats: [{type: 'stat a', key: 'no stats yet'},{type: 'stat b', key: 'no stats yet'},{type: 'stat c', key: 'no stats yet'}],
             keys:[]
         }; 
 
         usersApps.push(newlyCreatedApp);
 
-        this.setState({ userApps: usersApps, show: false, selectedApp :  newlyCreatedApp, createdApp: '', subView : 'overview'});
+        this.setState({ userApps: usersApps, show: false, selectedApp :  newlyCreatedApp, createdApp: '', createdAppDesc: '', subView : 'overview'});
     }
 
     onCreateKey() { 
@@ -203,12 +210,10 @@ class DashboardPage extends React.Component {
 
             return (
                 
-                <div>
-                    <p>
-                        Interested in a sandalone  network, click the button below,
-                        and we will email you
-                    </p>
-                    <button className="bt btn-default">Contact</button>
+                <div className="contact-content">
+                    <h4>Interested in a sandalone  network?</h4>
+                    <p>click the button below, and we will email you</p>
+                    <button className="btn btn-dashboard"> <span className="icon-delivery"></span>Contact</button>
                 </div>
             );
             
@@ -244,24 +249,31 @@ class DashboardPage extends React.Component {
                         handleClose={this.handleClose} 
                         closeModal={this.handleClose}
                         show={this.state.show}>
-                        <p>Create App</p>
                         <form>
                         <FormGroup
                             controlId="formBasicText"
                         >
-                            <ControlLabel>Name</ControlLabel>
                             <div className="row">
-                                <div className="col-md-6">
+                                <div className="col-md-9">
                                 <FormControl
                                     type="text"
                                     value={this.state.createdApp}
                                     name="create app"
-                                    placeholder="Enter text"
+                                    placeholder="Name*"
                                     onChange={this.handleUserEnter}
                                 />
                                 </div>
                                 <div className="col-md-3">
-                                    <Button onClick={this.onCreateApp}>Create App</Button>
+                                    <Button className="btn btn-dashboard" onClick={this.onCreateApp}><span>+</span>Create New</Button>
+                                </div>
+                                <div className="col-md-9">
+                                    <FormControl
+                                        type="text"
+                                        value={this.state.createdAppDesc}
+                                        name="app desc"
+                                        placeholder="Description"
+                                        onChange={this.handleUserEnter}
+                                    />
                                 </div>
                             </div>
                             
@@ -276,24 +288,22 @@ class DashboardPage extends React.Component {
                         handleClose={this.handleClose} 
                         functionalApp={this.handleClose}
                         show={this.state.show}>
-                        <p>Create Key</p>
                         <form>
                         <FormGroup
                             controlId="formBasicText"
                         >
-                            <ControlLabel>Key post-fix</ControlLabel>
                             <div className="row">
                                 <div className="col-md-6">
                                 <FormControl
                                     type="text"
                                     value={this.state.createdKeyApi}
                                     name="create key"
-                                    placeholder="Enter text"
+                                    placeholder="Enter key post-fix"
                                     onChange={this.handleUserEnter}
                                 />
                                 </div>
                                 <div className="col-md-3">
-                                    <Button onClick={this.onCreateKey}>Create Key</Button>
+                                    <Button className="btn btn-dashboard" onClick={this.onCreateKey}>Create Key</Button>
                                 </div>
                             </div>
                             
@@ -304,11 +314,9 @@ class DashboardPage extends React.Component {
             case 'upgrade': 
                 return(
                     <ModalApp 
-                        name={this.state.modalType} 
                         handleClose={this.handleClose} 
                         functionalApp={this.handleClose}
                         show={this.state.show}>
-                            <p>Upgrade Plan</p>
                             { this.selectedAPlan }
                     </ModalApp>
                 );
@@ -331,41 +339,88 @@ class DashboardPage extends React.Component {
 
     get breadcrumbs() {
 
+        const { user, firebase } = this.props;
+
+        let breadcrumbStyles = {
+            backgroundColor: '#223047'
+        }; 
+
+        if( this.state.view.value === 'my-app') {
+            breadcrumbStyles.height = '140px';
+        }
+
+
         return (
 
-            <ol className="breadcrumb">
-                <li>
-                    <VirtualizedSelect
-                        value={this.state.view}
-                        options={this.props.views}
-                        clearable={false}
-                        onChange={this.onChangeView}
-                    />
-                </li>
-                {(() => {
-                    
-                    return this.state.selectedApp !== null ? 
-                        (
-                            <li> 
-                                { this.state.selectedApp.name } 
-                                <button
-                                    className="btn btn-breadcrumb-removal" 
-                                    onClick={() => this.setState({ selectedApp : null, subView : 'overview' })}> 
-                                        x 
-                                </button> 
-                            </li>
-                        ) : null
-                })()}
-                {(() => {
+            <div style={breadcrumbStyles}>
+               <div style={{maxWidth: '70%', margin: '0 auto', position : 'relateive', zindex : '50'}}>
+                    <div className="row">
+                        <a className="pull-right" style={{ marginRight: '-190px', marginTop: '12px', color: 'white', textDecoration : 'underline' }} onClick={() => firebase.auth().signOut()}>Sign-out</a>
+                    </div>
 
-                    return this.state.selectedApp !== null ? 
-                        (
-                            <li> 
-                                { this.state.subView } 
-                            </li>
-                        ) : null 
-                })()}
-            </ol>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <ul className="breadcrumb-dashboard">
+                                <li>
+                                    <VirtualizedSelect
+                                        value={this.state.view}
+                                        options={this.props.views}
+                                        multi={false}
+                                        clearable={false}
+                                        searchable={false}
+                                        onChange={this.onChangeView}
+                                    />
+                                </li>
+                                {(() => {
+
+                                    return this.state.selectedApp !== null ?
+                                        (
+                                            <li>
+                                                <span className="divider">|</span>  {this.state.selectedApp.name}
+                                                <button
+                                                    className="btn btn-breadcrumb-removal"
+                                                    onClick={() => this.setState({ selectedApp: null, subView: 'overview' })}>
+                                                    x
+                                </button>
+                                            </li>
+                                        ) : null
+                                })()}
+                                {(() => {
+
+                                    return this.state.selectedApp !== null ?
+                                        (
+                                            <li>
+                                                <span className="divider">|</span> {this.state.subView}
+                                            </li>
+                                        ) : null
+                                })()}
+                            </ul>
+                        </div>
+                        <div className="col-md-12">
+                            {(() => {
+
+                                if( this.state.selectedApp === null && this.state.view.value !== 'my-account') {
+                                    return(
+                                        <div className="layout-icons-wrapper">
+                                            <button className="btn"><span className="icon-my-apps"></span></button>
+                                            <button className="btn disabled"><span className="icon-ordering"></span></button>
+                                        </div>
+                                    );
+                                } else if( this.state.selectedApp !== null) {
+                                    return(
+                                        <div className="subview-button-layout">
+                                            {this.subViewBtn}
+                                        </div>
+                                    );
+                                } else {
+                                    return null;
+                                }
+                                
+                            })()}
+                        </div>
+                    </div>
+               </div>
+            </div>
         );
     }
 
@@ -374,7 +429,7 @@ class DashboardPage extends React.Component {
 
         return this.state.userApps.map((app, index) => {
             return(
-                <div className="col-md-3">
+                <div className="col-md-6">
                     <App
                         key={index}
                         appInfo={app}
@@ -385,7 +440,7 @@ class DashboardPage extends React.Component {
                                 onClick={() => this.onShowModal('delete app', app)}
                             >
                                 <i 
-                                    className="fa fa-trash">
+                                    className="icon-trash">
                                 </i>
                             </button>
                     </App>
@@ -448,12 +503,6 @@ class DashboardPage extends React.Component {
 
         return(
             <div>
-                
-                <div className="row">
-                    <div className="subview-button-layout">
-                        { this.subViewBtn }
-                    </div>
-                </div>
 
                 <div className="row">
                     { this.subview }
@@ -464,24 +513,24 @@ class DashboardPage extends React.Component {
 
     get content() {
 
-        switch(this.state.view.label) {
+        switch(this.state.view.value) {
             case 'my-apps':
                 return (
                     <div className="my-apps">
                         <div className="row">
                         <div className="col-md-3 pull-right">
-                            <div style={{marginBottom: '50px', textAlign: 'right'}}>
+                            <div style={{marginBottom: '50px', textAlign: 'right', position: 'relative', top : '-50px'}}>
                                 <button 
-                                    className="btn btn-default"
+                                    className="btn btn-dashboard"
                                     onClick={() => this.onShowModal('create app', null)}
                                 >
-                                    Create App
+                                    <span>+</span>Create New
                                 </button>
                                 {(() => {
                                     return this.state.subView === 'keys' ? 
                                         (
                                             <button 
-                                                className="btn btn-default"
+                                                className="btn btn-dashboard"
                                                 style={{marginLeft: '10px'}}
                                                 onClick={() => this.onShowModal('create key', null)}
                                             >
@@ -493,7 +542,7 @@ class DashboardPage extends React.Component {
                                     return this.state.subView === 'plan' ? 
                                         (
                                             <button 
-                                                className="btn btn-default"
+                                                className="btn btn-dashboard"
                                                 style={{marginLeft: '10px'}}
                                                 onClick={() => this.onShowModal('upgrade', null)}
                                             >
@@ -538,15 +587,26 @@ class DashboardPage extends React.Component {
 
         return (
             <div className="dashboard-page">
-               <div style={{maxWidth: '1024px', margin: '0 auto'}}>
-                <div className="row">
-                    <a className="pull-right" style={{marginRight: '20px'}} onClick={() => firebase.auth().signOut()}>Sign-out</a>
-                </div>
-                <div className="container-fluid">
+                <div style={{ minHeight: '80vh'}}>
                     {this.breadcrumbs}
                     {this.content}
-                    { this.showModal }
-                </div>
+                    {this.showModal}
+               </div>
+
+               <div className="row">
+                    <DashboardFooter view={this.state.view.value}>
+                        {(() => {
+                            return this.state.view.value === 'my-account' ? 
+                                (
+                                    <div className="dashboard-footer-child">
+                                        <div className="col-md-12">
+                                            <p>delete your account?</p>
+                                            <button className="btn btn-dashboard" onClick={() => props.onShowModal('delete account', null)}> Delete </button>
+                                        </div>
+                                    </div>
+                                ) : null;
+                        })()}
+                    </DashboardFooter>
                </div>
             </div>
         );
@@ -557,11 +617,11 @@ class DashboardPage extends React.Component {
         return {
             views: [
                 {
-                    label: 'my-apps',
+                    label: 'My Apps',
                     value: 'my-apps'
                 },
                 {
-                    label: 'my-account',
+                    label: 'My Account',
                     value: 'my-account'
                 }
             ]

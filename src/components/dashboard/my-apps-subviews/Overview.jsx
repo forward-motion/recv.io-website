@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../styles/dashboard/my-apps-subviews/Overview.scss';
 
 const Overview = (props) => (
     <div className="row">
@@ -11,7 +12,8 @@ const Overview = (props) => (
                             <div className="panel panel-default">
                                 <div className="panel-body" style={{textAlign: 'center'}}>
                                         <p style={{fontSize: '30px', textTransform: 'uppercase'}}> { stat.type }</p>
-                                        <p> { stat.key }</p>
+                                        <div className="underline-accent"></div>
+                                        <p className="key-value"> { stat.key }</p>
                                 </div>
                             </div>
                     </div>

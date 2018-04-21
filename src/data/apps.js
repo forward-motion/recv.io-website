@@ -1,6 +1,7 @@
 const data = [
     {
-        name: "my-app-1",
+        name: "App A",
+        desc: 'Quick Description - lorem ipsum dolor sit amet.',
         stats: [
             {
                 type: "stat a",
@@ -34,7 +35,8 @@ const data = [
         ]
     },
     {
-        name: "my-app-2",
+        name: "App B",
+        desc: 'Quick Description - lorem ipsum dolor sit amet.',
         stats: [
             {
                 type: "stat a",
@@ -63,7 +65,8 @@ const data = [
         ]
     },
     {
-        name: "my-app-3",
+        name: "App C",
+        desc: 'Quick Description - lorem ipsum dolor sit amet.',
         stats: [
             {
                 type: "stat a",
@@ -87,7 +90,8 @@ const data = [
         ]
     },
     {
-        name: "my-app-4",
+        name: "App D",
+        desc: 'Quick Description - lorem ipsum dolor sit amet. Quick Description - lorem ipsum dolor sit amet.',
         stats: [
             {
                 type: "stat a",

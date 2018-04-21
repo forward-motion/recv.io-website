@@ -65,7 +65,7 @@ class Keys extends React.Component {
                                                 onClick={() => this.props.onShowModal('delete key', key)}
                                             >
                                                 <i 
-                                                    className="fa fa-trash">
+                                                    className="icon-trash">
                                                 </i>
                                             </button>
                                         </div>

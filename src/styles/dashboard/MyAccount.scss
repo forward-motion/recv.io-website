@@ -1,18 +1,30 @@
+@import '../_global/variables.scss';
+
 .my-account-page {
     margin-top: 60px; 
 
-    p {
-        font-size: 20px;
+    .sub-title {
+        background-color: $dashboard-secondary-bg;
+        margin-top: -60px;
+        height: 250px;
+        text-align: center;
 
-        .display-name {
-            font-weight: bold; 
-            color : pink; 
+        p {
+            font-size: 20px;
+            margin-top: 70px;
 
+            .provider-id {
+                font-family: 'Avenir Next LT W01 Bold';
+                color: black;
+            }
         }
 
-        .provider-id {
-            font-weight: bold; 
-            color: red;
+        .underline-accent {
+            border-top: 2px solid $accent; 
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 100px;
         }
     }
+
 }

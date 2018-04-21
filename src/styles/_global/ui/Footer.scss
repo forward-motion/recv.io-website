@@ -5,6 +5,23 @@
         color: $primary-font-color;
         height: 30vh;
 
+        .dashboard-footer-child {
+
+            text-align: center;
+
+            p {
+                font-family: 'AvenirNextLTW01-Regular';
+                font-size: 20px;
+                margin-top: 50px;
+                margin-bottom: 30px;
+            }
+
+            .btn-dashboard {
+                color: $primary-font-color;
+                background-color: $callToActionButtons;
+            }
+        }
+
         .call-to-action-sign-up {
             text-align: center;
             padding-top: 30px;
