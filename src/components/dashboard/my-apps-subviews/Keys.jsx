@@ -21,13 +21,9 @@ class Keys extends React.Component {
                 handleClose={this.props.onHandleClose}
                 show={this.props.show}>
                 <div className="container-fluid">
-                    <div className="row">
-                        <p>Want to delete your api key</p>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-3 pull-right">
-                            <button className="btn btn-default" onClick={() => this.props.onDeletedKey(this.props.deleteKey)}> Delete Key</button>
-                        </div>
+                    <div className="row" style={{textAlign:'center'}}>
+                        <p>Want to delete your api key?</p>
+                        <button className="btn btn-dashboard" onClick={() => this.props.onDeletedKey(this.props.deleteKey)}> Delete Key</button>
                     </div>
                 </div>
 
@@ -55,8 +51,8 @@ class Keys extends React.Component {
                                 <div className="col-md-4">
                                     <div className="panel panel-default">
                                         <div className="panel-body">
-                                            <p>Api key: <span>{ key.api }</span></p>
-                                            <p>Secret: <span>{ key.secret }</span></p>
+                                            <p>Api key: <span className="keys">{ key.api }</span></p>
+                                            <p>Secret: <span className="keys">{ key.secret }</span></p>
                                             <p>Date: <span>{ moment(key.date).format('MM/DD/YYYY') }</span></p>
 
                                             <button

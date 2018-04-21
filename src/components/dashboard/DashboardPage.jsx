@@ -178,33 +178,10 @@ class DashboardPage extends React.Component {
 
         if(this.state.userPlan == 'free') {
             return (
-                <form>
-                    <FormGroup
-                        controlId="formBasicText"
-                    >
-                        <ControlLabel>Stripe Flow</ControlLabel>
-                        <div className="row">
-                            <div className="col-md-6">
-                                <FormControl
-                                    type="text"
-                                    name="Full Name"
-                                    placeholder="Enter text"
-                                />
-                            </div>
-                            <div className="col-md-6">
-                                <FormControl
-                                    type="text"
-                                    name="Credit Card"
-                                    placeholder="Enter text"
-                                />
-                            </div>
-                            <div className="col-md-3 pull-right" style={{marginTop: '20px' }}>
-                                <Button style={{width: '100%'}} onClick={this.onUpgradePlan}>Upgrade</Button>
-                            </div>
-                        </div>
-                        
-                    </FormGroup>
-                </form>
+                <div style={{textAlign:'center'}}>
+                    <h2 style={{fontWeight:'bold'}}>Alert!</h2>
+                    <p>Shaun's message can go here, about it being in beta</p>
+                </div>
             );
         } else if(this.state.userPlan == 'paid') {
 
@@ -320,16 +297,31 @@ class DashboardPage extends React.Component {
                             { this.selectedAPlan }
                     </ModalApp>
                 );
-            case 'delete account':
+            case 'warning!':
                 return(
                     <ModalApp 
-                        name={this.state.modalType} 
                         handleClose={this.handleClose} 
                         functionalApp={this.handleClose}
                         show={this.state.show}>
-                            <p>Delete Account</p>
-                            <p>Warning all of your apps and data will also be erased. This action can't be undone</p>
-                            <button className="btn btn-default" onClick={ this.onDeleteAccount }> Delete </button>
+                            <div className="row delet-account" style={{textAlign : 'center'}}>
+                                <div className="col-md-12">
+                                    <h3>{this.state.modalType}</h3>
+                                </div>
+                                <div className="text-wrapper">
+                                    <div className="col-md-12">
+                                        <p>All of your apps and data will also be erased.</p>
+                                    </div>
+                                    <div className="col-md-12">
+                                        <p>This <b>CANNOT</b> be undone.</p>
+                                    </div>
+                                </div>
+                                <div className="col-md-11">
+                                    <span><input type="checkbox" /><p style={{display: 'inline-block', paddingLeft: '12px'}}>I have read, and understand.</p></span>
+                                </div>
+                                <div className="col-md-12">
+                                    <button className="btn btn-dashboard" onClick={this.onDeleteAccount}> Delete </button>
+                                </div>
+                            </div>
                     </ModalApp>
                 );
         }
@@ -601,7 +593,7 @@ class DashboardPage extends React.Component {
                                     <div className="dashboard-footer-child">
                                         <div className="col-md-12">
                                             <p>delete your account?</p>
-                                            <button className="btn btn-dashboard" onClick={() => props.onShowModal('delete account', null)}> Delete </button>
+                                            <button className="btn btn-dashboard" onClick={() => this.onShowModal('warning!', null)}> Delete </button>
                                         </div>
                                     </div>
                                 ) : null;

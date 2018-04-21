@@ -20,6 +20,24 @@
                 margin-bottom: 20px;
             }
 
+            .delet-account {
+                h3, b {
+                     font-family: 'Avenir Next LT W01 Bold';
+                }
+
+                h3 {
+                    text-transform: capitalize;
+                }
+
+                .text-wrapper {
+                    margin-top: 10px;
+                    
+                    p {
+                        color: #7f8ba4
+                    }
+                }
+            }
+
             .contact-content {
 
                 text-align: center;
