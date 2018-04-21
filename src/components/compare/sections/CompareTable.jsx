@@ -20,14 +20,14 @@ export default class CompareTable extends Component {
       accessor: 'price',
       Cell: props => <div className="value">{props.value}</div>,
       style: {
-        borderRight: "solid #55cb3d 1px"
+        borderRight: "solid rgb(221, 223, 226) 1px"
       }
     }, {
       Header: () => <span className="column-header seperator">Feature A</span>,
       accessor: 'feature_a',
       Cell: props => <div className="value">{props.value}</div>,
       style: {
-        borderRight: "solid #55cb3d 1px"
+        borderRight: "solid rgb(221, 223, 226) 1px"
       }
     }, {
       Header: () => <span className="column-header">Feature B</span>,
