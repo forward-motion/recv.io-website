@@ -36,18 +36,3 @@
       }
     }
   }
-
-
-
-@media (max-width: 700px) {
-  .component-header  {
-    flex-direction: column;
-    .data-animation {
-      .data-img {
-        max-width: auto;
-        height: 200px;
-        display: block;
-      }
-    }
-  }
-}
