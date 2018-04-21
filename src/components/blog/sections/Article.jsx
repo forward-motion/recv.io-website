@@ -10,7 +10,9 @@ const Article = (props) => (
         <div className="article-title-seperator"></div>
       </div>
       <span className="date"> Date {props.blogData.date}</span>
-      <div className="image-wrapper" style={{background:`url(${props.blogData.image})`}}> </div>
+      <div className="image-wrapper">
+        <img className="img-responsive" src={props.blogData.image} /> 
+      </div>
       <div className="subtitle">{props.blogData.subtitle}</div>
       <div className="article">{props.blogData.article}</div>
       <div className="">
