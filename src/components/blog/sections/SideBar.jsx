@@ -10,11 +10,11 @@ import '../../../styles/blog/sections/SideBar.scss';
 class SideBar extends Component {
   render(){
     return(
-      <div className="component-side-bar row" >
-        <div className="article-wrapper col-md-8">
+      <div className="component-side-bar" >
+        <div className="article-wrapper">
           {this.props.article}
         </div>
-        <div className="component-side-bar-inner col-md-4" >
+        <div className="component-side-bar-inner" >
           <div className="seperator">
             <div className="search">
               <VirtualizedSelect
