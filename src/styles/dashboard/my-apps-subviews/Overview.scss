@@ -1,0 +1,25 @@
+@import '../../_global/variables';
+
+.overview-panel {
+
+    .panel-default {
+         -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        height: 150px;
+
+        .panel-body {
+
+            .underline-accent {
+                border-top: 2px solid $accent; 
+                margin: 0 auto; 
+                width: 100px;
+            }
+
+            .key-value {
+                color: $accent;
+                font-size: 30px;
+            }
+        }
+    }
+}

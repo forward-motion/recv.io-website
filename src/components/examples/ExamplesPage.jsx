@@ -1,5 +1,6 @@
 import React, { Component } from 'react'; 
 import Footer from '../_global/ui/Footer.jsx';
+import SecondaryHeader from '../_global/ui/SecondaryHeader';
 
 import '../../styles/examples/ExamplesPage.scss';
 
@@ -95,9 +96,7 @@ class ExamplesPage extends Component {
         return(
             <div className="examples-page">
                 <div className="row">
-                    <div className="col-md-12 secondary-background">
-                        <p className="subtitle">Examples</p>
-                    </div>
+                    <SecondaryHeader title='Examples' />
                 </div>
 
                 <div className="row" style={{backgroundColor : 'white'}}>
@@ -122,7 +121,7 @@ class ExamplesPage extends Component {
                 </div>
 
                 <div className="row">
-                    <Footer />
+                    <Footer user={this.props.user} />
                 </div>
             </div>
         );

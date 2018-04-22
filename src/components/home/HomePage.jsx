@@ -17,7 +17,7 @@ const HomePage = () => (
       <LookFamiliar />
       <WithSomeExtras />
       <FullFeatureSet />
-      <Footer />
+      <Footer user={props.user} />
   </div>
   );
 

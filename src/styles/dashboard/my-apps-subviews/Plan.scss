@@ -1,12 +1,26 @@
+@import '../../_global/variables.scss';
+
 .plan-page {
     margin-top: 80px;
     text-align: center;
 
+    
+
+    .plan-indicator {
+        font-size: 50px;
+        margin-bottom: 10px;
+
+        .icon-free:before {
+            content: "\e904";
+        }
+    }
+
     p {
         font-size: 30px;
 
-        span {
-            text-decoration: underline;
+        .current-user-plan {
+            color: $accent;
+            font-family: 'Avenir Next LT W01 Bold';
         }
     }
 }

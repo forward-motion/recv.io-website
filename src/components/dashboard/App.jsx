@@ -14,16 +14,30 @@ class MyApps extends React.Component {
 
         return(
             <div>
-                <div 
-                    className="panel panel-default">
-                    <div className="panel-heading"
-                        onClick={(selectedApp) => this.props.onChangeSelectedApp(this.props.appInfo)}
-                    >
-                        { this.props.appInfo.name }
+                <div className="panel panel-default">
+                    <div className="panel-header">
                     </div>
                     <div className="panel-body">
-                        <div className="trash">
-                            { this.props.children }
+                        <div className="row">
+                        <div 
+                            className="app-cliable-body"
+                            onClick={(selectedApp) => this.props.onChangeSelectedApp(this.props.appInfo)}
+                        >
+                                <div className="col-md-2">
+                                    <span className="icon-my-apps"></span>
+                                </div>
+                                <div className="col-md-10">
+                                    <h4>{this.props.appInfo.name}</h4>
+                                    <div className="desc">
+                                        {this.props.appInfo.desc}
+                                    </div>
+                                </div>
+                        </div>
+                        <div className="col-md-12 pull-right">
+                                <div className="trash">
+                                    {this.props.children}
+                                </div>
+                        </div>
                         </div>
                     </div>
                 </div>

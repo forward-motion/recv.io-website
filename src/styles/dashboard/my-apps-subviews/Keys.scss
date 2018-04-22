@@ -1,8 +1,18 @@
 .keys-page {
+
+    .panel-body {
+        .keys {
+            color: #7f8ba4
+        }
+    }
     .trash-btn {
         background: transparent;
         bottom: 20px;
         position: absolute;
         right: 16px;
+
+        .icon-trash:before {
+            content: "\e906";
+        }
     }
 }

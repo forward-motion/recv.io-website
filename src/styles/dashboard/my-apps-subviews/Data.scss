@@ -1,23 +1,74 @@
+@import '../../_global/variables.scss';
+
 .data-page {
 
-    margin-top: 50px;
+    margin-top: -85px;
 
-    .table-btn-selector {
-        display: block; 
-        text-transform: uppercase;
+    .side-bar {
+        background-color: #97a4be;
 
-        &:focus {
-            outline: none;
+        .side-bar-content{
+            padding-top: 25px;
+            float: left;
+            min-height: 610px;
+            width: 30%;
+
+            .table-btn-selector {
+                display: block; 
+                text-transform: capitalize;
+                background-color: transparent;
+                font-size: 30px;
+                color: $primary-font-color;
+                font-family: 'AvenirNextLTW01-Regular';
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            .under-line {
+                
+                margin-bottom: 20px;
+                margin-left: 15px;
+
+                &.active {
+                    border-top: 1px solid black;
+                    width: 70%;
+                } 
+            }
         }
-    }
 
-    .under-line {
-        
-        margin-bottom: 20px;
+        .table-section {
 
-        &.active {
-            border-top: 1px solid black;
-            width: 70%;
-        } 
+            .ReactTable {
+                background-color: $primary-font-color;
+                padding-left: 40px;
+
+                .rt-thead {
+                    font-size: 20px;
+                    font-family: 'Avenir Next LT W01 Bold';
+                    padding-top: 40px;
+
+                    .rt-th {
+                        //width: 80px;
+                        border-bottom: 2px solid $accent;
+                        margin-right: 1px;
+
+                        .rt-resizable-header-content {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                .rt-tbody {
+                    .rt-tr {
+                        border-bottom: 1px solid #97a4be;
+                        text-align: center;
+                    }
+                }
+            }
+            
+        }
     }
 }

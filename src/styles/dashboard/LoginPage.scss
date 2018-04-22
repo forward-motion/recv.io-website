@@ -1,15 +1,62 @@
+@import '../_global/variables.scss';
+
 .login-page{
-    text-align: center;
-    margin-top: 60px;
 
-    h1 {
-        margin-bottom: 60px;
-        text-transform: uppercase;
+    .dashboard-label-section {
+        background-color: $dashboard-secondary-bg;
+
+        .title-wrapper {
+
+            margin: 0 auto; 
+            padding-top: 50px;
+            text-align: center;
+            width: 500px;
+
+            h2 {
+                font-family: 'AvenirNextLTW01-Regular';
+                color: #000;
+            }
+
+            .underline-accent {
+                border-top: 2px solid $accent;
+                margin: 0 auto;
+                margin-top: 30px;
+                padding-bottom: 50px;
+                text-align: center;
+                width: 90px;
+            }
+        }
     }
 
-    .btn-default{
-        width: 60%;
-        height: 70px;
-        font-size: 30px;
-    }
+    .firebase-button-wrapper{
+
+        margin: 120px 0;
+
+            .firebaseui-container {
+                max-width : none;
+                text-align: center;
+
+                .firebaseui-list-item {
+                    display: inline;
+                    margin-right: 30px;
+
+                    .firebaseui-idp-button {
+                        height: 130px;
+                        max-width: 350px;
+
+                        .firebaseui-idp-icon-wrapper {
+                            img {
+                                height: 38px;
+                                width: 38px;
+                            }
+                        }
+
+                        .firebaseui-idp-text {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
 }
