@@ -10,7 +10,7 @@ import Footer from './sections/Footer';
 
 import '../../styles/home/HomePage.scss';
 
-const HomePage = () => (
+const HomePage = (props) => (
   <div className="component-home-page">
       <Header />
       <PubSub />
