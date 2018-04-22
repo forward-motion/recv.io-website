@@ -1,11 +1,7 @@
-.blog-page {
-  a {
-    color: black;
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-  }
-  .social-icon {
-    text-align: center;
+@import '../_global/variables';
+.component-blog-page {
+  //a, a:hover {text-decoration: none!important; color: $secondary-bg-color}
+  .article-list {
+    //padding-top: 10px;
   }
 }
