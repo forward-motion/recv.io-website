@@ -1,0 +1,25 @@
+@import '../../_global/variables';
+.component-with-some-extras {
+    background: white;
+    margin-bottom: 0px;
+    padding: 25px 0 50px 0;
+
+    .extras-header,.extras {
+      background: white;
+      color: black;
+    }
+    .extras-header {
+      text-align: center;
+      padding-top: 75px;
+      padding-bottom: 25px;
+      .extras-text {
+        font-size: 30px;
+      }
+    }
+    .extras {
+      margin: 0 auto;
+      max-width: 900px;
+      padding-bottom: 15px;
+    }
+
+  }

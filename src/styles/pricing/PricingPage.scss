@@ -1,12 +1,113 @@
+@import '../_global/variables';
+
 .pricing-page {
 
-    .panel-heading {
+    background-color: $primary-bg-color;
+    margin-top: -20px;
+
+    .tag-line {
+        color: $primary-font-color;
+        font-family: 'AvenirNextLTW01-Regular';
         text-align: center;
-        text-transform: capitalize;
+        margin: 100px 0;
+    }
+
+    .underline-accent {
+        border-top: 2px solid $accent;
+    }
+
+    .panel-default {
+
+        display: inline-block;
+        margin-right: 20px; 
+
+        .panel-heading {
+
+            text-align: center;
+            text-transform: capitalize;
+            border-color: white; 
+            background-color: white;
+
+            .price-plan {
+                font-family: 'AvenirNextLTW01-Regular';
+                font-size: 20px;
+                margin-top: -20px;
+            }
+
+            .icon-free:before {
+                content: "\e904";
+            }
+
+            .icon-paid:before {
+                content: "\e902";
+            }
+
+            .icon-standalone:before {
+                content: "\e901";
+            }
+        }
+
+        .panel-body {
+            font-family: 'AvenirNextLTW01-Regular';
+            ul {
+                padding-left: 30px;
+            }
+        }
     }
 
     .comparing {
-        font-size: 30px;
+        height: 200px;
+        font-family: 'AvenirNextLTW01-Regular';
+        text-align: center;
+
+        p{
+            color: $primary-font-color;
+            font-size: 20px;
+            padding-top: 100px;
+
+            span {
+                text-decoration: underline;
+
+                a {
+                    color: $callToActionButtons; 
+                }
+            }
+        }
+    }
+
+    .faq {
+        text-align: center;
+        font-family: 'AvenirNextLTW01-Regular';
+        margin: 40px 0;
+
+        .icon-faqs:before {
+            content: "\e900";
+        }
+
+        h4 {
+            margin-top: -15px;
+        }
+    }
+
+    #faq-accordion {
+        margin: 0 auto;
+        margin-bottom: 100px;
+        width: 60%;
+
+        .panel-title{
+            font-size: 13px;
+
+            .toggle-icon{
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            a {
+                &:hover, &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
     }
 
 }

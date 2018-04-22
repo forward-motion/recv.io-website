@@ -1,0 +1,27 @@
+@import '../../_global/variables';
+.component-features {
+  background-color: white;
+  border-radius: 5px;
+  color: $font-dark;
+  padding: 20px 20px;
+  .features-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    .features-icon {
+      padding-right: 10px;
+    }
+    .features-title {
+      font-size: 30px;
+    }
+  }
+  .checkbox-label {
+    font-weight: 300;
+  }
+  .icon-features:before {
+    content: "\e914";
+    font-size: 45px;
+  }
+}

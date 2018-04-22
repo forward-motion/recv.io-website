@@ -1,39 +1,9 @@
-.home-page {
-  .extras-header h3 {
-    text-decoration: underline;
-  }
-  .extras {
-    // margin: 0 auto;
-    // max-width: 800px;
-    padding-bottom: 15px;
-  }
-  .extras-left,.extras-right  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
-      width: 200px;
-    }
-  }
-  .link-to-features, .sign-in-header,.look-familiar,.extras-header,.sign-in-option-wrapper{
-    text-align: center;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .link-to-features {
-    border-bottom: solid black 1px;
-  }
+@import '../_global/variables';
 
-  .sign-in-option-wrapper {
-    .sign-in-option {
-      border: solid black 1px;
-      padding: 25px 50px;
-      width: 200px;
-    }
-  }
-  footer {
-    height: 50px;
+.home-page {
+  color: $font-color;
+  background-color: $background;
+  .icon-globally:before {
+    content: "\e924";
   }
 }

@@ -1,0 +1,48 @@
+@import '../../_global/variables';
+.component-extra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .extras-inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 450px;
+      height: 120px;
+      border: solid ghostwhite 2px;
+      padding: 20px 0;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      -webkit-box-shadow: 7px 7px 0px -3px $accent-green;
+         -moz-box-shadow: 7px 7px 0px -3px $accent-green;
+              box-shadow: 7px 7px 0px -3px $accent-green;
+      span {
+        font-size: 13px;
+      }
+      .extras-icon {
+        height: 100%;
+        width: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .extras-icon-inner {
+          font-size: 36px;
+        }
+      }
+    }
+    .icon-globally:before {
+      content: "\e924";
+    }
+    .icon-delivery:before {
+      content: "\e923";
+    }
+    .icon-ordering_b-01:before {
+      content: "\e922";
+    }
+    .icon-retrievemsg:before {
+      content: "\e920";
+    }
+    .icon-queue:before {
+      content: "\e921";
+    }
+}

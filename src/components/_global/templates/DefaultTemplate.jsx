@@ -54,7 +54,7 @@ class DefaultTemplate extends React.Component {
 
                 <Header user={user} />
 
-                <div className="container-fluid">
+                <div>
                     {this.props.children({ ...this.props, user, firebase })}
                 </div>
             </div>

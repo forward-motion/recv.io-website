@@ -1,0 +1,30 @@
+@import '../../_global/variables';
+
+.component-full-feature-set {
+  text-align: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid black 1px;
+  height: 200px;
+  background:$secondary-blue;
+  .feature-text {
+    font-size: 30px;
+  }
+    a {
+      text-decoration: none;
+      color: $action-purple;
+    }
+    h4 {
+      font-weight: 300;
+    }
+    .here {
+      display: inline-block;
+      border-bottom: solid $action-purple 1px;
+      position: relative;
+      top: -2px;
+      font-size: 34px!important;
+      margin-left: 5px;
+    }
+}
