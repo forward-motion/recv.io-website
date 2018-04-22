@@ -13,7 +13,7 @@
             a {
                 background-color: $primary-bg-color;
 
-                &:focus {
+                &:focus, &:hover {
                     background-color: $primary-bg-color;
                 }
             }

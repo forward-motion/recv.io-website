@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactTable from 'react-table'
+import moment from 'moment';
 
 import '../../../styles/dashboard/my-apps-subviews/Data.scss';
 
@@ -67,7 +68,12 @@ class Data extends React.Component {
                     },
                     {
                         Header: 'Date',
-                        accessor: 'date'
+                        accessor: 'date',
+                        Cell : (d) => (
+                            <div>
+                                {moment(d.original.date).format('MM/DD/YYYY')}
+                            </div>
+                        )
                     }
                 ]; 
                 
@@ -117,6 +123,7 @@ class Data extends React.Component {
         return (
                 <ReactTable
                     defaultPageSize={20}
+                    pageSizeOptions={[20, 25, 50, 100]}
                     data={data}
                     columns={columns}
                 />

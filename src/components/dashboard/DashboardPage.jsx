@@ -208,13 +208,9 @@ class DashboardPage extends React.Component {
                         handleClose={this.handleClose}
                         show={this.state.show}>
                         <div className="container-fluid">
-                            <div className="row">
+                            <div className="row" style={{textAlign : 'center'}}>
                                 <p>Want to delete {this.state.deleteApp.name}</p>
-                            </div>
-                            <div className="row">
-                                <div className="col-md-3 pull-right">
-                                    <Button onClick={() => this.onDeleteApp(this.state.deleteApp.name)}>Delete App</Button>
-                                </div>
+                                <Button className="bt btn-dashboard" onClick={() => this.onDeleteApp(this.state.deleteApp.name)}>Delete App</Button>
                             </div>
                         </div>
 
