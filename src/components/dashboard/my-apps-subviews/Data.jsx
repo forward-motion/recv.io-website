@@ -115,11 +115,11 @@ class Data extends React.Component {
         }
 
         return (
-            <ReactTable
-                defaultPageSize={5}
-                data={data}
-                columns={columns}
-            />
+                <ReactTable
+                    defaultPageSize={20}
+                    data={data}
+                    columns={columns}
+                />
         );
 
 
@@ -131,14 +131,18 @@ class Data extends React.Component {
 
 
         return (
-            <div className="container-fluid data-page">
+            <div className="data-page">
         
                 <div className="row">
-                    <div className="col-md-2">
-                        { this.tableSelectorButtons }
-                    </div>
-                    <div className="col-md-10">
-                        { this.showSelctedTable }
+                    <div className="col-md-12">
+                       <div className="side-bar">
+                            <div className="side-bar-content">
+                                {this.tableSelectorButtons}
+                            </div>
+                            <div className="table-section">
+                                {this.showSelctedTable}
+                            </div>
+                       </div>
                     </div>
                 </div>
         

@@ -14,6 +14,7 @@ import DashboardFooter from '../_global/ui/DashboardFooter.jsx';
 
 // app styles 
 import '../../styles/dashboard/DashboardPage.scss';
+import '../../styles/_global/ui/CSSCheckbox.scss';
 
 import user from '../../data/apps.js';
 
@@ -315,9 +316,11 @@ class DashboardPage extends React.Component {
                                         <p>This <b>CANNOT</b> be undone.</p>
                                     </div>
                                 </div>
-                                <div className="col-md-11">
-                                    <span><input type="checkbox" /><p style={{display: 'inline-block', paddingLeft: '12px'}}>I have read, and understand.</p></span>
-                                </div>
+                                <label className="check-container col-md-12">
+                                    <span className="checkbox-label"> I have read, and understand. </span>
+                                        <input type="checkbox" />
+                                    <span className="checkmark"></span>
+                                </label>
                                 <div className="col-md-12">
                                     <button className="btn btn-dashboard" onClick={this.onDeleteAccount}> Delete </button>
                                 </div>

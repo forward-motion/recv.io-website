@@ -23,6 +23,156 @@ const messages = [
         topic: 'Who cares?',
         payload: 'I do',
         date: 1523212030876
+    },
+    {
+        topic: 'NBA',
+        payload: 'here is some payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Internet',
+        payload: 'what is payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Startbucks',
+        payload: 'jsdssdsfdgee - this is not from mockdatajs',
+        date: 1523212030876
+    },
+    {
+        topic: 'Dunkin Donuts',
+        payload: 'who order a starbucks, here at DD',
+        date: 1523212030876
+    },
+    {
+        topic: 'Who cares?',
+        payload: 'I do',
+        date: 1523212030876
+    },
+    {
+        topic: 'NBA',
+        payload: 'here is some payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Internet',
+        payload: 'what is payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Startbucks',
+        payload: 'jsdssdsfdgee - this is not from mockdatajs',
+        date: 1523212030876
+    },
+    {
+        topic: 'Dunkin Donuts',
+        payload: 'who order a starbucks, here at DD',
+        date: 1523212030876
+    },
+    {
+        topic: 'Who cares?',
+        payload: 'I do',
+        date: 1523212030876
+    },
+    {
+        topic: 'NBA',
+        payload: 'here is some payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Internet',
+        payload: 'what is payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Startbucks',
+        payload: 'jsdssdsfdgee - this is not from mockdatajs',
+        date: 1523212030876
+    },
+    {
+        topic: 'Dunkin Donuts',
+        payload: 'who order a starbucks, here at DD',
+        date: 1523212030876
+    },
+    {
+        topic: 'Who cares?',
+        payload: 'I do',
+        date: 1523212030876
+    },
+    {
+        topic: 'NBA',
+        payload: 'here is some payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Internet',
+        payload: 'what is payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Startbucks',
+        payload: 'jsdssdsfdgee - this is not from mockdatajs',
+        date: 1523212030876
+    },
+    {
+        topic: 'Dunkin Donuts',
+        payload: 'who order a starbucks, here at DD',
+        date: 1523212030876
+    },
+    {
+        topic: 'Who cares?',
+        payload: 'I do',
+        date: 1523212030876
+    },
+    {
+        topic: 'NBA',
+        payload: 'here is some payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Internet',
+        payload: 'what is payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Startbucks',
+        payload: 'jsdssdsfdgee - this is not from mockdatajs',
+        date: 1523212030876
+    },
+    {
+        topic: 'Dunkin Donuts',
+        payload: 'who order a starbucks, here at DD',
+        date: 1523212030876
+    },
+    {
+        topic: 'Who cares?',
+        payload: 'I do',
+        date: 1523212030876
+    },
+    {
+        topic: 'NBA',
+        payload: 'here is some payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Internet',
+        payload: 'what is payload',
+        date: 1523212030876
+    },
+    {
+        topic: 'Startbucks',
+        payload: 'jsdssdsfdgee - this is not from mockdatajs',
+        date: 1523212030876
+    },
+    {
+        topic: 'Dunkin Donuts',
+        payload: 'who order a starbucks, here at DD',
+        date: 1523212030876
+    },
+    {
+        topic: 'Who cares?',
+        payload: 'I do',
+        date: 1523212030876
     }
 ]; 
 
