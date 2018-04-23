@@ -198,7 +198,7 @@ class PricingPage extends Component {
 
                     </div>
 
-                    <div className="row" style={{ backgroundColor : 'white'}}>
+                    <div className="row" style={{ backgroundColor : 'white', minHeight : '480px'}}>
 
                         <div className="col-md-12">
                             <div className="faq">

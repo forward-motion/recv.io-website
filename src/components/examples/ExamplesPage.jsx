@@ -99,7 +99,7 @@ class ExamplesPage extends Component {
                     <SecondaryHeader title='Examples' />
                 </div>
 
-                <div className="row" style={{backgroundColor : 'white'}}>
+                <div className="row" style={{backgroundColor : 'white', minHeight : '710px'}}>
                     <div style={{ width: '860px', margin: '0 auto', marginTop: '40px', height: '63vh'}}>
                         <div className="row">
                             <div className="col-md-6">
