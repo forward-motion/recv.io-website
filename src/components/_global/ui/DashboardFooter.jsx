@@ -8,7 +8,7 @@ const DashboardFooter = (props) => {
     if (props.view === 'my-account') {
         dashboardFooterStyle.paddingTop = '50px';
     } else {
-        dashboardFooterStyle.paddingTop = '170px';
+        dashboardFooterStyle.paddingTop = '160px';
     }
 
     return (
