@@ -333,12 +333,9 @@ class DashboardPage extends React.Component {
         const { user, firebase } = this.props;
 
         let breadcrumbStyles = {
-            backgroundColor: '#223047'
+            backgroundColor: '#223047',
+            minHeight : '140px'
         }; 
-
-        if( this.state.view.value === 'my-app') {
-            breadcrumbStyles.height = '140px';
-        }
 
 
         return (
@@ -387,7 +384,7 @@ class DashboardPage extends React.Component {
                                 })()}
                             </ul>
                         </div>
-                        <div className="col-md-12">
+                        <div className="col-md-6">
                             {(() => {
 
                                 if( this.state.selectedApp === null && this.state.view.value !== 'my-account') {
@@ -408,6 +405,40 @@ class DashboardPage extends React.Component {
                                 }
                                 
                             })()}
+                        </div>
+                        <div className="col-md-6 pull-right">
+                            <div style={{ textAlign: 'right' }}>
+                                <button
+                                    className="btn btn-dashboard"
+                                    onClick={() => this.onShowModal('create app', null)}
+                                >
+                                    <span>+</span>Create New
+                                                    </button>
+                                {(() => {
+                                    return this.state.subView === 'keys' ?
+                                        (
+                                            <button
+                                                className="btn btn-dashboard"
+                                                style={{ marginLeft: '10px' }}
+                                                onClick={() => this.onShowModal('create key', null)}
+                                            >
+                                                Create Key
+                                                                </button>
+                                        ) : null;
+                                })()}
+                                {(() => {
+                                    return this.state.subView === 'plan' ?
+                                        (
+                                            <button
+                                                className="btn btn-dashboard"
+                                                style={{ marginLeft: '10px' }}
+                                                onClick={() => this.onShowModal('upgrade', null)}
+                                            >
+                                                Upgrade
+                                                                </button>
+                                        ) : null;
+                                })()}
+                            </div>
                         </div>
                     </div>
                </div>
@@ -508,43 +539,7 @@ class DashboardPage extends React.Component {
             case 'my-apps':
                 return (
                     <div className="my-apps">
-                        <div className="row">
-                        <div className="col-md-3 pull-right">
-                            <div style={{marginBottom: '50px', textAlign: 'right', position: 'relative', top : '-50px'}}>
-                                <button 
-                                    className="btn btn-dashboard"
-                                    onClick={() => this.onShowModal('create app', null)}
-                                >
-                                    <span>+</span>Create New
-                                </button>
-                                {(() => {
-                                    return this.state.subView === 'keys' ? 
-                                        (
-                                            <button 
-                                                className="btn btn-dashboard"
-                                                style={{marginLeft: '10px'}}
-                                                onClick={() => this.onShowModal('create key', null)}
-                                            >
-                                                Create Key
-                                            </button>
-                                        ) : null; 
-                                })()}
-                                {(() => {
-                                    return this.state.subView === 'plan' ? 
-                                        (
-                                            <button 
-                                                className="btn btn-dashboard"
-                                                style={{marginLeft: '10px'}}
-                                                onClick={() => this.onShowModal('upgrade', null)}
-                                            >
-                                                Upgrade
-                                            </button>
-                                        ) : null; 
-                                })()}
-                            </div>
-                        </div>
-                        </div>
-                        <div className="row">
+                        <div className="row" style={{marginTop : '70px'}}>
                             { !this.state.selectedApp ? this.userApps : this.selectedApp }
                         </div>
                     </div>
