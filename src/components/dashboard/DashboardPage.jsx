@@ -578,7 +578,7 @@ class DashboardPage extends React.Component {
 
         return (
             <div className="dashboard-page">
-                <div style={{ minHeight: '80vh'}}>
+                <div style={{ minHeight: '85vh'}}>
                     {this.breadcrumbs}
                     {this.content}
                     {this.showModal}
