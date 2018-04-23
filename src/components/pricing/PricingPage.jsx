@@ -77,7 +77,7 @@ class PricingPage extends Component {
                     ]
                 },
                 {
-                    key: '4',
+                    key: '5',
                     heading: 'How often can I change my plan?',
                     questions: [
                         'You can upgrade or downgrade your account at any time.',
@@ -104,21 +104,23 @@ class PricingPage extends Component {
 
         return this.state.prices.map((price) => {
             return(
-                <div className="panel panel-default" style={{width : '300px'}}>
-                    <div className="panel-heading">
-                        <p style={{ fontSize : '35px'}}><span className={ price.icon }></span></p>
-                        <p className="price-plan">{ price.plan }</p>
-                    </div>
-                    <div className="panel-body">
-                        <ul>
-                            {(() => {
-                                return price.includes.map((include) => {
-                                    return (
-                                        <li> { include }</li>
-                                    );
-                                })
-                            })()}
-                        </ul>
+                <div className="col-md-4">
+                    <div className="panel panel-default">
+                        <div className="panel-heading">
+                            <p style={{ fontSize: '35px' }}><span className={price.icon}></span></p>
+                            <p className="price-plan">{price.plan}</p>
+                        </div>
+                        <div className="panel-body">
+                            <ul>
+                                {(() => {
+                                    return price.includes.map((include) => {
+                                        return (
+                                            <li> {include}</li>
+                                        );
+                                    })
+                                })()}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             );
@@ -128,22 +130,24 @@ class PricingPage extends Component {
     get accordionPanels() {
         return this.state.faqs.map((faq) => {
             return(
-                <Panel key={faq.key} eventKey={faq.key} style={{ border : 'none'}}>
-                    <Panel.Heading>
-                        <Panel.Title toggle> <span className="toggle-icon"> { this.state.activeKey === faq.key ? '-' : '+' }</span> { faq.heading }</Panel.Title>
-                    </Panel.Heading>
-                    <Panel.Body collapsible style={{paddingLeft : '30px', borderTop : 'none'}}>
-                        {(() => {
-                            return faq.questions.map((question) => {
-                                return(
-                                    <div>
-                                        <p> { question }</p>
-                                    </div>
-                                );
-                            })
-                        })()}
-                    </Panel.Body>
-                </Panel>
+                <div className="col-md-12">
+                    <Panel key={faq.key} eventKey={faq.key} style={{ border: 'none' }}>
+                        <Panel.Heading>
+                            <Panel.Title toggle> <span className="toggle-icon"> {this.state.activeKey === faq.key ? '-' : '+'}</span> {faq.heading}</Panel.Title>
+                        </Panel.Heading>
+                        <Panel.Body collapsible style={{ paddingLeft: '30px', borderTop: 'none' }}>
+                            {(() => {
+                                return faq.questions.map((question) => {
+                                    return (
+                                        <div>
+                                            <p> {question}</p>
+                                        </div>
+                                    );
+                                })
+                            })()}
+                        </Panel.Body>
+                    </Panel>
+                </div>
             );
         })
     }
@@ -193,7 +197,7 @@ class PricingPage extends Component {
                     <div className="row">
 
                         <div className="comparing">
-                            <p>see how we compare to the competition <span><Link to="/compare">here</Link></span>.</p>
+                            <p>see our full feature set <span><Link to="/compare">here</Link></span>.</p>
                         </div>
 
                     </div>
@@ -215,7 +219,9 @@ class PricingPage extends Component {
                                 onSelect={this.onHandleSelect}
                            >
 
-                            { this.accordionPanels }
+                            <div className="row">
+                                    {this.accordionPanels}
+                            </div>
 
                            </PanelGroup>
                         </div>
