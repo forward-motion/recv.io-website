@@ -193,7 +193,7 @@ class PricingPage extends Component {
                     <div className="row">
 
                         <div className="comparing">
-                            <p>see how we compare to the competition <span><Link to="/compare">here</Link></span>.</p>
+                            <p>see our full feature set <span><Link to="/compare">here</Link></span>.</p>
                         </div>
 
                     </div>
