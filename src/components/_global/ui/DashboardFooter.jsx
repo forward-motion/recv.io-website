@@ -6,9 +6,9 @@ const DashboardFooter = (props) => {
     let dashboardFooterStyle = {};
 
     if (props.view === 'my-account') {
-        dashboardFooterStyle.paddingTop = '50px';
+        dashboardFooterStyle.bottom = '-40px';
     } else {
-        dashboardFooterStyle.paddingTop = '160px';
+        dashboardFooterStyle.bottom = '-190px';
     }
 
     return (
@@ -18,8 +18,8 @@ const DashboardFooter = (props) => {
                 <div className="col-md-12">
                     {props.children}
                 </div>
-                <div className="col-md-12" style={dashboardFooterStyle}>
-                    <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
+                <div className="col-md-12">
+                    <p className="copy-right" style={dashboardFooterStyle}>© {moment().year()} - recv.io All Right Reserved</p>
                 </div>
             </div>
         </div>

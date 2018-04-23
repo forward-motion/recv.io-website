@@ -50,7 +50,7 @@ const Footer = (props) => {
             <div className="page-footer">
 
                 <div className="row">
-                    <div className="col-md-6" style={{ paddingTop: '160px' }}>
+                    <div className="col-md-6" style={{ bottom: '-190px' }}>
                         <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
                     </div>
                 </div>
