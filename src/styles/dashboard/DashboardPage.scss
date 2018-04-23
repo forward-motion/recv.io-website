@@ -83,11 +83,26 @@
             background: transparent;
             position: relative;
             bottom: 11px; 
-            font-size: 11px; 
 
             &:focus {
                 outline: none;
             }
+
+            &:hover {
+                color: lightgrey;
+            }
+        }
+    }
+
+    .btn-dashboard {
+        background-color: $callToActionButtons;
+        color: $primary-font-color;
+        font-family: 'AvenirNextLTW01-Regular';
+
+        span {
+            padding-right: 5px;
+            font-size: 15px;
+            font-weight: bold;
         }
     }
 
@@ -128,17 +143,6 @@
         max-width: 70%;
         margin: 0 auto;
 
-        .btn-dashboard {
-            background-color: $callToActionButtons;
-            color: $primary-font-color;
-            font-family: 'AvenirNextLTW01-Regular';
-
-            span {
-                padding-right: 5px;
-                font-size: 15px;
-                font-weight: bold;
-            }
-        }
     }
    
 }
