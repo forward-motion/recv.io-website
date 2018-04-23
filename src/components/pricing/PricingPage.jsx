@@ -104,21 +104,23 @@ class PricingPage extends Component {
 
         return this.state.prices.map((price) => {
             return(
-                <div className="panel panel-default" style={{width : '300px'}}>
-                    <div className="panel-heading">
-                        <p style={{ fontSize : '35px'}}><span className={ price.icon }></span></p>
-                        <p className="price-plan">{ price.plan }</p>
-                    </div>
-                    <div className="panel-body">
-                        <ul>
-                            {(() => {
-                                return price.includes.map((include) => {
-                                    return (
-                                        <li> { include }</li>
-                                    );
-                                })
-                            })()}
-                        </ul>
+                <div className="col-md-4">
+                    <div className="panel panel-default">
+                        <div className="panel-heading">
+                            <p style={{ fontSize: '35px' }}><span className={price.icon}></span></p>
+                            <p className="price-plan">{price.plan}</p>
+                        </div>
+                        <div className="panel-body">
+                            <ul>
+                                {(() => {
+                                    return price.includes.map((include) => {
+                                        return (
+                                            <li> {include}</li>
+                                        );
+                                    })
+                                })()}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             );

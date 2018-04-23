@@ -17,11 +17,11 @@
     }
 
     .panel-default {
-
-        display: inline-block;
+        min-height: 250px;
         margin-right: 20px; 
         -webkit-box-shadow: none;
         box-shadow: none;
+        width: 100%;
 
         .panel-heading {
 
