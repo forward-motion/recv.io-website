@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
+import recvLogo from '../../../assets/img/home/recv.io.png';
+
 import '../../../styles/_global/ui/Header.scss';
 
 const Header = (props) => (
@@ -10,7 +12,7 @@ const Header = (props) => (
         <Navbar collapseOnSelect fluid>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <Link to="/">recv.io</Link>
+                    <Link to="/"><img src={recvLogo} alt="recv.io"/></Link>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>
