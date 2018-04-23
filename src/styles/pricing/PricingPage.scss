@@ -20,10 +20,11 @@
 
         display: inline-block;
         margin-right: 20px; 
+        -webkit-box-shadow: none;
+        box-shadow: none;
 
         .panel-heading {
 
-            text-align: center;
             text-transform: capitalize;
             border-color: white; 
             background-color: white;

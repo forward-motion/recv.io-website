@@ -77,7 +77,7 @@ class PricingPage extends Component {
                     ]
                 },
                 {
-                    key: '4',
+                    key: '5',
                     heading: 'How often can I change my plan?',
                     questions: [
                         'You can upgrade or downgrade your account at any time.',
@@ -128,22 +128,24 @@ class PricingPage extends Component {
     get accordionPanels() {
         return this.state.faqs.map((faq) => {
             return(
-                <Panel key={faq.key} eventKey={faq.key} style={{ border : 'none'}}>
-                    <Panel.Heading>
-                        <Panel.Title toggle> <span className="toggle-icon"> { this.state.activeKey === faq.key ? '-' : '+' }</span> { faq.heading }</Panel.Title>
-                    </Panel.Heading>
-                    <Panel.Body collapsible style={{paddingLeft : '30px', borderTop : 'none'}}>
-                        {(() => {
-                            return faq.questions.map((question) => {
-                                return(
-                                    <div>
-                                        <p> { question }</p>
-                                    </div>
-                                );
-                            })
-                        })()}
-                    </Panel.Body>
-                </Panel>
+                <div className="col-md-12">
+                    <Panel key={faq.key} eventKey={faq.key} style={{ border: 'none' }}>
+                        <Panel.Heading>
+                            <Panel.Title toggle> <span className="toggle-icon"> {this.state.activeKey === faq.key ? '-' : '+'}</span> {faq.heading}</Panel.Title>
+                        </Panel.Heading>
+                        <Panel.Body collapsible style={{ paddingLeft: '30px', borderTop: 'none' }}>
+                            {(() => {
+                                return faq.questions.map((question) => {
+                                    return (
+                                        <div>
+                                            <p> {question}</p>
+                                        </div>
+                                    );
+                                })
+                            })()}
+                        </Panel.Body>
+                    </Panel>
+                </div>
             );
         })
     }
@@ -215,7 +217,9 @@ class PricingPage extends Component {
                                 onSelect={this.onHandleSelect}
                            >
 
-                            { this.accordionPanels }
+                            <div className="row">
+                                    {this.accordionPanels}
+                            </div>
 
                            </PanelGroup>
                         </div>
