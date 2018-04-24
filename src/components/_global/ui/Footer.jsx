@@ -29,9 +29,7 @@ const Footer = (props) => {
         return (
             <div className="page-footer">
                 <div className="row">
-                    <div className="col-md-12">
-                        <p className="call-to-action-sign-up">Ready to recv<span>?</span> Sign up for <b>free</b> with</p>
-                    </div>
+                    <p className="call-to-action-sign-up">Ready to recv<span>?</span> Sign up for <b>free</b> with</p>
                 </div>
 
                 <div className="row">
@@ -39,9 +37,7 @@ const Footer = (props) => {
                 </div>
 
                 <div className="row">
-                    <div className="col-md-6">
-                        <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
-                    </div>
+                    <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
                 </div>
             </div>
         );
@@ -49,11 +45,7 @@ const Footer = (props) => {
         return (
             <div className="page-footer">
 
-                <div className="row">
-                    <div className="col-md-6" style={{ bottom: '-190px' }}>
-                        <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
-                    </div>
-                </div>
+                <p className="copy-right">© {moment().year()} - recv.io All Right Reserved</p>
             </div>
         );
     }
