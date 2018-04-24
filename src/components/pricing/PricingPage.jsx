@@ -10,7 +10,7 @@ class PricingPage extends Component {
         super(props);
 
         this.state = {
-            activeKey: '',
+            collapsiblePanel: [true , true, true, true, true],
             prices: [
                 {
                     icon: 'icon-free',
@@ -89,15 +89,6 @@ class PricingPage extends Component {
                 }
             ]
         }; 
-
-        this.onHandleSelect = this.onHandleSelect.bind(this);
-
-    }
-
-
-    onHandleSelect(activeKey) {
-
-        this.setState({ activeKey });
     }
 
     get plans() {
@@ -128,12 +119,32 @@ class PricingPage extends Component {
     }
 
     get accordionPanels() {
-        return this.state.faqs.map((faq) => {
+
+        let expand = 'true';
+        
+        return this.state.faqs.map((faq, index) => {
             return(
                 <div className="col-md-12">
-                    <Panel key={faq.key} eventKey={faq.key} style={{ border: 'none' }}>
+                    <Panel 
+                        key={faq.key} 
+                        id={`collapsible-panel-${faq.key}`} 
+                        defaultExpanded 
+                        style={{ border: 'none' }}
+                        onToggle={() => {
+                            console.log('something changed');
+                            const panels = this.state.collapsiblePanel; 
+                            panels[index] = !this.state.collapsiblePanel[index];
+                            this.setState({
+                                collapsiblePanel: panels
+                            })
+
+                            console.log('state', this.state.collapsiblePanel);
+                            
+                            
+                        }}
+                    >
                         <Panel.Heading>
-                            <Panel.Title toggle> <span className="toggle-icon"> {this.state.activeKey === faq.key ? '-' : '+'}</span> {faq.heading}</Panel.Title>
+                            <Panel.Title toggle> <span className="toggle-icon"> {this.state.collapsiblePanel[index] ? '-' : '+'}</span> {faq.heading}</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body collapsible style={{ paddingLeft: '30px', borderTop: 'none' }}>
                             {(() => {
@@ -213,19 +224,10 @@ class PricingPage extends Component {
                             </div>
                         </div>
 
-                        <div className="col-md-12">
-                           <PanelGroup
-                                accordion
-                                id="faq-accordion"
-                                activeKey={this.state.activeKey}
-                                onSelect={this.onHandleSelect}
-                           >
-
-                            <div className="row">
-                                    {this.accordionPanels}
+                        <div className="row" >
+                            <div id="faq-accordion">
+                                {this.accordionPanels}
                             </div>
-
-                           </PanelGroup>
                         </div>
 
                     </div>
