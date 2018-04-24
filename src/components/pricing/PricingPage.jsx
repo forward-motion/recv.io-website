@@ -185,7 +185,9 @@ class PricingPage extends Component {
                             marginBottom : '40px',
                             width: '980px'
                            }}>
-                            {this.plans}
+                            <div className="plans-wrapper">
+                                {this.plans}
+                            </div>
                        </div>
 
                         <div style={{ margin: '0 auto', width: '100px' }}>
@@ -197,7 +199,7 @@ class PricingPage extends Component {
                     <div className="row">
 
                         <div className="comparing">
-                            <p>see our full feature set <span><Link to="/compare">here</Link></span>.</p>
+                            <p>see how we compare to the competition <span><Link to="/compare">here</Link></span>.</p>
                         </div>
 
                     </div>

@@ -16,44 +16,48 @@
         border-top: 2px solid $accent;
     }
 
-    .panel-default {
-        min-height: 250px;
-        margin-right: 20px; 
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        width: 100%;
+    .plans-wrapper {
 
-        .panel-heading {
+        .panel-default {
+            min-height: 250px;
+            margin-right: 20px; 
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            width: 100%;
 
-            text-transform: capitalize;
-            border-color: white; 
-            background-color: white;
+            .panel-heading {
 
-            .price-plan {
+                text-transform: capitalize;
+                border-color: white; 
+                background-color: white;
+
+                .price-plan {
+                    font-family: 'AvenirNextLTW01-Regular';
+                    font-size: 20px;
+                    margin-top: -20px;
+                }
+
+                .icon-free:before {
+                    content: "\e904";
+                }
+
+                .icon-paid:before {
+                    content: "\e902";
+                }
+
+                .icon-standalone:before {
+                    content: "\e901";
+                }
+            }
+
+            .panel-body {
                 font-family: 'AvenirNextLTW01-Regular';
-                font-size: 20px;
-                margin-top: -20px;
-            }
-
-            .icon-free:before {
-                content: "\e904";
-            }
-
-            .icon-paid:before {
-                content: "\e902";
-            }
-
-            .icon-standalone:before {
-                content: "\e901";
+                ul {
+                    padding-left: 30px;
+                }
             }
         }
 
-        .panel-body {
-            font-family: 'AvenirNextLTW01-Regular';
-            ul {
-                padding-left: 30px;
-            }
-        }
     }
 
     .comparing {
@@ -70,7 +74,7 @@
                 text-decoration: underline;
 
                 a {
-                    color: $callToActionButtons; 
+                    color: #ec0064;; 
                 }
             }
         }
@@ -95,19 +99,30 @@
         margin-bottom: 100px;
         width: 60%;
 
-        .panel-title{
-            font-size: 13px;
+        .panel-default {
 
-            .toggle-icon{
-                font-size: 20px;
-                font-weight: bold;
-            }
+            -webkit-box-shadow: none;
+            box-shadow: none;
 
-            a {
-                &:hover, &:focus {
-                    text-decoration: none;
+            .panel-heading {
+                background-color: transparent;
+
+                .panel-title{
+                    font-size: 13px;
+
+                    .toggle-icon{
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+
+                    a {
+                        &:hover, &:focus {
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
+
         }
     }
 
