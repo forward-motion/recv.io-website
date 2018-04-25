@@ -37,6 +37,10 @@
 
             margin: 25px 0;
 
+            @media (max-width: 414px) {
+                margin-top: -20px;
+            }
+
             .firebaseui-container {
                 max-width: none;
                 width: 100%;
