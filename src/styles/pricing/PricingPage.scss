@@ -28,6 +28,7 @@
             .panel-heading {
 
                 text-transform: capitalize;
+                text-align: center;
                 border-color: white; 
                 background-color: white;
 
@@ -71,10 +72,14 @@
             padding-top: 100px;
 
             span {
-                text-decoration: underline;
 
                 a {
-                    color: #ec0064;; 
+                    color: #ec0064;
+                    border-bottom : 1px solid #ec0064;
+
+                    &:hover, &:focus {
+                        text-decoration: none;
+                    }
                 }
             }
         }
@@ -95,9 +100,9 @@
     }
 
     #faq-accordion {
+        width: 60%;
         margin: 0 auto;
         margin-bottom: 100px;
-        width: 60%;
 
         .panel-default {
 
@@ -106,6 +111,7 @@
 
             .panel-heading {
                 background-color: transparent;
+                border-bottom: none;
 
                 .panel-title{
                     font-size: 13px;
