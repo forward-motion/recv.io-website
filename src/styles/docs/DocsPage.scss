@@ -4,13 +4,30 @@
 
     .side-bar {
         background-color: $secondary-bg-color;
-        padding-left: 50px;
         font-family: 'AvenirNextLTW01-Regular';
         min-height: 710px;
+
 
         h4 {
             color: $primary-font-color;
             margin-top: 40px;
+        }
+
+        .side-bar-links {
+            width: 200px;
+            float: left;
+
+            @media (max-width: 1064px) {
+                display: none;
+            }
+        }
+
+        .side-bar-links-tablet {
+            width: 100%;
+
+            @media (min-width: 1064px) {
+                display: none;
+            }
         }
     }
 
