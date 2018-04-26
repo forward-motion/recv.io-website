@@ -39,6 +39,12 @@
                     line-height: 0;
                     margin-top: 9px;
 
+                    @media (max-width: 414px) {
+                        width: 30%;
+                        margin-left: 10px;
+                        padding-bottom: 15px;
+                    }
+
                     &:hover, &:focus {
 
                         background-color: $callToActionButtons;

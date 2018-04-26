@@ -52,10 +52,10 @@ class ExamplesPage extends Component {
                     <div className="panel-body">
                         <div className="row">
                             <div className="app-wrapper">
-                                <div className="col-md-2">
+                                <div className="col-xs-2">
                                     <p className="icons"><span className={ example.icon }></span></p>
                                 </div>
-                                <div className="col-md-10">
+                                <div className="col-xs-10">
                                     <p className="app-name"> {example.app} </p>
                                     <p className="app-tag"> {example.tag} </p>
                                 </div>
@@ -74,10 +74,10 @@ class ExamplesPage extends Component {
                     <div className="panel-body">
                         <div className="row">
                             <div className="app-wrapper">
-                                <div className="col-md-2">
+                                <div className="col-xs-2">
                                     <p className="icons"><span className={example.icon}></span></p>
                                 </div>
-                                <div className="col-md-10">
+                                <div className="col-xs-10">
                                     <p className="app-name"> {example.app} </p>
                                     <p className="app-tag"> {example.tag} </p>
                                 </div>
@@ -100,7 +100,7 @@ class ExamplesPage extends Component {
                 </div>
 
                 <div className="row" style={{backgroundColor : 'white', minHeight : '710px'}}>
-                    <div style={{ width: '860px', margin: '0 auto', marginTop: '40px', height: '63vh'}}>
+                    <div style={{ width: '80%', margin: '0 auto', marginTop: '40px', minHeight: '63vh'}}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div style={{ width: '100px', margin: '0 auto'}}>

@@ -40,10 +40,12 @@ const Login = ({ firebase, user }) => (
 
         <div className="row" style={{backgroundColor : 'white'}}>
 
-            <div className="firebase-button-wrapper">
+            <div className="col-sm-12">
+                <div className="firebase-button-wrapper">
 
-                <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+                    <FirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
 
+                </div>
             </div>
 
         </div>
