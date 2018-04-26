@@ -16,48 +16,56 @@
         border-top: 2px solid $accent;
     }
 
-    .plans-wrapper {
+    .plans-outer-wrapper{
+         max-width: 1200px;
 
-        .panel-default {
-            min-height: 300px;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            width: 100%;
+         @media (max-width: 768px) {
+             width: 100%;
+         }
 
-            .panel-heading {
+        .plans-wrapper {
 
-                text-transform: capitalize;
-                text-align: center;
-                border-color: white; 
-                background-color: white;
+            .panel-default {
+                min-height: 300px;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                width: 100%;
 
-                .price-plan {
+                .panel-heading {
+
+                    text-transform: capitalize;
+                    text-align: center;
+                    border-color: white; 
+                    background-color: white;
+
+                    .price-plan {
+                        font-family: 'AvenirNextLTW01-Regular';
+                        font-size: 20px;
+                        margin-top: -20px;
+                    }
+
+                    .icon-free:before {
+                        content: "\e904";
+                    }
+
+                    .icon-paid:before {
+                        content: "\e902";
+                    }
+
+                    .icon-standalone:before {
+                        content: "\e901";
+                    }
+                }
+
+                .panel-body {
                     font-family: 'AvenirNextLTW01-Regular';
-                    font-size: 20px;
-                    margin-top: -20px;
-                }
-
-                .icon-free:before {
-                    content: "\e904";
-                }
-
-                .icon-paid:before {
-                    content: "\e902";
-                }
-
-                .icon-standalone:before {
-                    content: "\e901";
+                    ul {
+                        padding-left: 30px;
+                    }
                 }
             }
 
-            .panel-body {
-                font-family: 'AvenirNextLTW01-Regular';
-                ul {
-                    padding-left: 30px;
-                }
-            }
         }
-
     }
 
     .comparing {

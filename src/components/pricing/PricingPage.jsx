@@ -193,8 +193,10 @@ class PricingPage extends Component {
                        <div style={{
                             margin : '0 auto', 
                             marginTop : '-50px',
-                            marginBottom : '40px'
-                           }}>
+                            marginBottom : '40px',
+                           }}
+                           className="plans-outer-wrapper"
+                           >
                             <div className="plans-wrapper">
                                 {this.plans}
                             </div>
