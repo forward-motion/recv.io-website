@@ -8,8 +8,16 @@
         border: 0;
         border-radius: 0;
 
-        img {
-            width : 8%;
+        .navbar-header {
+
+           .navbar-brand {
+               width: 200px;
+
+               img {
+                   width: 40%;
+               }
+           }
+
         }
 
      li {
