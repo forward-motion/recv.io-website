@@ -23,13 +23,15 @@ class MyApps extends React.Component {
                             className="app-cliable-body"
                             onClick={(selectedApp) => this.props.onChangeSelectedApp(this.props.appInfo)}
                         >
-                                <div className="col-md-2">
+                                <div className="col-xs-2">
                                     <span className="icon-my-apps"></span>
                                 </div>
-                                <div className="col-md-10">
-                                    <h4>{this.props.appInfo.name}</h4>
-                                    <div className="desc">
-                                        {this.props.appInfo.desc}
+                                <div className="col-xs-10">
+                                    <div className="content-wrapper">
+                                        <h4>{this.props.appInfo.name}</h4>
+                                        <div className="desc">
+                                            {this.props.appInfo.desc}
+                                        </div>
                                     </div>
                                 </div>
                         </div>

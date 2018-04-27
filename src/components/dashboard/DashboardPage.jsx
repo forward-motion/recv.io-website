@@ -539,7 +539,7 @@ class DashboardPage extends React.Component {
             case 'my-apps':
                 return (
                     <div className="my-apps">
-                        <div className="row" style={{marginTop : '70px'}}>
+                        <div className="row app-wrapper">
                             { !this.state.selectedApp ? this.userApps : this.selectedApp }
                         </div>
                     </div>
