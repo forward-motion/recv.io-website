@@ -48,5 +48,11 @@
       text-align: center;
     }
   }
-
+}
+@media (min-width: 1440px) {
+  .component-side-bar {
+    .article-wrapper {
+      margin: 0 auto;
+    }
+  }
 }
