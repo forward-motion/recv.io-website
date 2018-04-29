@@ -10,6 +10,7 @@
         .panel-body {
             padding-top: 25px;
 
+
             .app-cliable-body {
 
                 cursor: pointer;
@@ -25,11 +26,18 @@
                     content: "\e908";
                 }
 
-                .desc{
-                    width: 310px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                .content-wrapper {
+
+                    @media (max-width: 414px) {
+                        padding-left: 15px;
+                    }
+
+                    .desc{
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                
                 }
 
             }

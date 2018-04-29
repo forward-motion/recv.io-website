@@ -104,6 +104,16 @@
             font-size: 15px;
             font-weight: bold;
         }
+
+        @media (max-width: 768px) {
+            position: relative;
+            top: -80px; 
+        }
+
+        @media (max-width: 414px) {
+            top: -20px;
+            left: 50px;
+        }
     }
 
     .subview-button-layout {
@@ -140,8 +150,10 @@
     }
 
     .my-apps {
-        max-width: 70%;
+        max-width: 1200px;
         margin: 0 auto;
+        margin-top: 70px;
+        width: 90%;
 
     }
    
