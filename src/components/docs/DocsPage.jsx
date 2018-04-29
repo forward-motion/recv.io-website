@@ -45,7 +45,7 @@ class DocsPage extends Component {
 
        return  this.sideBarLinks.map((link, index) => {
             return(
-                 <div key={`link-${index}`}>
+                 <div key={`link-${index}`} className="link-wrappers">
                      <h4>
                          { link.title }
                      </h4>
@@ -87,8 +87,9 @@ class DocsPage extends Component {
             <div className="container-fluid docs-page">
                 <div className="row">
                     <div className="col-md-12 side-bar">
-                        <div style={{width : '200px', float : 'left'}}>{this.links}</div>
+                        <div className="side-bar-links">{this.links}</div>
                         {this.examplesPage}
+                        <div className="side-bar-links-tablet">{this.links}</div>
                     </div>
                 </div>
 

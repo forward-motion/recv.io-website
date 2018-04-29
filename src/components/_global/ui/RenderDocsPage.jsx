@@ -7,9 +7,9 @@ import '../../../styles/_global/ui/RenderDocsPage.scss';
 const RenderDocsPage = (props) => {
 
     return(
-        <div className="container-fluid render-docs-page" style={{backgroundColor : 'white', float : 'right', width : '80%', minHeight : '710px'}}>
+        <div className="container-fluid render-docs-page">
             
-            <div style={{ width: '870px'}}>
+            <div style={{ width: '100%'}}>
                 <h1 style={{ textTransform: 'uppercase' }}> {props.title}</h1>
 
                 <div className="underline-accent"></div>

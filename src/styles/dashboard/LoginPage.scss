@@ -5,12 +5,16 @@
     .dashboard-label-section {
         background-color: $dashboard-secondary-bg;
 
+        @media (max-width: 768px) {
+            margin-top: -9px;
+        }
+
         .title-wrapper {
 
             margin: 0 auto; 
             padding-top: 50px;
             text-align: center;
-            width: 500px;
+            width: 50%;
 
             h2 {
                 font-family: 'AvenirNextLTW01-Regular';
@@ -32,13 +36,29 @@
 
         margin: 120px 0;
 
+        @media (max-width: 1187px) {
+            margin: 150px 0;
+        }
+
+        @media (max-width: 414px) {
+            margin: 50px 0;
+        }
+
             .firebaseui-container {
-                max-width : none;
+                max-width : 100%;
                 text-align: center;
 
                 .firebaseui-list-item {
                     display: inline;
                     margin-right: 30px;
+
+                    @media (max-width: 1187px) {
+                        display: inherit;
+                    }
+
+                    @media (max-width: 414px) {
+                        margin-right: 0;
+                    }
 
                     .firebaseui-idp-button {
                         height: 80px;
@@ -53,6 +73,10 @@
 
                         .firebaseui-idp-text {
                             font-size: 30px;
+
+                            @media (max-width: 414px) {
+                                font-size: 20px;
+                            }
                         }
                     }
                 }
