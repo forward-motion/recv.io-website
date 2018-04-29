@@ -384,7 +384,7 @@ class DashboardPage extends React.Component {
                                 })()}
                             </ul>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-xs-12 col-md-7">
                             {(() => {
 
                                 if( this.state.selectedApp === null && this.state.view.value !== 'my-account') {
@@ -406,7 +406,7 @@ class DashboardPage extends React.Component {
                                 
                             })()}
                         </div>
-                        <div className="col-md-6 pull-right">
+                        <div className="col-xs-12 col-md-5 pull-right">
                             <div style={{ textAlign: 'right' }}>
                                 <button
                                     className="btn btn-dashboard"
