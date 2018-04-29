@@ -95,7 +95,7 @@ class PricingPage extends Component {
 
         return this.state.prices.map((price) => {
             return(
-                <div className="col-md-4">
+                <div className="col-sm-4">
                     <div className="panel panel-default">
                         <div className="panel-heading">
                             <p style={{ fontSize: '35px' }}><span className={price.icon}></span></p>
@@ -193,8 +193,7 @@ class PricingPage extends Component {
                        <div style={{
                             margin : '0 auto', 
                             marginTop : '-50px',
-                            marginBottom : '40px',
-                            width: '980px'
+                            marginBottom : '40px'
                            }}>
                             <div className="plans-wrapper">
                                 {this.plans}
