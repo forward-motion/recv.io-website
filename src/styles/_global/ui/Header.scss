@@ -8,8 +8,16 @@
         border: 0;
         border-radius: 0;
 
-        img {
-            width : 8%;
+        .navbar-header {
+
+           .navbar-brand {
+               width: 200px;
+
+               img {
+                   width: 40%;
+               }
+           }
+
         }
 
      li {
@@ -39,7 +47,7 @@
                     line-height: 0;
                     margin-top: 9px;
 
-                    @media (max-width: 414px) {
+                    @media (max-width: 767px) {
                         width: 30%;
                         margin-left: 10px;
                         padding-bottom: 15px;
