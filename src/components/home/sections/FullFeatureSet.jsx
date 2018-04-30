@@ -88,7 +88,7 @@ class FullFeatureSet extends React.Component {
             <div className="component-full-feature-set">
                 <div className="row">
                     <div className="col-xs-12">
-                        <h4 className="feature-text">We're currently in <strong>closed beta</strong>. Get notified when we launch below!</h4>
+                        <h4 className="feature-text">We're currently in <strong style={{textDecoration: 'underline'}}>closed beta</strong>.<br />Sign up below to get notified when we launch!</h4>
                     </div>
                     <div className="col-xs-12">
                         <form className="form-inline" id="launch-form" onSubmit={this.onSubmit}>

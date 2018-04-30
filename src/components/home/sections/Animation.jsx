@@ -20,7 +20,7 @@ class Animation extends React.Component {
 
             let stage = this.state.stage + 1;
             if (stage > this.props.numStages) {
-                stage = 0;
+                stage = 1;
             }
             this.setState({ stage });
         }, 1000);
