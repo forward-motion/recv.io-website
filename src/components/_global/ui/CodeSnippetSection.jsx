@@ -23,8 +23,8 @@ class CodeSnippetSection extends React.Component {
         return codeSnippets.map(({ title, code }) => {
 
             return (
-                <div className={`col-md-${columnClass}`}>
-                    <div className="code-snip" key={title}>
+                <div className={`col-md-${columnClass}`} key={title}>
+                    <div className="code-snip">
                         <div className="title-wrapper">
                             <div className="title">{title}</div>
                             <span className="title-underline" />
