@@ -46,7 +46,7 @@ class DefaultTemplate extends React.Component {
         return (
             <div className="default-template">
                 <Helmet
-                    title="recv.io"
+                    title="recv.io - A fully-hosted, durable, distributed pub/sub network."
                     meta={[
                         { name: 'description', content: 'A fully-hosted, durable, distributed pub/sub network.' },
                         { name: 'keywords', content: 'recv.io, realtime, pubsub, socket.io' },
