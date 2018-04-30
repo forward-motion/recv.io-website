@@ -9,7 +9,7 @@ const extrasData = [
         subtitle:'to connect users down the street or across continents'
     },
     {
-        icon:'icon-podcast',
+        icon:'icon-antenna',
         title:'Native MQTT',
         subtitle:'for IOT devices, with WebSocket support for browsers'
     },
@@ -29,12 +29,12 @@ const extrasData = [
         subtitle:'means messages always arrive in the correct order'
     },
     {
-        icon:'icon-tree',
+        icon:'icon-stack',
         title:'Durable Queues',
         subtitle:'of all messages for asynchronous server-side processing'
     },
     {
-        icon:'icon-user-check',
+        icon:'icon-lock',
         title:'Topic Permissioning',
         subtitle:'gives you flexible, powerful auth schemes'
     },

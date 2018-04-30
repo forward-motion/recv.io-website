@@ -2,6 +2,9 @@ import React from 'react';
 import '../../../styles/home/sections/Hero.scss';
 import BackgroundImage from '../../../assets/img/home/background-pattern.png'
 import DataFlow from '../../../assets/img/home/data-flow.png'
+
+import Animation from './Animation';
+
 const Hero = (props) => (
     <div className="component-hero"
          style={{
@@ -26,7 +29,7 @@ const Hero = (props) => (
             </div>
         </div>
         <div className="data-animation">
-             <img className="data-img" src={DataFlow}/>
+             <Animation />
         </div>
     </div>
 );

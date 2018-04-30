@@ -1,0 +1,236 @@
+@import '../../_global/variables';
+
+.component-animation {
+
+  width: 300px;
+  text-align: center;
+  position: relative;
+  margin-top: -50px;
+
+  div {
+    text-align: center;
+    float: left;
+    font-size: 30px;
+  }
+
+  .recv {
+    width: 100%;
+    padding-top: 82px;
+    padding-bottom: 75px;
+    padding-left: 9px;
+    img {
+      width: 25%;
+    }
+  }
+
+  .back-end {
+    width: 33%;
+  }
+
+  .device {
+    width: 25%;
+  }
+
+  .data {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: $accent-green;
+    opacity: 0;
+    transition: top 500ms, left 500ms, bottom 500ms, right 500ms;
+  }
+
+  &.stage-1 {
+    .laptop {
+      .data {
+        top: 230px;
+        left: 30px;
+      }
+    }
+  }
+  &.stage-2 {
+    .laptop {
+      .data {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .mobile, .tablet, .server-one {
+      .data {
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+  &.stage-3 {
+    .mobile, .tablet {
+      .data {
+        opacity: 1;
+        top: 230px;
+      }
+    }
+    .mobile {
+      .data {
+        left: 107px;
+      }
+    }
+    .tablet {
+      .data {
+        left: 182px;
+      }
+    }
+    .server-one {
+      .data {
+        opacity: 1;
+        top: 40px;
+        left: 44px;
+      }
+    }
+  }
+  &.stage-4 {
+
+    .server-two {
+      .data {
+        top: 40px;
+        left: 144px;
+      }
+    }
+  }
+
+  &.stage-5 {
+    .server-two {
+      .data {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .device {
+      .data {
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+  &.stage-6 {
+
+    .laptop, .mobile, .tablet, .gamepad {
+      .data {
+        opacity: 1;
+        top: 230px;
+      }
+    }
+
+    .laptop {
+      .data {
+        left: 30px;
+      }
+    }
+    .mobile {
+      .data {
+        left: 107px;
+      }
+    }
+    .tablet {
+      .data {
+        left: 182px;
+      }
+    }
+    .gamepad {
+      .data {
+        left: 256px;
+      }
+    }
+  }
+
+  &.stage-7 {
+    .tablet {
+      .data {
+        top: 230px;
+        left: 182px;
+      }
+    }
+  }
+
+  &.stage-8 {
+    .tablet {
+      .data {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .laptop, .mobile, .gamepad, .server-two {
+      .data {
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+
+  &.stage-9 {
+    .laptop, .mobile, .gamepad {
+      .data {
+        opacity: 1;
+        top: 230px;
+      }
+    }
+    .laptop {
+      .data {
+        left: 30px;
+      }
+    }
+    .mobile {
+      .data {
+        left: 107px;
+      }
+    }
+    .gamepad {
+      .data {
+        left: 256px;
+      }
+    }
+    .server-two {
+      .data {
+        opacity: 1;
+        top: 40px;
+        left: 144px;
+      }
+    }
+  }
+  &.stage-10 {
+
+    .gamepad {
+      .data {
+        top: 230px;
+        left: 256px;
+      }
+    }
+  }
+  &.stage-11 {
+    .gamepad {
+      .data {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .server-three {
+      .data {
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+  &.stage-12 {
+    .server-three {
+      .data {
+        opacity: 1;
+        top: 40px;
+        left: 244px;
+      }
+    }
+  }
+}

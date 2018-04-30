@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../../../assets/icons/icomoon.eot?uc6fur');
-  src:  url('../../../assets/icons/icomoon.eot?uc6fur#iefix') format('embedded-opentype'),
-  url('../../../assets/icons/icomoon.ttf?uc6fur') format('truetype'),
-  url('../../../assets/icons/icomoon.woff?uc6fur') format('woff'),
-  url('../../../assets/icons/icomoon.svg?uc6fur#icomoon') format('svg');
+  src:  url('../../../assets/icons/icomoon.eot?mj9tj2');
+  src:  url('../../../assets/icons/icomoon.eot?mj9tj2#iefix') format('embedded-opentype'),
+  url('../../../assets/icons/icomoon.ttf?mj9tj2') format('truetype'),
+  url('../../../assets/icons/icomoon.woff?mj9tj2') format('woff'),
+  url('../../../assets/icons/icomoon.svg?mj9tj2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +24,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.icon-gamepad2:before {
+  content: "\e959";
+}
+.icon-antenna:before {
+  content: "\e96d";
+}
+.icon-stack:before {
+  content: "\e9a9";
+}
+.icon-display:before {
+  content: "\ea17";
+}
+.icon-laptop:before {
+  content: "\ea18";
+}
+.icon-mobile:before {
+  content: "\ea19";
+}
+.icon-tablet:before {
+  content: "\ea1b";
+}
+.icon-drive:before {
+  content: "\ea29";
+}
+.icon-lock:before {
+  content: "\ea63";
+}
+.icon-user-check:before {
+  content: "\e975";
+}
+.icon-list-numbered:before {
+  content: "\e9b9";
+}
+.icon-cloud-download:before {
+  content: "\e9c2";
+}
+.icon-cloud-check:before {
+  content: "\e9c4";
+}
+.icon-earth:before {
+  content: "\e9ca";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
 .icon-faqs:before {
   content: "\e900";
 }
@@ -124,28 +168,4 @@
 .icon-dashboard-w:before {
   content: "\e925";
   color: #fff;
-}
-.icon-podcast:before {
-  content: "\e91c";
-}
-.icon-user-check:before {
-  content: "\e975";
-}
-.icon-list-numbered:before {
-  content: "\e9b9";
-}
-.icon-tree:before {
-  content: "\e9bc";
-}
-.icon-cloud-download:before {
-  content: "\e9c2";
-}
-.icon-cloud-check:before {
-  content: "\e9c4";
-}
-.icon-earth:before {
-  content: "\e9ca";
-}
-.icon-plus:before {
-  content: "\ea0a";
 }
