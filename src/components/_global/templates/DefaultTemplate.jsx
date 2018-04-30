@@ -62,6 +62,10 @@ class DefaultTemplate extends React.Component {
                     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#55cb3d" />
                     <meta name="msapplication-TileColor" content="#223047" />
                     <meta name="theme-color" content="#223047" />
+                    <meta property="og:url" content="https://recv.io" />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="recv.io" />
+                    <meta property="og:description" content="A fully-hosted, durable, distributed pub/sub network." />
                     <meta property="og:image" content={icon} />
 
                 </Helmet>
