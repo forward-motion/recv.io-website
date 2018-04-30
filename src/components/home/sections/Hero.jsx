@@ -19,6 +19,7 @@ const Hero = (props) => (
                     <li>Native MQTT and WebSocket support</li>
                     <li>Both fan-out and queue-based messaging</li>
                 </ul>
+                
                 <div>
                     <a className="btn" href="#launch-form">Launching in June!</a>
                 </div>
