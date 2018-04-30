@@ -20,8 +20,8 @@ const Hero = (props) => (
                     <li>Both fan-out and queue-based messaging</li>
                 </ul>
                 
-                <div>
-                    <a className="btn" href="#launch-form">Launching in June!</a>
+                <div className="buttons">
+                    <a className="btn learn-more" id="learn-more" href="#learn-more">Learn More</a><a className="btn launch" href="#launch-form">Sign Up</a>
                 </div>
             </div>
         </div>

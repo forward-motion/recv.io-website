@@ -1,7 +1,7 @@
 @import '../../_global/variables';
 .component-with-some-extras {
     background: white;
-    padding: 25px 0 50px 0;
+    padding: 50px 0 50px 0;
 
     .extras-header,.extras {
       background: white;
@@ -9,7 +9,6 @@
     }
     .extras-header {
       text-align: center;
-      padding-top: 50px;
       padding-bottom: 40px;
       .extras-text {
         font-size: 30px;

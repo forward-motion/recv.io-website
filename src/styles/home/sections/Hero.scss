@@ -1,11 +1,21 @@
 @import '../../_global/variables';
 .component-hero {
-  height: 450px;
+  height: 630px;
   display: flex;
   justify-content: center;
-  .btn {
-    color: $primary-font-color;
-    background-color: $callToActionButtons;
+
+  .buttons {
+    .btn {
+      margin-left: 10px;
+      margin-right: 10px;
+      &.learn-more {
+        background-color: $secondary-bg-color;
+      }
+      &.launch {
+        background-color: $callToActionButtons;
+      }
+      color: $primary-font-color;
+    }
   }
   .tagline {
     max-width: 475px;
@@ -29,6 +39,11 @@
         line-height: 45px;
         margin-bottom: 25px;
       }
+      @media (max-width: 767px) {
+        .tagline-text {
+          font-size: 2em;
+        }
+      }
     }
 
   }
@@ -40,6 +55,19 @@
       max-width: 90%;
       height: auto;
       display: block;
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    height: 100%;
+    .data-animation {
+      display: none;
+    }
+    .buttons {
+      text-align: center;
     }
   }
 }

@@ -7,4 +7,10 @@
   .copy-right {
     padding-right: 30px;
   }
+  @media (max-width: 767px) {
+    text-align: center;
+    .copy-right {
+      padding-right: 0;
+    }
+  }
 }

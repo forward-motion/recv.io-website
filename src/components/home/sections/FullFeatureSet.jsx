@@ -33,25 +33,84 @@ import '../../../styles/home/sections/FullFeatureSet.scss';
 //     }
 // }
 
-function FullFeatureSet() {
 
-    return (
-        <div className="component-full-feature-set">
-            <div className="row">
-                <div className="col-xs-12">
-                    <h4 className="feature-text">We're currently in <strong>closed beta</strong>. Get notified when we launch below!</h4>
-                </div>
-                <div className="col-xs-12">
-                    <form className="form-inline" id="launch-form">
-                        <div className="form-group">
-                            <input type="email" className="form-control" id="email" placeholder="your email address" />
-                        </div>
-                        <button type="submit" className="btn">Notify Me</button>
-                    </form>
+class FullFeatureSet extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            loading: false,
+            submitted: false
+        };
+
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onChange(e) {
+        this.setState({ email: e.currentTarget.value });
+    }
+
+    onSubmit(e) {
+        e.preventDefault();
+
+        const { email } = this.state;
+
+        const url = `https://recv.us18.list-manage.com/subscribe/post-json?u=c47bcee550c62287336362beb&amp;id=ce4d0d234e&EMAIL=${email}`;
+
+        this.setState({ loading: true }, () => {
+
+            const xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = () => {
+
+                if (xmlhttp.readyState === XMLHttpRequest.DONE) {
+                    this.setState({
+                        loading: false,
+                        submitted: true
+                    });
+                } else {
+                    this.setState({
+                        loading: false,
+                        submitted: false
+                    });
+                }
+            };
+
+            xmlhttp.open('GET', url, true);
+            xmlhttp.send();
+        });
+    }
+
+    render() {
+        return (
+            <div className="component-full-feature-set">
+                <div className="row">
+                    <div className="col-xs-12">
+                        <h4 className="feature-text">We're currently in <strong>closed beta</strong>. Get notified when we launch below!</h4>
+                    </div>
+                    <div className="col-xs-12">
+                        <form className="form-inline" id="launch-form" onSubmit={this.onSubmit}>
+                            <div className="form-group">
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    placeholder="your email address"
+                                    value={this.state.email}
+                                    onChange={this.onChange}
+                                />
+                            </div>
+                            <button disabled={this.state.loading} type="submit" className="btn">
+                                {this.state.submitted ? 'Success!' : 'Notify Me'}
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
+
 
 export default FullFeatureSet;
