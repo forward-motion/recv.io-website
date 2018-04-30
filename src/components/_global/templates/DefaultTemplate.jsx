@@ -5,8 +5,6 @@ import Footer from '../ui/Footer';
 import firebase from 'firebase';
 import 'firebase/auth';
 
-import icon from '../../../assets/img/home/recv-icon.png';
-
 import '../../../styles/_global/templates/DefaultTemplate.scss';
 
 const config = {
@@ -66,7 +64,7 @@ class DefaultTemplate extends React.Component {
                     <meta property="og:type" content="website" />
                     <meta property="og:title" content="recv.io" />
                     <meta property="og:description" content="A fully-hosted, durable, distributed pub/sub network." />
-                    <meta property="og:image" content={icon} />
+                    <meta property="og:image" content="/recv-icon.png" />
 
                 </Helmet>
 
