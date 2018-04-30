@@ -24,7 +24,7 @@ const Hero = (props) => (
                 </ul>
                 
                 <div className="buttons">
-                    <a className="btn learn-more" id="learn-more" href="#learn-more">Learn More</a><a className="btn launch" href="#launch-form">Sign Up</a>
+                    <a className="btn launch" href="#launch-form">Sign Up</a>
                 </div>
             </div>
         </div>
