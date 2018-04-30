@@ -4,70 +4,67 @@
   position: relative;
   z-index: 2;
   .navbar {
-        background-color: $primary-bg-color !important;
-        border: 0;
-        border-radius: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
 
-        .navbar-header {
+    .navbar-header {
 
-           .navbar-brand {
-               width: 200px;
+      .navbar-brand {
+        width: 200px;
 
-               img {
-                   width: 40%;
-               }
-           }
+        img {
+          width: 40%;
+        }
+      }
 
+    }
+
+    li {
+
+      &.open {
+        a {
+          background-color: $primary-bg-color;
+
+          &:focus, &:hover {
+            background-color: $primary-bg-color;
+          }
         }
 
-     li {
-
-        &.open {
-            a {
-                background-color: $primary-bg-color;
-
-                &:focus, &:hover {
-                    background-color: $primary-bg-color;
-                }
-            }
-
-            .dropdown-menu {
-                padding: 0;
-            }
-
+        .dropdown-menu {
+          padding: 0;
         }
-         a {
-             color: $primary-font-color !important;
 
-             &.btn-dashboard {
-                    height: 20px;
-                    background-color: $callToActionButtons;
-                    padding-top: 15px;
-                    border: none;
-                    line-height: 0;
-                    margin-top: 9px;
+      }
+      a {
+        color: $primary-font-color !important;
 
-                    @media (max-width: 767px) {
-                        width: 30%;
-                        margin-left: 10px;
-                        padding-bottom: 15px;
-                    }
+        &.btn-dashboard {
+          height: 20px;
+          background-color: $callToActionButtons;
+          padding-top: 15px;
+          border: none;
+          line-height: 0;
+          margin-top: 9px;
 
-                    &:hover, &:focus {
+          @media (max-width: 767px) {
+            width: 30%;
+            margin-left: 10px;
+            padding-bottom: 15px;
+          }
 
-                        background-color: $callToActionButtons;
-                    }
+          &:hover, &:focus {
 
-                    .icon-my-apps {
-                        line-height: 0 !important;
-                        padding-right: 10px;
-                    }
+            background-color: $callToActionButtons;
+          }
 
-                    .icon-my-apps:before {
-                        content: "\e908";
-                    }
-             }
-         }
-     }
+          .icon-my-apps {
+            line-height: 0 !important;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,19 +1,41 @@
 @import '../../_global/variables';
 .component-look-familiar {
-  height: 350px;
+  background: $secondary-bg-color;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
   .look-familiar {
+    padding-bottom: 20px;
     h3 {
-      font-size: 50px;
+      font-size: 40px;
     }
-    span {
-      font-size: 30px;
+    div {
+      font-size: 25px;
     }
     .socket {
-      color: rgb(44,53,64);
+      font-family: AvenirNextLTW01-Italic, sans-serif;
+      font-size: 24px;
+    }
+    img {
+      height: 23px;
+      margin-top: -10px;
+      padding-left: 3px;
+    }
+    .title-wrapper {
+      position: relative;
+      text-align: center;
+      .title {
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+      .title-underline {
+        display: inline-block;
+        width: 60px;
+        border-bottom: solid $accent-green 3px;
+      }
     }
   }
 }

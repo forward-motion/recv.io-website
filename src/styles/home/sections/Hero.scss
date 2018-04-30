@@ -1,0 +1,45 @@
+@import '../../_global/variables';
+.component-hero {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  .btn {
+    color: $primary-font-color;
+    background-color: $callToActionButtons;
+  }
+  .tagline {
+    max-width: 475px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tagline-inner {
+      margin: 0 30px;
+      ul {
+        margin: 0;
+        padding: 12px;
+        li {
+          padding-bottom: 10px;
+          font-size: 15px;
+        }
+      }
+      .tagline-text {
+        display: inline-block;
+        font-size: 40px;
+        font-weight: normal;
+        line-height: 45px;
+        margin-bottom: 25px;
+      }
+    }
+
+  }
+  .data-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .data-img {
+      max-width: 90%;
+      height: auto;
+      display: block;
+    }
+  }
+}

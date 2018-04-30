@@ -14,32 +14,32 @@ const Header = (props) => (
                 <Navbar.Brand>
                     <Link to="/"><img src={recvLogo} alt="recv.io"/></Link>
                 </Navbar.Brand>
-                <Navbar.Toggle />
+                {/*<Navbar.Toggle />*/}
             </Navbar.Header>
-            <Navbar.Collapse>
-                <Nav pullRight>
-                    <li role="presentation">
-                        <Link role="button" to="/pricing/">Pricing</Link>
-                    </li>
-                    <NavDropdown title="Resources" id="resources">
-                        <li role="presentation">
-                            <Link to="/docs/">Docs</Link>
-                        </li>
-                        <li role="presentation">
-                            <Link to="/examples/">Examples</Link>
-                        </li>
-                        <li role="presentation">
-                            <Link to="/compare/">Compare</Link>
-                        </li>
-                    </NavDropdown>
-                    <li role="presentation">
-                        <Link role="button" to="/blog/">Blog</Link>
-                    </li>
-                    <li role="presentation">
-                        <Link className="btn btn-dashboard" role="button" to="/dashboard/"><span className="icon-my-apps"></span>{props.user ? props.user.displayName : 'Dashboard'}</Link>
-                    </li>
-                </Nav>
-            </Navbar.Collapse>
+            {/*<Navbar.Collapse>*/}
+                {/*<Nav pullRight>*/}
+                    {/*<li role="presentation">*/}
+                        {/*<Link role="button" to="/pricing/">Pricing</Link>*/}
+                    {/*</li>*/}
+                    {/*<NavDropdown title="Resources" id="resources">*/}
+                        {/*<li role="presentation">*/}
+                            {/*<Link to="/docs/">Docs</Link>*/}
+                        {/*</li>*/}
+                        {/*<li role="presentation">*/}
+                            {/*<Link to="/examples/">Examples</Link>*/}
+                        {/*</li>*/}
+                        {/*<li role="presentation">*/}
+                            {/*<Link to="/compare/">Compare</Link>*/}
+                        {/*</li>*/}
+                    {/*</NavDropdown>*/}
+                    {/*<li role="presentation">*/}
+                        {/*<Link role="button" to="/blog/">Blog</Link>*/}
+                    {/*</li>*/}
+                    {/*<li role="presentation">*/}
+                        {/*<Link className="btn btn-dashboard" role="button" to="/dashboard/"><span className="icon-my-apps"></span>{props.user ? props.user.displayName : 'Dashboard'}</Link>*/}
+                    {/*</li>*/}
+                {/*</Nav>*/}
+            {/*</Navbar.Collapse>*/}
         </Navbar>
 
     </div>

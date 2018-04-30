@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../../styles/home/sections/Header.scss';
-import BackgroundImage from '../../../assets/img/home/header-bg.png'
+import '../../../styles/home/sections/Hero.scss';
+import BackgroundImage from '../../../assets/img/home/background-pattern.png'
 import DataFlow from '../../../assets/img/home/data-flow.png'
-const Header = (props) => (
-    <div className="component-header"
+const Hero = (props) => (
+    <div className="component-hero"
          style={{
              backgroundImage:`url(${BackgroundImage})`,
              backgroundRepeat:"no-repeat",
@@ -12,13 +12,16 @@ const Header = (props) => (
 
         <div className="tagline">
             <div className="tagline-inner">
-                <span className="tagline-text">A distributed, durable pub/sub network.</span>
+                <span className="tagline-text">A fully-hosted, durable, distributed pub/sub network.</span>
                 <ul>
-                    <li>Multi-datacenter scalability</li>
+                    <li>Multi-region scalability</li>
                     <li>Guaranteed message delivery</li>
                     <li>Native MQTT and WebSocket support</li>
                     <li>Both fan-out and queue-based messaging</li>
                 </ul>
+                <div>
+                    <a className="btn" href="#launch-form">Launching in June!</a>
+                </div>
             </div>
         </div>
         <div className="data-animation">
@@ -27,4 +30,4 @@ const Header = (props) => (
     </div>
 );
 
-export default Header;
+export default Hero;

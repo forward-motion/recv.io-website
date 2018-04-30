@@ -1,37 +1,36 @@
-@import '../../_global/variables';
+@import '../variables';
 
-.component-pub-sub {
+.component-code-snippet-section {
   color: $font-dark;
-  height: 600px;
-  padding-bottom: 100px;
-  padding-top: 75px;
+  padding-top: 50px;
+  padding-bottom: 75px;
+
+  pre[class*="language-"] {
+    padding: 3em;
+  }
+
   .codesnip-wrapper {
     height: 100%;
     display: flex;
     justify-content: center;
     .code-snip {
-      width: 450px;
+      width: 100%;
       height: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
       .title-wrapper {
-        height:40%;
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+        padding-bottom: 20px;
           .title {
             font-size: 24px;
             letter-spacing: 1px;
           }
           .title-underline {
-            position: absolute;
+            display: inline-block;
             width: 60px;
-            height: 35%;
             border-bottom: solid $accent-green 3px;
           }
-      }
-      .image {
-        height: 60%;
-        width: 100%;
       }
     }
   }

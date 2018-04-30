@@ -1,7 +1,7 @@
 @import '../../../_global/variables';
 .component-popular-articles {
   .article-section-title {
-    font-weight: 300;
+    font-weight: normal;
     padding-bottom: 25px;
 
   }
@@ -12,7 +12,7 @@
     }
     .article-title, .article-date {
       display: inline-block;
-      font-weight: 300;
+      font-weight: normal;
       font-size: 14px;
     }
     .article-title {

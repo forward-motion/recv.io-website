@@ -2,15 +2,35 @@
 
 .component-full-feature-set {
   text-align: center;
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: solid black 1px;
   height: 200px;
   background:$secondary-blue;
+
+  input[type=email] {
+    min-width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    color: $sidebar-subtext;
+    background-color: $primary-bg-color;
+    border: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 16px;
+  }
+  .btn {
+    color: $primary-font-color;
+    background-color: $callToActionButtons;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 50px;
+    font-size: 16px;
+  }
   .feature-text {
     font-size: 30px;
+    padding-bottom: 20px;
   }
     a {
       color: $action-purple;
@@ -21,7 +41,7 @@
       }
     }
     h4 {
-      font-weight: 300;
+      font-weight: normal;
     }
     .here {
       display: inline-block;

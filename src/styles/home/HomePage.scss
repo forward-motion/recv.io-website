@@ -3,9 +3,6 @@
 .component-home-page {
   color: $font-color;
   background-color: $background;
-  .icon-globally:before {
-    content: "\e924";
-  }
 }
 
 @media (max-width: 700px) {

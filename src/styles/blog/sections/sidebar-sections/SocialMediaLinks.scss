@@ -1,7 +1,7 @@
 @import '../../../_global/variables';
 .component-social-media-links {
   .social-media-links-title {
-    font-weight: 300;
+    font-weight: normal;
   }
   .social-media-icons {
     display: flex;
@@ -20,17 +20,5 @@
     border-bottom: solid $primary-bg-color 1px;
     width: 250px;
     padding-bottom: 40px;
-  }
-  .icon-social_twt:before {
-    content: "\e917";
-    color: #fff;
-  }
-  .icon-social_fb:before {
-    content: "\e918";
-    color: #fff;
-  }
-  .icon-social_rss:before {
-    content: "\e916";
-    color: #fff;
   }
 }
