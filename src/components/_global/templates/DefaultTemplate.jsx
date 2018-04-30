@@ -5,6 +5,8 @@ import Footer from '../ui/Footer';
 import firebase from 'firebase';
 import 'firebase/auth';
 
+import icon from '../../../assets/img/home/recv-icon.png';
+
 import '../../../styles/_global/templates/DefaultTemplate.scss';
 
 const config = {
@@ -60,6 +62,7 @@ class DefaultTemplate extends React.Component {
                     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#55cb3d" />
                     <meta name="msapplication-TileColor" content="#223047" />
                     <meta name="theme-color" content="#223047" />
+                    <meta property="og:image" content={icon} />
 
                 </Helmet>
 
