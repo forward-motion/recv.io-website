@@ -15,16 +15,16 @@ const Hero = (props) => (
 
         <div className="tagline">
             <div className="tagline-inner">
-                <span className="tagline-text">A fully-hosted, durable, distributed pub/sub network.</span>
+                <span className="tagline-text">A durable, globally-distributed pub/sub network.</span>
                 <ul>
-                    <li>Multi-region scalability</li>
+                    <li>Multi-region scale</li>
                     <li>Guaranteed message delivery</li>
                     <li>Native MQTT and WebSocket support</li>
                     <li>Both fan-out and queue-based messaging</li>
                 </ul>
                 
                 <div className="buttons">
-                    <a className="btn launch" href="#launch-form">Sign Up</a>
+                    <a className="btn launch" href="#launch-form">Sign Up For Launch News</a>
                 </div>
             </div>
         </div>

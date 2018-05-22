@@ -46,12 +46,7 @@ class CodeSnippetSection extends React.Component {
     render() {
 
         return (
-            <div className="component-code-snippet-section"
-                 style={{
-                     backgroundImage:`url(${BackgroundImage})`,
-                     backgroundRepeat:"no-repeat",
-                     backgroundPosition:"center"
-                 }}>
+            <div className="component-code-snippet-section">
                 <div className="codesnip-wrapper">
                     <div className="row">
                         {this.codeSnippets}

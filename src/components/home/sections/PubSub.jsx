@@ -1,7 +1,10 @@
 import React from 'react';
 
-import '../../_global/ui/CodeSnippetSection';
-import CodeSnippetSection from "../../_global/ui/CodeSnippetSection";
+import '../../../styles/home/sections/PubSub.scss';
+
+import recvLogo from '../../../assets/img/home/recv.io.png';
+
+import CodeSnippetSection from "../../_global/ui/CodeSnippetSection.jsx";
 
 const publish = `// in the browser...
 const client = io(clientCredentials);
