@@ -53,19 +53,22 @@ class FullFeatureSet extends React.Component {
     }
 
     onSubmit(e) {
+
         e.preventDefault();
 
-        const { email } = this.state;
+        this.setState({ loading: true, submitted: false }, () => {
 
-        const url = `https://recv.us18.list-manage.com/subscribe/post-json?u=c47bcee550c62287336362beb&amp;id=ce4d0d234e&EMAIL=${email}`;
+            const data = {
+                email: this.state.email,
+                api_key: 'xumUkWFKu6JM5wr_6ZQ_wQ'
+            };
 
-        this.setState({ loading: true }, () => {
+            const xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 
-            const xmlhttp = new XMLHttpRequest();
+            xhr.open('POST', 'https://api.convertkit.com/v3/forms/397809/subscribe');
+            xhr.onreadystatechange = () => {
 
-            xmlhttp.onreadystatechange = () => {
-
-                if (xmlhttp.readyState === XMLHttpRequest.DONE) {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
                     this.setState({
                         loading: false,
                         submitted: true
@@ -76,10 +79,11 @@ class FullFeatureSet extends React.Component {
                         submitted: false
                     });
                 }
-            };
 
-            xmlhttp.open('GET', url, true);
-            xmlhttp.send();
+            };
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+            xhr.send(JSON.stringify(data));
         });
     }
 
